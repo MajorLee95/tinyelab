@@ -14,6 +14,39 @@ Avancement
 ====================================================================================================
 A faire
 ====================================================================================================
+Mettre des photos dans la doc
+----------------------------------------------------------------------------------------------------
+- ir module oscillo qui chauffe
+- modules déjà réalisés en fonctionnement.
+
+Mettre projet sous Volab/wiki et sous github
+----------------------------------------------------------------------------------------------------
+- créer git local
+- créer projet github
+- lier projet Github et git local
+- pusher le projet
+- créer github io
+- pusher la doc sur githubio
+- créer un readme.rst au niveau projet
+- créer le projet dans le Wiki du lab
+- Renseigner le projet dans le wiki du lab
+
+Mettre les modules sous Thinkiverse
+----------------------------------------------------------------------------------------------------
+- base 35mm
+    - renseigner le lien dans la doc
+- UI primaire
+    - renseigner le lien dans la doc
+- USB
+    - renseigner le lien dans la doc
+- DPS3005
+    - renseigner le lien dans la doc
+- Oscillo
+    - renseigner le lien dans la doc
+- VA
+    - renseigner le lien dans la doc
+
+
 Les nomenclatures
 ----------------------------------------------------------------------------------------------------
     - base **OK**
@@ -28,7 +61,7 @@ schéma de câblage des modules
     - USB
     - Module U/I en ligne
     - Alim DPS3005
-    - Oscillo
+    - **Oscillo**
     - VA
 
 Câblage alim 24V
@@ -44,8 +77,9 @@ Outillage pour la soudure des XT60
     - retoucher les dimension du reglet celui de 20CM large **OK**
 - export STL **OK**
 - préparation GCODE **OK**
-- impression
+- impression **OK**
 - test
+    - retoucher l'épaisseur du réglet dans la speadsheet
 
 Concept du tiroir
 ----------------------------------------------------------------------------------------------------
@@ -75,11 +109,11 @@ Module oscilo
     - préparation GCODE **OK**
         - Fav **OK**
         - Base 150mm **OK**
-    - impression
-        - Fav
-        - Base
-    - câblage
-    - test
+    - impression **OK**
+        - Fav **OK**
+        - Base **OK**
+    - câblage **OK**
+    - test **OK**
 
 Module voltmère / ampéremètre 
 ----------------------------------------------------------------------------------------------------

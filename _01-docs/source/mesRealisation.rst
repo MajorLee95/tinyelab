@@ -173,10 +173,15 @@ Nomenclature de base
 
 
 ====================================================================================================
-Alimentation de chaque module
+Alimentation des modules en plus base tension
 ====================================================================================================
 Module convertisseur réglable 2A
 ----------------------------------------------------------------------------------------------------
+Ce convertisseur est nécessaire quand les éléments du module ne supportent pas des tension d'entrées
+comprise entre 15 et 24V.
+
+Il convient alors de régler la tension de sortie du convertisseur à la bonne valeur
+
 
 Convertisseur DC/DC 1A réglable
 
@@ -319,14 +324,12 @@ Nomenclature
     pair: Modules; Oscilloscope
 
 ====================================================================================================
-Module oscillo 1 voies
+Module oscillo 1 voies DSO138
 ====================================================================================================
+.. WARNING:: REGLER LA TENSION DE SORTIE DU DCDC à 9V sinon ça chauffe
+   :class: without-title
 
-.. image:: images/oscillo.jpg 
-   :width: 600 px
-
-
-|clearer|
+   ici 9V
 
 .. _`NOUVEAU JYETech® 13805K DSO138 Mini Oscilloscope Numérique 200KHz` : https://www.banggood.com/fr/NEW-JYETech-13805K-DSO138-Mini-200KHz-Digital-Oscilloscope-SMD-Soldered-Version-DC3_5V-6V-With-Housing-p-1627586.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=FR&utm_content=minha&utm_campaign=minha-fr-fr-pc&currency=EUR&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_union&utm_content=sandra&utm_campaign=sandra-ssc-fr-css-all-0423-19bf-v2&ad_id=344815794167&gclid=CjwKCAiAx8KQBhAGEiwAD3EiP3yN54JABv3-oe_jhIRZ2Zv9rc89praeH_G5VnR0Qqd3OnVhP0iA_hoC_KoQAvD_BwE
 
@@ -357,6 +360,17 @@ BNC : code RS :  680-7371, modèle directement récupérer et mis en fichier Fre
 
 .. image:: images/bncMountingHole.jpg 
    :width: 300 px
+
+.. WARNING:: REGLER LA TENSION DE SORTIE DU DCDC à 9V sinon ça chauffe
+   :class: without-title
+
+   Ici 9V cf. `Alimentation de chaque module`_
+
+Rendu FreeCad
+----------------------------------------------------------------------------------------------------
+.. image:: images/oscillo.jpg 
+   :width: 600 px
+
 
 Nomenclature oscillo DSO138
 ----------------------------------------------------------------------------------------------------
