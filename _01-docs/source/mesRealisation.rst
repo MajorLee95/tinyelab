@@ -364,7 +364,7 @@ BNC : code RS :  680-7371, modèle directement récupérer et mis en fichier Fre
 .. WARNING:: REGLER LA TENSION DE SORTIE DU DCDC à 9V sinon ça chauffe
    :class: without-title
 
-   Ici 9V cf. `Alimentation de chaque module`_
+   Ici 9V cf. `Alimentation des modules en plus base tension`_
 
 Rendu FreeCad
 ----------------------------------------------------------------------------------------------------
@@ -500,7 +500,8 @@ Rendu Freecad
 ====================================================================================================
 Gene de signal
 ====================================================================================================
-
+Péliminaire
+----------------------------------------------------------------------------------------------------
 `Générateur de Signal XR2206 1Hz -1MHz`_
 
 .. _`Générateur de Signal XR2206 1Hz -1MHz` : https://fr.aliexpress.com/item/32862689682.html?gatewayAdapt=glo2fra&spm=a2g0o.detail.1000023.2.14c435deWAoz2w
@@ -514,6 +515,33 @@ Sur Instructable `DIY Function/Waveform Generator`_
 
 Base AD9833 :download:`datasheet<fichiersJoints/ad9833.pdf>`
 
+Maquettage
+----------------------------------------------------------------------------------------------------
+
+
+L'instructable à base d'ARDUINO NANO et d'AD9833 me parait bien. 
+
+Appro breakout board 9833 ok
+
+Ampli OP dans le design original : TL071
+
+Maquetter avec un OPA284 ou 184 ou 484 ceux dispo au lab. Single supply jusqu'à 36V ;-)
+
+Modélisation 3D
+----------------------------------------------------------------------------------------------------
+- 3D écran
+- 3D nano (pas utile puisque pcb dédié)
+- 3D boutons
+- 
+
+KICAD project started.
+
+
+====================================================================================================
+Module Parkside
+====================================================================================================
+Recherche de model internet : pas grand chose d'exploitable, surtout des stl !
+Mieux vaut tout re-modéliser ça n'a pas l'air très compliqué s on s'inspire du chargeur !
 
 ====================================================================================================
 Weblinks

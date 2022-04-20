@@ -4,7 +4,7 @@ Avancement
 
 :Auteur: J.Soranzo
 :Date de création: 03/2022
-:Date dernière maj: 03/2022
+:Date dernière maj: 19/04/2022
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -112,14 +112,18 @@ Module oscilo
     - impression **OK**
         - Fav **OK**
         - Base **OK**
+        - Test mécanique **KO**
+            - reprendre l'emprunte de la BNC
     - câblage **OK**
-    - test **OK**
+    - régler le module DCDC **OK**
+    - test électrique **OK**
+
 
 Module voltmère / ampéremètre 
 ----------------------------------------------------------------------------------------------------
-- Trouver schéma de cablage
+- Trouver schéma de câblage
     - essayer à blanc
-- modélisation 3D
+- modélisation 3D **OK**
     - réutiliser connecteurs AUDIO **OK**
     - rechercher model 3D du module utilisé **OK**
         - vérifier les dimensions **OK**
@@ -128,17 +132,28 @@ Module voltmère / ampéremètre
     - 4 fiches bananes **OK**
 - Rechercher schéma de câblage version 3 gros fils, sérigraphié **OK**
     - rouge VI, verts I+,  Noir COM **OK**
-    - finir svg de câblage
+    - finir svg de câblage **OK**
 
-- export STL
-- préparation GCODE
-   - Fav
-   - Base 150mm
+- export STL **OK**
+- préparation GCODE **OK**
+   - Fav **OK**
+   - Base 95mm **OK**
 - impression
    - Fav
    - Base
+   - teste mécanique
 - câblage
-- test
+- test électrique
+
+Module Générateur de fonction
+----------------------------------------------------------------------------------------------------
+- appro
+    - AD9833 breakout board AMAZON **OK**
+    - Encodeur rotatif (au lab)
+    - NANO
+    - Ecran I2C
+    - Alimentation symétrique +10V/-10V
+    - Ampli op de sortie
 
 
 module Voltmètre seul

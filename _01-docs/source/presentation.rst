@@ -190,7 +190,7 @@ voir :ref:`ici<refOscilloRealisation>`
 
 ----------------------------------------------------------------------------------------------------
 
-**Autres solutiosn**
+**Autres solutions**
 
 `hackaday ScopeIO (9 chanel digital)`_
 
