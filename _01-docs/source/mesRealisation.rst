@@ -515,6 +515,10 @@ Sur Instructable `DIY Function/Waveform Generator`_
 
 Base AD9833 :download:`datasheet<fichiersJoints/ad9833.pdf>`
 
+.. image:: images/schOriginalGenFunc.png 
+   :width: 600 px
+
+
 Maquettage
 ----------------------------------------------------------------------------------------------------
 
@@ -527,10 +531,29 @@ Ampli OP dans le design original : TL071
 
 Maquetter avec un OPA284 ou 184 ou 484 ceux dispo au lab. Single supply jusqu'à 36V ;-)
 
+Si non un dc/dc +15/-15V, sur AMAZON: 
+
+`Niiyen Module élévateur, convertisseur élévateur CC 3.3 V-13 V à + 15 V/-15 V, convertisseur élévateur`_
+
+.. _`Niiyen Module élévateur, convertisseur élévateur CC 3.3 V-13 V à + 15 V/-15 V, convertisseur élévateur` : https://www.amazon.fr/gp/product/B093PSZPW6/ref=crt_ewc_title_dp_1?ie=UTF8&psc=1&smid=A3MM3V4F4Z0CQN
+
+
+un potar de gain et un d'offset, on pourait ajouter une relecture sur l'écran pour controler.
+
+Ajouter l'interrupteur ofset au GND comme sur le design original.
+
+Reverse du code
+----------------------------------------------------------------------------------------------------
+une fonction debounce bof.
+
+un handler d'it qui fait beaucoup
+
+Un switch case pour gérer les menu.
+
 Modélisation 3D
 ----------------------------------------------------------------------------------------------------
 - 3D écran
-- 3D nano (pas utile puisque pcb dédié)
+- 3D nano (pas utile puisque pcb dédié) si en fait pour les volumes en attendant le pcb
 - 3D boutons
 - 
 
@@ -541,7 +564,26 @@ KICAD project started.
 Module Parkside
 ====================================================================================================
 Recherche de model internet : pas grand chose d'exploitable, surtout des stl !
-Mieux vaut tout re-modéliser ça n'a pas l'air très compliqué s on s'inspire du chargeur !
+
+Mieux vaut tout re-modéliser ça n'a pas l'air très compliqué si on s'inspire du chargeur !
+
+====================================================================================================
+Module triple tiny voltmètre
+====================================================================================================
+2.4 to 30V 0.28" chez Banggood Aliexpress ou 
+
+`AMAZON YIXISI 4pcs Mini Voltmètre Numérique, 0.28 Pouce Deux Lignes DC Voltmètre, 4 Couleurs Rouge/Jaune/Vert/Bleu`_
+
+.. _`AMAZON YIXISI 4pcs Mini Voltmètre Numérique, 0.28 Pouce Deux Lignes DC Voltmètre, 4 Couleurs Rouge/Jaune/Vert/Bleu` : https://www.amazon.fr/YIXISI-Voltm%C3%A8tre-Num%C3%A9rique-Lignes-Couleurs/dp/B082ZLRY1Y/ref=asc_df_B082ZLRY1Y/?tag=googshopfr-21&linkCode=df0&hvadid=411439987151&hvpos=&hvnetw=g&hvrand=12753950135123075235&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9056228&hvtargid=pla-864257550626&psc=1&tag=&ref=&adgrpid=95238321811&hvpone=&hvptwo=&hvadid=411439987151&hvpos=&hvnetw=g&hvrand=12753950135123075235&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9056228&hvtargid=pla-864257550626
+
+.. image:: images/028voltmeter.jpg 
+   :width: 300 px
+
+Rendu FreeCAD
+----------------------------------------------------------------------------------------------------
+.. image:: images/tripleVolmetre.jpg 
+   :width: 600 px
+
 
 ====================================================================================================
 Weblinks

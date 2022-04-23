@@ -78,8 +78,14 @@ Outillage pour la soudure des XT60
 - export STL **OK**
 - préparation GCODE **OK**
 - impression **OK**
-- test
-    - retoucher l'épaisseur du réglet dans la speadsheet
+- test **OK**
+    - retoucher l'épaisseur du réglet dans la speadsheet v013 **OK**
+    - Ajouter des pieds en haut pour basculer pendant la soudure v014 **OK**
+
+- Ré-imprimer
+    - sortir STL **OK**
+    - préparer GCODE
+- re-tester la nouvelle version
 
 Concept du tiroir
 ----------------------------------------------------------------------------------------------------
@@ -138,27 +144,50 @@ Module voltmère / ampéremètre
 - préparation GCODE **OK**
    - Fav **OK**
    - Base 95mm **OK**
-- impression
-   - Fav
-   - Base
-   - teste mécanique
+- impression **OK**
+   - Fav **OK**
+   - Base **OK**
+   - teste mécanique **OK**
 - câblage
+    - couper barres laiton 78.62mm
 - test électrique
 
 Module Générateur de fonction
 ----------------------------------------------------------------------------------------------------
 - appro
     - AD9833 breakout board AMAZON **OK**
-    - Encodeur rotatif (au lab)
-    - NANO
-    - Ecran I2C
-    - Alimentation symétrique +10V/-10V
-    - Ampli op de sortie
+    - Encodeur rotatif (au lab) cdé le 21/4
+    - NANO **OK**
+    - Ecran I2C **OK**
+    - Alimentation symétrique +10V/-10V cdé le 21/4
+    - Ampli op de sortie cdé le 21/4
+- Maquettage
+- Design ARDUINO
+    - original Instructables
+        - DL code **OK**
+        - Etude code **OK**
 
-
-module Voltmètre seul
+module triple tiny Voltmètre
 ----------------------------------------------------------------------------------------------------
-- tout
+- design 3D
+    - model volmetre sur GRABCAD **KO**
+        - mini-dc-voltmeter-1.snapshot.5.zip : entraxe incorecte **KO**
+        - dc-0-30v-voltmeter-panel-mount-1.snapshot.3.zip **KO**
+        - led-dc-digital-voltmeter-5v-display-green-1.snapshot.5 **OK**
+
+- export STL
+- préparation GCODE
+   - Fav
+   - Base 95mm
+- impression
+   - Fav
+   - Base
+   - teste mécanique
+- câblage
+    - couper barres laiton 73.62mm
+- test électrique
+
+
 
 module ampèremètre seul 0/3A
 ----------------------------------------------------------------------------------------------------
