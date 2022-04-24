@@ -479,7 +479,7 @@ Voltmètre /ampèremètre
     :width: 300 px
     :align: left
 
-    Volt ampère schéma de cablage initial 
+    Volt ampère schéma de câblage initial 
 
 |clearer|
 
@@ -487,14 +487,27 @@ Voltmètre /ampèremètre
 
 .. _`How to Make a Digital Voltmeter and Ampere Meter at Home - Homemade Myltimeter` : https://www.youtube.com/watch?v=vPSaLIBBoh4
 
-.. image:: images/va_wiring.svg 
+.. figure:: images/va_wiring.svg 
    :width: 300 px
+   :align: left
+
+   Câblage interne et utilisation
+
+|clearer|
+
+.. figure:: images/VAInWork.jpg
+    :width: 600 px
+    :align: left
+
+    Module Volt ampère première utilisation 
+
 
 Rendu Freecad
 ----------------------------------------------------------------------------------------------------
 
 .. image:: images/moduleVA.jpg 
-   :width: 600 px
+    :width: 300 px
+    :align: left
 
 
 ====================================================================================================
@@ -583,6 +596,40 @@ Rendu FreeCAD
 ----------------------------------------------------------------------------------------------------
 .. image:: images/tripleVolmetre.jpg 
    :width: 600 px
+
+====================================================================================================
+Module ampèremètre
+====================================================================================================
+`High Precision Ammeter - Amber`_ sur PC Board.ca 11.90 $ sans les frais de port
+
+Sur AMAZON : peu de choix : `Harilla DC 3.5-30V 5 Digit Digital LED Ampèremètre Ampèremètre Panneau Car - Jaune`_
+et 22€ pas en prime !
+
+Tellement fun un ampèremètre continu à aiguille : 
+
+`Mini-ampèremètre analogique  2.5 Précision Ampèremètre (DC 0-5A)`_ là encore pas énormémet de choix
+15.47€
+
+.. image:: images/amperemetreDigitalPrecision_51c1JswDGgL._AC_SL1024_.jpg 
+   :width: 300 px
+
+
+`Version 3A CC`_ 10.39€
+
+`En version AC 0-5A`_
+
+
+.. _`High Precision Ammeter - Amber` : https://www.pcboard.ca/digital-ammeter-high-precision-amber
+
+.. _`Harilla DC 3.5-30V 5 Digit Digital LED Ampèremètre Ampèremètre Panneau Car - Jaune` : https://www.amazon.fr/Harilla-3-5-30V-Digital-Amp%C3%A8rem%C3%A8tre-Panneau/dp/B08R34SXPH/ref=sr_1_23?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3SWMM4HKE1BQB&keywords=Digital+amperemetre&qid=1649549353&sprefix=digital+amperemetre%2Caps%2C100&sr=8-23
+
+.. _`Mini-ampèremètre analogique  2.5 Précision Ampèremètre (DC 0-5A)` : https://www.amazon.fr/Mini-amp%C3%A8rem%C3%A8tre-analogique-Professionnel-Pr%C3%A9cision-Amp%C3%A8rem%C3%A8tre/dp/B07RSQDQB4/ref=sr_1_5?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3FHEH37LOASTV&keywords=pr%C3%A9cision%2Bamp%C3%A8rem%C3%A8tre%2Bpanneau&qid=1650790527&sprefix=pr%C3%A9cision%2Bamp%C3%A8rem%C3%A8tre%2Bpanneau%2B%2Caps%2C57&sr=8-5&th=1
+
+.. _`Version 3A CC` : https://www.amazon.fr/Heschen-85-C1-3-rectangle-Panneau-Amp%C3%A8rem%C3%A8tre/dp/B072BNXHM2/ref=sr_1_18?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=25ULUI5QE2J55&keywords=pr%C3%A9cision%2Bamp%C3%A8rem%C3%A8tre%2Bpanneau&qid=1650820644&sprefix=pr%C3%A9cision%2Bamp%C3%A8rem%C3%A8tre%2Bpanneau%2Caps%2C106&sr=8-18
+
+.. _`En version AC 0-5A` : https://www.amazon.fr/Classe-pr%C3%A9cision-Analogique-0-5A-gamme-Panneau/dp/B009PKGQZY/ref=sr_1_43?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=25ULUI5QE2J55&keywords=pr%C3%A9cision%2Bamp%C3%A8rem%C3%A8tre%2Bpanneau&qid=1650820644&sprefix=pr%C3%A9cision%2Bamp%C3%A8rem%C3%A8tre%2Bpanneau%2Caps%2C106&sr=8-43
+
+
 
 
 ====================================================================================================

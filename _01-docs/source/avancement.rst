@@ -64,12 +64,7 @@ schéma de câblage des modules
     - **Oscillo**
     - VA
 
-Câblage alim 24V
-----------------------------------------------------------------------------------------------------
-- faire cable 220V
-- faire cable XT60
-- En profiter pour cable rallonge XT60
-    - avec gros fil dans le tiroir
+
 
 Outillage pour la soudure des XT60
 ----------------------------------------------------------------------------------------------------
@@ -87,19 +82,32 @@ Outillage pour la soudure des XT60
     - préparer GCODE
 - re-tester la nouvelle version
 
+XT60 : boîtier
+----------------------------------------------------------------------------------------------------
+- dessi 3D avec vis pointeau
+
 Concept du tiroir
 ----------------------------------------------------------------------------------------------------
 - rangement sonde/fils
     -  principe du petit tiroir basculant ou pas **à conceptualiser**
 
-Module primaire
+Module primaire prises PC multiples
 ----------------------------------------------------------------------------------------------------
 - recherche des standard de prises
 - appro des embase correspondantes
 - test des embase en question avant design
 
 - Design du module
-  
+
+Module alim 24V/10A
+----------------------------------------------------------------------------------------------------
+- faire cable 220V
+- faire cable XT60
+- En profiter pour cable rallonge XT60
+    - avec gros fil dans le tiroir
+- Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V
+
+
 Module oscilo
 ----------------------------------------------------------------------------------------------------
 - module oscillo
@@ -120,6 +128,7 @@ Module oscilo
         - Base **OK**
         - Test mécanique **KO**
             - reprendre l'emprunte de la BNC
+        - ré-imprimer la FAV
     - câblage **OK**
     - régler le module DCDC **OK**
     - test électrique **OK**
@@ -127,8 +136,6 @@ Module oscilo
 
 Module voltmère / ampéremètre 
 ----------------------------------------------------------------------------------------------------
-- Trouver schéma de câblage
-    - essayer à blanc
 - modélisation 3D **OK**
     - réutiliser connecteurs AUDIO **OK**
     - rechercher model 3D du module utilisé **OK**
@@ -148,9 +155,37 @@ Module voltmère / ampéremètre
    - Fav **OK**
    - Base **OK**
    - teste mécanique **OK**
-- câblage
-    - couper barres laiton 78.62mm
+- câblage **OK**
+    - couper barres laiton 78.62mm **OK**
 - test électrique
+     - à compléter en ampèremètre (peu précis dans les faibles courants)
+- nomenclatures
+- schéma
+- photo
+    - une incluse **OK**
+
+module triple tiny Voltmètre
+----------------------------------------------------------------------------------------------------
+- design 3D
+    - model volmetre sur GRABCAD **KO**
+        - mini-dc-voltmeter-1.snapshot.5.zip : entraxe incorecte **KO**
+        - dc-0-30v-voltmeter-panel-mount-1.snapshot.3.zip **KO**
+        - led-dc-digital-voltmeter-5v-display-green-1.snapshot.5 **OK**
+
+- export STL **OK**
+- préparation GCODE **OK**
+   - Fav **OK**
+   - Base 90mm **OK**
+- impression
+   - Fav
+   - Base
+   - teste mécanique
+- câblage
+    - couper barres laiton 73.62mm (vérifié le 24/4)
+- test électrique
+
+- nomenclatures
+- schéma
 
 Module Générateur de fonction
 ----------------------------------------------------------------------------------------------------
@@ -166,26 +201,13 @@ Module Générateur de fonction
     - original Instructables
         - DL code **OK**
         - Etude code **OK**
+- refonte du code **DELAYED**
+    - Trop de boulot peut-être pour une version ultérieure
 
-module triple tiny Voltmètre
+Module batterie Lidl
 ----------------------------------------------------------------------------------------------------
-- design 3D
-    - model volmetre sur GRABCAD **KO**
-        - mini-dc-voltmeter-1.snapshot.5.zip : entraxe incorecte **KO**
-        - dc-0-30v-voltmeter-panel-mount-1.snapshot.3.zip **KO**
-        - led-dc-digital-voltmeter-5v-display-green-1.snapshot.5 **OK**
-
-- export STL
-- préparation GCODE
-   - Fav
-   - Base 95mm
-- impression
-   - Fav
-   - Base
-   - teste mécanique
-- câblage
-    - couper barres laiton 73.62mm
-- test électrique
+- Modéliser le haut de la batterie
+- modéliser le module
 
 
 
@@ -193,16 +215,10 @@ module ampèremètre seul 0/3A
 ----------------------------------------------------------------------------------------------------
 - trouver la bête
 
-https://www.pcboard.ca/digital-ammeter-high-precision-amber
-
-https://www.amazon.fr/Harilla-3-5-30V-Digital-Amp%C3%A8rem%C3%A8tre-Panneau/dp/B08R34SXPH/ref=sr_1_23?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3SWMM4HKE1BQB&keywords=Digital+amperemetre&qid=1649549353&sprefix=digital+amperemetre%2Caps%2C100&sr=8-23
 
 
 
 
-Module fer à souder
-----------------------------------------------------------------------------------------------------
-- tout
 
 Module ventilation
 ----------------------------------------------------------------------------------------------------
@@ -212,9 +228,7 @@ Module LCR mètre
 ----------------------------------------------------------------------------------------------------
 - tout
 
-Module batterie Lidl
-----------------------------------------------------------------------------------------------------
-- tout
+
 
 Étagère system
 ----------------------------------------------------------------------------------------------------
@@ -229,6 +243,10 @@ Dévidoir de fil
     - AWG 24
 
 6 couleurs
+
+Module fer à souder
+----------------------------------------------------------------------------------------------------
+- tout : présente peu d'intérêt avec le fer TS100 un simple cable de bout de chaîne pourrait suffire !
 
 Appro 
 ----------------------------------------------------------------------------------------------------

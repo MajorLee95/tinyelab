@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="108.75075mm"
-   height="109.17066mm"
-   viewBox="0 0 108.75075 109.17066"
+   width="142.31798mm"
+   height="172.75816mm"
+   viewBox="0 0 142.31798 172.75816"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
@@ -23,26 +23,70 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.0482005"
-     inkscape:cx="149.3035"
-     inkscape:cy="279.04968"
-     inkscape:window-width="2048"
-     inkscape:window-height="1129"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
+     inkscape:zoom="0.52410025"
+     inkscape:cx="81.091356"
+     inkscape:cy="684.02944"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="367"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     inkscape:snap-global="false" />
   <defs
-     id="defs2" />
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker15103"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path15101" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1939"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1937" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1555" />
+    </marker>
+  </defs>
   <g
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-33.35029,-51.912786)">
+     transform="translate(-8.1086183,-48.153704)">
     <path
        style="fill:none;stroke:#808080;stroke-width:1.965;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 125.49835,147.76308 c 0,11.15534 -24.42973,12.34697 -30.476416,12.33781 -5.86113,-0.009 -27.520576,-0.8162 -31.636566,-11.98084"
@@ -174,5 +218,69 @@
          style="font-size:7.76111px;stroke-width:0.264583"
          x="117.59549"
          y="108.84969">I+</tspan></text>
+    <rect
+       style="fill:none;stroke:#000080;stroke-width:1.965"
+       id="rect1358"
+       width="114.59718"
+       height="115.10203"
+       x="31.078539"
+       y="49.136204" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 8.1086183,194.78065 H 28.049539"
+       id="path1415" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.765;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 13.914203,199.32415 h 8.329751"
+       id="path1417" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="M 18.71012,194.52823 V 176.60664 H 63.135463 V 150.60772"
+       id="path1550"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1939)"
+       d="m 19.068952,199.32415 v 19.18367 l 29.15413,0 v -68.05584"
+       id="path1935"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.465;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect2106"
+       width="28.1954"
+       height="19.496059"
+       x="121.4987"
+       y="186.1113" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="123.66399"
+       y="197.91399"
+       id="text8042"><tspan
+         sodipodi:role="line"
+         id="tspan8040"
+         style="font-size:5.64444px;stroke-width:0.264583"
+         x="123.66399"
+         y="197.91399">CHARGE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="142.048"
+       y="179.7977"
+       id="text3188"><tspan
+         sodipodi:role="line"
+         id="tspan3186"
+         style="font-size:5.64444px;fill:#ff0000;stroke-width:0.264583"
+         x="142.048"
+         y="179.7977">+</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker15103)"
+       d="m 126.49206,152.37464 v 16.15467 h 10.09667 v 17.25899"
+       id="path15099"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1939)"
+       d="m 136.84114,206.0763 v 14.70327 h -26.25133 v -70.17185"
+       id="path15111"
+       sodipodi:nodetypes="cccc" />
   </g>
 </svg>
