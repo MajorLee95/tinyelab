@@ -21,7 +21,7 @@ Mettre des photos dans la doc
 
 Mettre projet sous Volab/wiki et sous github
 ----------------------------------------------------------------------------------------------------
-- créer git local
+- créer git local **OK**
 - créer projet github
 - lier projet Github et git local
 - pusher le projet
