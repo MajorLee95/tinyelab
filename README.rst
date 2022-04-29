@@ -13,5 +13,5 @@ Tiny E-LAB
 
 Ce projet est ma contribution au `Projet Tiny e-lab de MarcLuer sur Thyngiverse`_
 
-.. _`https://www.thingiverse.com/thing:2999383`
+.. _`Projet Tiny e-lab de MarcLuer sur Thyngiverse`: https://www.thingiverse.com/thing:2999383
 
