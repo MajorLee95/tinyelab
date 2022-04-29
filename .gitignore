@@ -14,8 +14,8 @@ credential.json
 ## [ Dossiers a ignorer ]
 _00-*/
 
-_10_*/
-_11_*/
+_10-*/
+_11-*/
 
 _
 **/99-*/
