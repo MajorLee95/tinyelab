@@ -86,6 +86,13 @@ XT60 : boîtier
 ----------------------------------------------------------------------------------------------------
 - dessi 3D avec vis pointeau
 
+outillage switch
+----------------------------------------------------------------------------------------------------
+- imprimer
+    - gcode **OK**
+- test méca
+    - trop long, raccourcir de 1 mm
+
 Concept du tiroir
 ----------------------------------------------------------------------------------------------------
 - rangement sonde/fils
@@ -127,8 +134,12 @@ Module oscilo
         - Fav **OK**
         - Base **OK**
         - Test mécanique **KO**
-            - reprendre l'emprunte de la BNC
+            - reprendre l'emprunte de la BNC 3.85 vers 3.35 **OK**
+            - aapliqué aussi à BNC_002 **OK**
         - ré-imprimer la FAV
+            - re-stl **OK**
+            - re-gcode **OK**
+            - re-imprimer
     - câblage **OK**
     - régler le module DCDC **OK**
     - test électrique **OK**
@@ -176,12 +187,12 @@ module triple tiny Voltmètre
 - préparation GCODE **OK**
    - Fav **OK**
    - Base 90mm **OK**
-- impression
-   - Fav
-   - Base
-   - teste mécanique
+- impression **OK**
+   - Fav **OK**
+   - Base **OK**
+   - teste mécanique **OK**
 - câblage
-    - couper barres laiton 73.62mm (vérifié le 24/4)
+    - couper barres laiton 73.62mm (vérifié le 24/4) **OK**
 - test électrique
 
 - nomenclatures
@@ -196,7 +207,7 @@ Module Générateur de fonction
     - Ecran I2C **OK**
     - Alimentation symétrique +10V/-10V cdé le 21/4
     - Ampli op de sortie cdé le 21/4
-- Maquettage
+- Maquettage **OK**
 - Design ARDUINO
     - original Instructables
         - DL code **OK**
@@ -214,15 +225,13 @@ Module batterie Lidl
 module ampèremètre seul 0/3A
 ----------------------------------------------------------------------------------------------------
 - trouver la bête
-
-
-
-
-
+- commande AMAZON à aiguille
 
 Module ventilation
 ----------------------------------------------------------------------------------------------------
 - Tout
+- model ventilo 
+    - Vérifier les dimension **OK**
 
 Module LCR mètre
 ----------------------------------------------------------------------------------------------------
