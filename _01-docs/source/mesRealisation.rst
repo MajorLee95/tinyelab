@@ -175,6 +175,8 @@ Nomenclature de base
 ====================================================================================================
 Alimentation des modules en plus base tension
 ====================================================================================================
+Pour les modules qui en ont besoin !
+
 Module convertisseur réglable 2A
 ----------------------------------------------------------------------------------------------------
 Ce convertisseur est nécessaire quand les éléments du module ne supportent pas des tension d'entrées
@@ -251,6 +253,17 @@ AC/DC adaptateur :
    :width: 600 px
 
 - prise MSI ?
+
+- prise alim Toshiba ADP-75SB BB
+    - diamètre extérieur 5.5
+    - diamètre tige intérieur : 2.7mm voir 2.8difficile à mesurer
+    - Embase verte du LAB à vis conviennent OK ame 2mm environ chez AMAZON5.5x2.1
+
+- Prise male pour le TS100 : l'ame centrale semble plus grosse ci bien que la prise tTOSHIBA avec
+  lame de ressort convient mais pas les verte du LAB. Serait : Port DC5525 5.5x2.5
+
+https://www.amazon.fr/Connecteur-femelle-verser-cam%C3%A9ra-surveillance/dp/B00Z2LMT2O/ref=sr_1_11?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1TMH52S91RFIR&keywords=DC5521&qid=1651395134&sprefix=dc5521%2Caps%2C50&sr=8-11
+
 
 
 .. index::

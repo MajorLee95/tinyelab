@@ -55,6 +55,7 @@ Les nomenclatures
     - Alim DPS3005 **OK**
     - Oscillo **OK**
     - VA
+    - multi-voltmètres
 
 schéma de câblage des modules
 ----------------------------------------------------------------------------------------------------
@@ -84,14 +85,18 @@ Outillage pour la soudure des XT60
 
 XT60 : boîtier
 ----------------------------------------------------------------------------------------------------
-- dessi 3D avec vis pointeau
+- dessin 3D avec vis pointeau
 
 outillage switch
 ----------------------------------------------------------------------------------------------------
 - imprimer
     - gcode **OK**
-- test méca
+- test méca **KO**
     - trop long, raccourcir de 1 mm
+- ré-imprimer
+    - stl
+    - gcode
+- re-tester
 
 Concept du tiroir
 ----------------------------------------------------------------------------------------------------
