@@ -247,22 +247,40 @@ Module primaire
 ====================================================================================================
 AC/DC adaptateur :
 
-- prise pc DELL voir 124-8898 chez RS
+
 
 .. image:: images/emboutPowerPC.jpg 
    :width: 600 px
 
-- prise MSI ?
+- prise pc DELL, diamètre extérieur mesuré: 7.4mm
+
+- prise MSI : diamètre extérieur 7.4mm, même adaptateur pour les TS-100 que pour DELL
 
 - prise alim Toshiba ADP-75SB BB
     - diamètre extérieur 5.5
     - diamètre tige intérieur : 2.7mm voir 2.8difficile à mesurer
-    - Embase verte du LAB à vis conviennent OK ame 2mm environ chez AMAZON5.5x2.1
+    - `Embase verte du LAB à vis`_ conviennent, l'âme 2mm environ chez AMAZON5.5x2.1 DC5520
 
-- Prise male pour le TS100 : l'ame centrale semble plus grosse ci bien que la prise tTOSHIBA avec
-  lame de ressort convient mais pas les verte du LAB. Serait : Port DC5525 5.5x2.5
+- Prise male pour le TS100 : l'âme centrale semble plus grosse ci bien que la prise TOSHIBA avec
+  lame de ressort convient mais pas les verte du LAB. Serait : Port DC5525 5.5x2.5.
+  Chez `AMAZON DC5525`_
 
-https://www.amazon.fr/Connecteur-femelle-verser-cam%C3%A9ra-surveillance/dp/B00Z2LMT2O/ref=sr_1_11?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1TMH52S91RFIR&keywords=DC5521&qid=1651395134&sprefix=dc5521%2Caps%2C50&sr=8-11
+N'ayant pas trouvé simplement d'embase 7.4x5.0mm j'opte pour un adaptateur vers 5.5x5.2 encore du 
+`AMAZON Kafuty 5PCS 7.4 x 5.0 x 0.6MM Connecteur d'adaptateur d'alimentation`_
+
+.. _`AMAZON Kafuty 5PCS 7.4 x 5.0 x 0.6MM Connecteur d'adaptateur d'alimentation` : https://www.amazon.fr/gp/product/B084Z6YDCV/ref=sw_img_1?smid=A1U9HA371QAC83&psc=1
+  
+Donc en résumé pour ce module : 1 XT-60 normal + à l'arrière ou du même côté que le XT ou les 2:
+
+- DC5025
+- `DC5020`_
+
+
+.. _`Embase verte du LAB à vis` : https://www.amazon.fr/Connecteur-femelle-verser-cam%C3%A9ra-surveillance/dp/B00Z2LMT2O/ref=sr_1_11?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1TMH52S91RFIR&keywords=DC5521&qid=1651395134&sprefix=dc5521%2Caps%2C50&sr=8-11
+
+.. _`AMAZON DC5525` : https://www.amazon.fr/gp/product/B01LQGESUO/ref=ox_sc_act_title_2?smid=AQ1IBDB6G2RRD&psc=1
+
+.. _`DC5020` : https://www.amazon.fr/gp/product/B07D4DLJ69/ref=ox_sc_act_title_1?smid=A2HAOQPNQ6T9Y5&psc=1 
 
 
 
@@ -526,7 +544,7 @@ Rendu Freecad
 ====================================================================================================
 Gene de signal
 ====================================================================================================
-Péliminaire
+Préliminaire
 ----------------------------------------------------------------------------------------------------
 `Générateur de Signal XR2206 1Hz -1MHz`_
 
