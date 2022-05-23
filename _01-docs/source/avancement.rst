@@ -12,7 +12,7 @@ Avancement
     :backlinks: top
 
 ====================================================================================================
-A faire
+A faire général
 ====================================================================================================
 Mettre des photos dans la doc
 ----------------------------------------------------------------------------------------------------
@@ -22,9 +22,11 @@ Mettre des photos dans la doc
 Mettre projet sous Volab/wiki et sous github
 ----------------------------------------------------------------------------------------------------
 - créer git local **OK**
+    - Arrêt du versionning par les noms de fichiers
 - créer projet github
 - lier projet Github et git local
 - pusher le projet
+
 - créer github io
 - pusher la doc sur githubio
 - créer un readme.rst au niveau projet
@@ -62,58 +64,95 @@ schéma de câblage des modules
     - USB
     - Module U/I en ligne
     - Alim DPS3005
-    - **Oscillo**
+    - Oscillo **OK**
     - VA
-
-
-
-Outillage pour la soudure des XT60
-----------------------------------------------------------------------------------------------------
-- design 3D
-    - retoucher les dimension du reglet celui de 20CM large **OK**
-- export STL **OK**
-- préparation GCODE **OK**
-- impression **OK**
-- test **OK**
-    - retoucher l'épaisseur du réglet dans la speadsheet v013 **OK**
-    - Ajouter des pieds en haut pour basculer pendant la soudure v014 **OK**
-
-- Ré-imprimer
-    - sortir STL **OK**
-    - préparer GCODE
-- re-tester la nouvelle version
 
 XT60 : boîtier
 ----------------------------------------------------------------------------------------------------
 - dessin 3D avec vis pointeau
 
-module Ui
-----------------------------------------------------------------------------------------------------
-- ré-imprimer la nouvelle face avant
-    - stl
-    - g-code
-- tester mécaniquement
+
 
 outillage switch
 ----------------------------------------------------------------------------------------------------
-- imprimer
+- imprimer **OK**
     - gcode **OK**
 - test méca **KO**
-    - trop long, raccourcir de 1 mm
-- ré-imprimer
-    - stl
-    - gcode
-- re-tester
+    - trop long, raccourcir de 1 mm, modif chanfrein 4x2 vers 5x1 v004
+- ré-imprimer v0004
+    - stl **OK**
+    - gcode **OK**
+    - imprimer **OK**
+- re-tester **OK**
+- documenter !
 
 Concept du tiroir
 ----------------------------------------------------------------------------------------------------
 - rangement sonde/fils
     -  principe du petit tiroir basculant ou pas **à conceptualiser**
 
+====================================================================================================
+A faire modules
+====================================================================================================
+
+Module ventilation
+----------------------------------------------------------------------------------------------------
+- model ventilo 
+    - Vérifier les dimension **OK**
+- design 3D
+    - impression modèle tronqué pour test charnière et système de cran **OK**
+    - intégrer les corrections **OK**
+        - diamètre trou charnière partie mobile et fixe 2+1*jeu ald 2+*2jeu fait en v016 **OK**
+        - augmenter la longueur de la fenêtre de passage de la butée
+        - épaissir le fond de la partie fixe **OK**
+            - j'ai passé le jeu de l'évidement charnière à 1xjeu ald 2x en v017 mais c'est juste **OK**
+            - passer le diam charn à 7.5 ald 8mm v018 **OK**
+    - designer la languette proto v019 **OK**
+    - imprimer languette proto **ABORTED**
+        - stl v019 **OK**
+        - gcode **OK**
+        - imprimer **OK**
+    - faire essais mécanique **ECHEC**
+        - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **(je crois que je l'ai fais en v029)**
+        - augmenter de diamètre de la bille => 8mm  **ABORTED**
+        - Abandonner l'idée de lame et de bille imprimée regarder coté bille métal **ABORTED**
+    - Inclinateur à base d'aimant (solution à billes abandonnée)
+        - dessiner partie fixe
+        - dessiner partie mobile actuelle v027
+
+
+        - imprimer version tronquée mobile v027
+            - export stl trunqué
+                - export step **OK**
+                - import **OK**
+                - opération booleen (fichier freecad non concervé) **OK**
+                - export stl **OK**
+            - gcode (cura) **OK**
+                - gestion des supports : essayer version sans support **OK**
+            - impression
+
+        - imprimer version tronquée fixe
+            - export stl trunqué
+                - export step
+                - import
+                - opération booleen
+                - export stl
+            - gcode
+            - impression
+        - monter
+        - tester
+
+
+
+
+
+
+
+
 Module primaire prises PC multiples
 ----------------------------------------------------------------------------------------------------
-- recherche des standard de prises
-- appro des embase correspondantes
+- recherche des standard de prises **OK**
+- appro des embase correspondantes **OK**
 - test des embase en question avant design
 
 - Design du module
@@ -129,33 +168,9 @@ Module alim 24V/10A
 
 Module oscilo
 ----------------------------------------------------------------------------------------------------
-- module oscillo
-    - design FreeCAD v003 sur base 006.4  **OK**
-    - Reprendre la base v007.dernière  **OK**
-    - ajouter BNC **OK**
-        - code RS 680-7371 **OK**
-    - ajouter module alimentation **OK**
-        - modéliser module alimentation **OK**
-        - Attention vis Nylon **OK**
-    - test hors boîtier (caractériser l'alimentation) **OK**
-    - export STL **OK**
-    - préparation GCODE **OK**
-        - Fav **OK**
-        - Base 150mm **OK**
-    - impression **OK**
-        - Fav **OK**
-        - Base **OK**
-        - Test mécanique **KO**
-            - reprendre l'emprunte de la BNC 3.85 vers 3.35 **OK**
-            - aapliqué aussi à BNC_002 **OK**
-        - ré-imprimer la FAV
-            - re-stl **OK**
-            - re-gcode **OK**
-            - re-imprimer
-    - câblage **OK**
-    - régler le module DCDC **OK**
-    - test électrique **OK**
-
+- photo
+- schéma **OK**
+- IR
 
 Module voltmère / ampéremètre 
 ----------------------------------------------------------------------------------------------------
@@ -182,9 +197,9 @@ Module voltmère / ampéremètre
     - couper barres laiton 78.62mm **OK**
 - test électrique
      - à compléter en ampèremètre (peu précis dans les faibles courants)
-- nomenclatures
-- schéma
-- photo
+- nomenclatures 
+- schéma **OK**
+- photo **OK**
     - une incluse **OK**
 
 module triple tiny Voltmètre
@@ -214,11 +229,11 @@ Module Générateur de fonction
 ----------------------------------------------------------------------------------------------------
 - appro
     - AD9833 breakout board AMAZON **OK**
-    - Encodeur rotatif (au lab) cdé le 21/4
+    - Encodeur rotatif (au lab) cdé le 21/4 **OK**
     - NANO **OK**
     - Ecran I2C **OK**
-    - Alimentation symétrique +10V/-10V cdé le 21/4
-    - Ampli op de sortie cdé le 21/4
+    - Alimentation symétrique +10V/-10V cdé le 21/4 **OK**
+    - Ampli op de sortie cdé le 21/4 **OK**
 - Maquettage **OK**
 - Design ARDUINO
     - original Instructables
@@ -226,6 +241,7 @@ Module Générateur de fonction
         - Etude code **OK**
 - refonte du code **DELAYED**
     - Trop de boulot peut-être pour une version ultérieure
+- 3D retouche BNC emprunte v008 **OK**
 
 Module batterie Lidl
 ----------------------------------------------------------------------------------------------------
@@ -239,11 +255,6 @@ module ampèremètre seul 0/3A
 - trouver la bête
 - commande AMAZON à aiguille
 
-Module ventilation
-----------------------------------------------------------------------------------------------------
-- Tout
-- model ventilo 
-    - Vérifier les dimension **OK**
 
 Module LCR mètre
 ----------------------------------------------------------------------------------------------------
@@ -268,6 +279,16 @@ Dévidoir de fil
 Module fer à souder
 ----------------------------------------------------------------------------------------------------
 - tout : présente peu d'intérêt avec le fer TS100 un simple cable de bout de chaîne pourrait suffire !
+
+
+Module Horloge et musique
+----------------------------------------------------------------------------------------------------
+A faire.
+
+Module renvoi d'angle
+----------------------------------------------------------------------------------------------------
+En accordéon réglable.
+
 
 Appro 
 ----------------------------------------------------------------------------------------------------
@@ -353,8 +374,61 @@ Module alim DPS3005
     - câblage **OK**
     - test **OK**
 
+Module oscilo
+----------------------------------------------------------------------------------------------------
+- module oscillo
+    - design FreeCAD v003 sur base 006.4  **OK**
+    - Reprendre la base v007.dernière  **OK**
+    - ajouter BNC **OK**
+        - code RS 680-7371 **OK**
+    - ajouter module alimentation **OK**
+        - modéliser module alimentation **OK**
+        - Attention vis Nylon **OK**
+    - test hors boîtier (caractériser l'alimentation) **OK**
+    - export STL **OK**
+    - préparation GCODE **OK**
+        - Fav **OK**
+        - Base 150mm **OK**
+    - impression **OK**
+        - Fav **OK**
+        - Base **OK**
+        - Test mécanique **KO**
+            - reprendre l'emprunte de la BNC 3.85 vers 3.35 **OK**
+            - aapliqué aussi à BNC_002 **OK**
+    - câblage **OK**
+    - régler le module DCDC **OK**
+    - test électrique **OK**
+    - module oscillo
+        - ré-imprimer la FAV
+            - re-stl **OK**
+            - re-gcode **OK**
+            - re-imprimer **OK**
+        - tester montage mécanique BNC **OK**
 
+Outillage pour la soudure des XT60
+----------------------------------------------------------------------------------------------------
+- design 3D **OK**
+    - retoucher les dimension du reglet celui de 20CM large **OK**
+- export STL **OK**
+- préparation GCODE **OK**
+- impression **OK**
+- test **OK**
+    - retoucher l'épaisseur du réglet dans la speadsheet v013 **OK**
+    - Ajouter des pieds en haut pour basculer pendant la soudure v014 **OK**
 
+- Ré-imprimer v2_014
+    - sortir STL **OK**
+    - préparer GCODE **OK**
+- re-tester la nouvelle version **OK**
+
+module Ui
+----------------------------------------------------------------------------------------------------
+- ré-imprimer la nouvelle face avant v012 **ABORTED**
+    - stl **OK**
+    - g-code **OK**
+    - imprimer **OK**
+- tester mécaniquement **ECHEC et ABANDON**
+- collage du module **OK**
 
 ====================================================================================================
 Weblinks

@@ -301,6 +301,10 @@ Module mesure Tension/courant de la ligne
 Le but de ce module est d'indiquer la tension et le courant consommé par les modules qui se trouvent
 après lui dans la chaîne. C'est le seul module qui n'est pas en parallèle.
 
+
+.. index::
+    pair: Outillages; XT60
+
 ====================================================================================================
 Outillage pour souder les XT60
 ====================================================================================================
@@ -397,6 +401,13 @@ BNC : code RS :  680-7371, modèle directement récupérer et mis en fichier Fre
 
    Ici 9V cf. `Alimentation des modules en plus base tension`_
 
+Oscillo schéma de câblage
+----------------------------------------------------------------------------------------------------
+
+.. image:: images/oscillosch_220504_1808.svg 
+   :width: 600 px
+
+
 Rendu FreeCad
 ----------------------------------------------------------------------------------------------------
 .. image:: images/oscillo.jpg 
@@ -412,6 +423,9 @@ Nomenclature oscillo DSO138
    :align: left
    :header-rows: 1
 
+
+.. index::
+    pair: Modules; Alim
 
 ====================================================================================================
 Alimentation stabilisé DPS3005
@@ -501,6 +515,8 @@ Nomenclature module DPS3005
    :align: left
    :header-rows: 1
 
+.. index::
+    pair: Modules; Volt/ampèremètre
 
 ====================================================================================================
 Voltmètre /ampèremètre
@@ -540,6 +556,11 @@ Rendu Freecad
     :width: 300 px
     :align: left
 
+|clearer|
+
+
+.. index::
+    pair: Modules; GénéBF
 
 ====================================================================================================
 Gene de signal
@@ -561,6 +582,8 @@ Base AD9833 :download:`datasheet<fichiersJoints/ad9833.pdf>`
 
 .. image:: images/schOriginalGenFunc.png 
    :width: 600 px
+
+
 
 
 Maquettage
@@ -603,6 +626,8 @@ Modélisation 3D
 
 KICAD project started.
 
+.. index::
+    pair: Modules; PARKSIDE
 
 ====================================================================================================
 Module Parkside
@@ -627,6 +652,20 @@ Rendu FreeCAD
 ----------------------------------------------------------------------------------------------------
 .. image:: images/tripleVolmetre.jpg 
    :width: 600 px
+
+.. index::
+    pair: Modules; Ventilo
+
+====================================================================================================
+Module ventilo
+====================================================================================================
+
+
+
+Diamètre ventilateur 8cm, souhait : inclinable avec éclairage à LED et filtre
+
+
+
 
 ====================================================================================================
 Module ampèremètre
