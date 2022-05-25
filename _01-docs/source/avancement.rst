@@ -23,9 +23,9 @@ Mettre projet sous Volab/wiki et sous github
 ----------------------------------------------------------------------------------------------------
 - créer git local **OK**
     - Arrêt du versionning par les noms de fichiers
-- créer projet github
-- lier projet Github et git local
-- pusher le projet
+- créer projet github **OK**
+- lier projet Github et git local (git ls-remote) **OK**
+- pusher le projet **OK**
 
 - créer github io
 - pusher la doc sur githubio
