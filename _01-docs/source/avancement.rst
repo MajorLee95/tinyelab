@@ -116,31 +116,43 @@ Module ventilation
         - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **(je crois que je l'ai fais en v029)**
         - augmenter de diamètre de la bille => 8mm  **ABORTED**
         - Abandonner l'idée de lame et de bille imprimée regarder coté bille métal **ABORTED**
-    - Inclinateur à base d'aimant (solution à billes abandonnée)
-        - dessiner partie fixe
-        - dessiner partie mobile actuelle v027
+    - Inclinateur à base d'aimant (solution à billes abandonnée)  **ABORTED**
+        - dessiner partie fixe **OK**
+        - dessiner partie mobile actuelle v027 **OK**
 
-
-        - imprimer version tronquée mobile v027
-            - export stl trunqué
+        - imprimer version tronquée **mobile** v027 **OK**
+            - export stl trunqué **OK**
                 - export step **OK**
                 - import **OK**
                 - opération booleen (fichier freecad non concervé) **OK**
                 - export stl **OK**
             - gcode (cura) **OK**
                 - gestion des supports : essayer version sans support **OK**
-            - impression
+            - impression **OK**
 
-        - imprimer version tronquée fixe
-            - export stl trunqué
-                - export step
-                - import
-                - opération booleen
-                - export stl
-            - gcode
-            - impression
-        - monter
-        - tester
+        - imprimer version tronquée **fixe** **OK**
+            - export stl trunqué **OK**
+                - export step **OK**
+                - import **OK**
+                - opération booleen **OK**
+                - export stl **OK**
+            - gcode **OK**
+            - impression **OK**
+        - monter **OK**
+        - tester : trop faible **ECHEC**
+        - Essais avec les aimant en long
+            - nouvelle branche **aimantsEnLong**
+            - dessiner **OK**
+            - exporter
+            - imprimer
+            - tester
+  
+    - Inclinateur à base de verrou élastique => version 028
+        - dessiner : nouvelle branche git : **ventiloSystemInclinaison**
+            - sur le côté droit du module.
+            - sur la partie fixe une languette en arc de cercle de 1 mm d'épaisseur
+            - languette rapporté pour simplifier l'impression
+            - sur la partie mobile : des crans
 
 
 
