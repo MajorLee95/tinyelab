@@ -140,12 +140,14 @@ Module ventilation
             - impression **OK**
         - monter **OK**
         - tester : trop faible **ECHEC**
+
         - Essais avec les aimant en long
             - nouvelle branche **aimantsEnLong**
             - dessiner **OK**
             - exporter
             - imprimer
             - tester
+
   
     - Inclinateur à base de verrou élastique => version 028
         - dessiner : nouvelle branche git : **ventiloSystemInclinaison**
