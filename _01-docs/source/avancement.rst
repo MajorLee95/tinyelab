@@ -169,6 +169,12 @@ Module primaire prises PC multiples
 
 - Design du module
 
+Module batterie Lidl
+----------------------------------------------------------------------------------------------------
+- Modéliser le haut de la batterie
+- modéliser le module
+
+
 Module alim 24V/10A
 ----------------------------------------------------------------------------------------------------
 - faire cable 220V
@@ -178,62 +184,14 @@ Module alim 24V/10A
 - Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V
 
 
-Module oscilo
+Module 3.3, 5 et +12-12
 ----------------------------------------------------------------------------------------------------
-- photo
-- schéma **OK**
-- IR
+Alim fixe avec les 3 alimentations principales
 
-Module voltmère / ampéremètre 
-----------------------------------------------------------------------------------------------------
-- modélisation 3D **OK**
-    - réutiliser connecteurs AUDIO **OK**
-    - rechercher model 3D du module utilisé **OK**
-        - vérifier les dimensions **OK**
-            - en déduire taille trou **OK**
-        - intégrer step dans un fichier Freecad avec spreadsheet **OK**
-    - 4 fiches bananes **OK**
-- Rechercher schéma de câblage version 3 gros fils, sérigraphié **OK**
-    - rouge VI, verts I+,  Noir COM **OK**
-    - finir svg de câblage **OK**
 
-- export STL **OK**
-- préparation GCODE **OK**
-   - Fav **OK**
-   - Base 95mm **OK**
-- impression **OK**
-   - Fav **OK**
-   - Base **OK**
-   - teste mécanique **OK**
-- câblage **OK**
-    - couper barres laiton 78.62mm **OK**
-- test électrique
-     - à compléter en ampèremètre (peu précis dans les faibles courants)
-- nomenclatures 
-- schéma **OK**
-- photo **OK**
-    - une incluse **OK**
 
 module triple tiny Voltmètre
 ----------------------------------------------------------------------------------------------------
-- design 3D
-    - model volmetre sur GRABCAD **KO**
-        - mini-dc-voltmeter-1.snapshot.5.zip : entraxe incorecte **KO**
-        - dc-0-30v-voltmeter-panel-mount-1.snapshot.3.zip **KO**
-        - led-dc-digital-voltmeter-5v-display-green-1.snapshot.5 **OK**
-
-- export STL **OK**
-- préparation GCODE **OK**
-   - Fav **OK**
-   - Base 90mm **OK**
-- impression **OK**
-   - Fav **OK**
-   - Base **OK**
-   - teste mécanique **OK**
-- câblage
-    - couper barres laiton 73.62mm (vérifié le 24/4) **OK**
-- test électrique
-
 - nomenclatures
 - schéma
 
@@ -255,10 +213,7 @@ Module Générateur de fonction
     - Trop de boulot peut-être pour une version ultérieure
 - 3D retouche BNC emprunte v008 **OK**
 
-Module batterie Lidl
-----------------------------------------------------------------------------------------------------
-- Modéliser le haut de la batterie
-- modéliser le module
+
 
 
 
@@ -301,16 +256,39 @@ Module renvoi d'angle
 ----------------------------------------------------------------------------------------------------
 En accordéon réglable.
 
+====================================================================================================
+A terminer
+====================================================================================================
+
+Module oscilo
+----------------------------------------------------------------------------------------------------
+- photo
+- schéma **OK**
+- IR
+
+
+Module voltmère / ampéremètre 
+----------------------------------------------------------------------------------------------------
+- test électrique plus complet
+- photo **OK**
+
+module triple tiny Voltmètre
+----------------------------------------------------------------------------------------------------
+- test électrique + réglage **OK**
+- photo
+- nomenclatures
+- schéma
+
+
+====================================================================================================
+Fait (pour mémoire)
+====================================================================================================
 
 Appro 
 ----------------------------------------------------------------------------------------------------
 - alim 24V/10A commandée AMAZON le 4/4/22 24€ **OK**
 - approvisionner tige laiton 3mm voire 2.5mm **OK**
 
-
-====================================================================================================
-Fait (pour mémoire)
-====================================================================================================
 BASE V008.1
 ----------------------------------------------------------------------------------------------------
 Passage des vis FAV en M3x6 ald M3x10 v008.1 **OK**
@@ -441,6 +419,60 @@ module Ui
     - imprimer **OK**
 - tester mécaniquement **ECHEC et ABANDON**
 - collage du module **OK**
+
+Module voltmère / ampéremètre 
+----------------------------------------------------------------------------------------------------
+- modélisation 3D **OK**
+    - réutiliser connecteurs AUDIO **OK**
+    - rechercher model 3D du module utilisé **OK**
+        - vérifier les dimensions **OK**
+            - en déduire taille trou **OK**
+        - intégrer step dans un fichier Freecad avec spreadsheet **OK**
+    - 4 fiches bananes **OK**
+- Rechercher schéma de câblage version 3 gros fils, sérigraphié **OK**
+    - rouge VI, verts I+,  Noir COM **OK**
+    - finir svg de câblage **OK**
+
+- export STL **OK**
+- préparation GCODE **OK**
+   - Fav **OK**
+   - Base 95mm **OK**
+- impression **OK**
+   - Fav **OK**
+   - Base **OK**
+   - teste mécanique **OK**
+- câblage **OK**
+    - couper barres laiton 78.62mm **OK**
+- test électrique
+     - à compléter en ampèremètre (peu précis dans les faibles courants)
+- nomenclatures 
+- schéma **OK**
+- photo **OK**
+    - une incluse **OK**
+
+
+module triple tiny Voltmètre
+----------------------------------------------------------------------------------------------------
+- design 3D **OK**
+    - model volmetre sur GRABCAD **KO**
+        - mini-dc-voltmeter-1.snapshot.5.zip : entraxe incorecte **KO**
+        - dc-0-30v-voltmeter-panel-mount-1.snapshot.3.zip **KO**
+        - led-dc-digital-voltmeter-5v-display-green-1.snapshot.5 **OK**
+
+- export STL **OK**
+- préparation GCODE **OK**
+   - Fav **OK**
+   - Base 90mm **OK**
+- impression **OK**
+   - Fav **OK**
+   - Base **OK**
+   - teste mécanique **OK**
+- câblage
+    - couper barres laiton 73.62mm (vérifié le 24/4) **OK**
+- test électrique
+
+- nomenclatures
+- schéma
 
 ====================================================================================================
 Weblinks
