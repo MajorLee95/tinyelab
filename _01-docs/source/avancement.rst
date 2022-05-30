@@ -113,7 +113,7 @@ Module ventilation
         - gcode **OK**
         - imprimer **OK**
     - faire essais mécanique **ECHEC**
-        - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **(je crois que je l'ai fais en v029)**
+        
         - augmenter de diamètre de la bille => 8mm  **ABORTED**
         - Abandonner l'idée de lame et de bille imprimée regarder coté bille métal **ABORTED**
     - Inclinateur à base d'aimant (solution à billes abandonnée)  **ABORTED**
@@ -155,7 +155,7 @@ Module ventilation
             - sur la partie fixe une languette en arc de cercle de 1 mm d'épaisseur
             - languette rapporté pour simplifier l'impression
             - sur la partie mobile : des crans
-
+    - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm
 
 
 
