@@ -151,11 +151,21 @@ Module ventilation
   
     - Inclinateur à base de verrou élastique => version 028
         - dessiner : nouvelle branche git : **ventiloSystemInclinaison**
-            - sur le côté droit du module.
-            - sur la partie fixe une languette en arc de cercle de 1 mm d'épaisseur
-            - languette rapporté pour simplifier l'impression
-            - sur la partie mobile : des crans
-    - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm
+            - sur le côté droit du module. **OK**
+            - sur la partie fixe une languette en arc de cercle de 1 mm d'épaisseur **OK**
+            - languette rapporté pour simplifier l'impression **OK**
+            - sur la partie mobile : des crans (trous cylindriques) **OK**
+            - impression languette, poignee
+                - stl, gcode **OK**
+                - impression
+            - impression partie fixe tronquee
+                - export step, tronquage, export stl, gcode **OK**
+                - impression
+            - impression partie fixe tronquee **OK**
+                - export step, tronquage, export stl, gcode
+                - impression
+            - test
+    - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **OK**
 
 
 
