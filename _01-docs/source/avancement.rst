@@ -155,22 +155,32 @@ Module ventilation
             - sur la partie fixe une languette en arc de cercle de 1 mm d'épaisseur **OK**
             - languette rapporté pour simplifier l'impression **OK**
             - sur la partie mobile : des crans (trous cylindriques) **OK**
-            - impression languette, poignee
+            - impression languette, poignee **OK**
                 - stl, gcode **OK**
-                - impression
-            - impression partie fixe tronquee
+                - impression **OK**
+            - impression partie fixe tronquee **OK**
                 - export step, tronquage, export stl, gcode **OK**
-                - impression
+                - impression **OK**
             - impression partie fixe tronquee **OK**
                 - export step, tronquage, export stl, gcode
-                - impression
-            - test
+                - impression **OK**
+            - test **A REVOIR**
+                - ménager un jeu d'épaisseur d'environ 1mm dans 
+                  la partie plane de la partie fixe plutot mobile à cause de l'emprunte languette
+                - finir design partie fixe avec inter, potar et voltmètre
+                    - récupérer potar 
+                        - sous Grabcad **OK**
+                        - Vérifier dimensions
+                        - appro (mettre dans le carton)
+                - trous passage des fils ventilo et casquette
+                - procéder alors à une impression complète
+                    - partie fixe
+                        - export stl, gcode
+                        - impression
+                    - partie mobile
+                        - export stl, gcode
+                        - impression
     - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **OK**
-
-
-
-
-
 
 
 Module primaire prises PC multiples
