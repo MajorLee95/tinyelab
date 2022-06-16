@@ -16,6 +16,16 @@ Mes réalisations
 .. contents::
     :backlinks: top
 
+====================================================================================================
+Réalisés
+====================================================================================================
+
+.. image:: images/realises01.jpg 
+   :width: 800 px
+
+De la gauche vers la droite : module tension/courant, USB 5V 3A, Oscillo, Alimentation stabilisé, re USB 5V 33A
+
+Manque sur la photo : Voltmètre/ampèremètre, triple tinyVoltmètre
 
 ====================================================================================================
 Règles de nommage
@@ -44,6 +54,10 @@ Versionning
 Pas de git pour ce projet !
 les versions soit 3 digits soit 3 digits. 1 sous version. Je suis indécis. J'aurais tendance à tendre
 vers 3 digits seuls (ça fait moins de caractères à taper)
+
+Passage sous git le 17/04/22 : on perd la notion de version numérotée. On peut s'en sortir avec le 
+hash du commit mais ce passage sous git va de paire avec le passage à des références dans freecad
+pour ne pas avoir de nom de référence qui change tout le temps...
 
 
 ====================================================================================================
@@ -176,6 +190,9 @@ Nomenclature de base
 Alimentation des modules en plus base tension
 ====================================================================================================
 Pour les modules qui en ont besoin !
+
+
+.. _moduleDCDC2596:
 
 Module convertisseur réglable 2A
 ----------------------------------------------------------------------------------------------------
@@ -327,7 +344,7 @@ toto
     pair: Modules; USB 3A
 
 ====================================================================================================
-USB 5V 3A
+USB 5V 3A : ECHEC les modules ne tiennent pas 24V en entrée
 ====================================================================================================
 Convertisseurs: `ANGEEK Lot de 5 modules d'alimentation USB DC 6-24 V à 5 V 3 A`_ chez AMAZON 10€/5
 
@@ -659,13 +676,171 @@ Rendu FreeCAD
 ====================================================================================================
 Module ventilo
 ====================================================================================================
-
-
-
 Diamètre ventilateur 8cm, souhait : inclinable avec éclairage à LED et filtre
 
+Conception du système d'inclinaison
+----------------------------------------------------------------------------------------------------
+Conception du système d'inclinaison, les différentes versions :
+
+- avec demi bille et lame de ressort imprimée : KO trop peu précis
+- avec aimant : presque mais... aimants difficiles à manipuler et pas assez puissants
+- languette et poignée sur le côté : prometteuse (retenue pour le moment)
 
 
+.. |langBille| image:: images/moduleVentiloVersionlanguetteBille.JPG
+   :width: 200 px
+
+.. |aimants| image:: images/moduleVentiloVersionAimants.JPG
+  :width: 300 px
+
+.. list-table::
+   :widths: 27 27 
+   :header-rows: 1
+
+   * - languette et bille imprimée
+     - Version avec aimants
+
+   * - |langBille|
+     - |aimants|
+
+.. _pilotageLedVentilo:
+
+Pilotage éléectrique du ventilo et des LED
+----------------------------------------------------------------------------------------------------
+
+.. image:: images/potarAvecOnOff.jpg 
+   :width: 300 px
+
+`Potentiomètre Rotatif avec Interrupteur chez AMAZON`_
+
+.. _`Potentiomètre Rotatif avec Interrupteur chez AMAZON` : https://www.amazon.fr/gp/product/B096NXK7L1/ref=ox_sc_act_title_1?smid=A2W68NJA5YNXUP&psc=1
+
+Un simple potentiomètre ne convient car la tension d'entrée peut varier de 12 à 24V.
+
+On est obligé de passer par un régulateur et comme on veut que cela soit variable, il convient de 
+limiter le module LM2596S à 12V max en sortie et de déporter le potar
+
+:download:`datasheet du LM2596S<fichiersJoints/lm2596s_dts.pdf>` qui équipe les modules choisi
+:ref:`voir ici<moduleDCDC2596>`
+
+.. image:: images/lm2596sextraitdtsCalculR1R2sch.jpg 
+   :width: 800 px
+
+.. image:: images/lm2596sextraitdtsCalculR1R2.jpg 
+   :width: 600 px
+
+Pour du 12v avec R1 1k on a:
+
+1k * ( 12/1.23 - 1 ) = 8.75k
+
+admettons qu'on veuille aller jusqu'à 14V, il faudrait 10.4K pour R2.
+
+D'après l'équation (1) si R1 augmente Vout diminiue mais R1 doit être comprise entre 240 et 1.5k 
+pas 10k comment les modules fonctionnent ?
+
+Une piste:
+
+.. image:: images/LM2596S-Schematic.jpg 
+   :width: 600 px
+
+Visiblement sur mes modules R1 = 270ohm
+
+vout à 10k = 1.23 * ( 1 + R2/R1) = 1.23 * ( 1 + 10/0.27) = 46V !
+
+vout à 100ohm = 1.23 * ( 1 + 100/270 ) = 1.68V
+
+Pour du 14 en sortie : 0.27 * ( 14 / 1.23 -1 ) = 2.8k max  et pas 13805K
+
+Solution une zener 12V en sortie pour écrêter:
+
+R = 24v - 12v / 0.1A environ 120ohm P=1.2W bof ! 5 résistance 1/4W en //
+
+Revoir le courant 20mA par groupe de 4 led 4 groupe 80mA refaire les calculs.
+
+Avec un digispark
+----------------------------------------------------------------------------------------------------
+:download:`Schema digispark<fichiersJoints/DigisparkSchematicFinal.pdf>`
+
+`Description sur le site`_ Pas fcaile à trouver !
+
+.. _`Description sur le site` : http://digistump.com/wiki/digispark/tutorials/digispark
+
+Pour le PWM et analogRead tout sur une `seule page sur le wiki digistump`_
+
+.. _`seule page sur le wiki digistump` : http://digistump.com/wiki/digispark/tutorials/basics
+
+Attiny85 10bits ADC
+
+.. image:: images/2n7000pinout.jpg 
+   :width: 200 px
+
+|clearer|
+
+.. image:: images/2n700courant.jpg 
+
+
+le 2n700, c'est la première colonne donc 200mA en continu et 500 en pulse.
+
+:download:`2N7000 datasheet<fichiersJoints/2N7000.pdf>`
+
+
+4 LED en // 80mA et le ventilo donné pour 0.33A mesuré 167mA sous 14V
+
+Transistor en D2PAK NTD20N03L27 20A ou 
+:download:`IPD079N06L datasheet<fichiersJoints/Infineon-IPD079N06L3-DS-v02_00-en.pdf>`
+composants que j'avais sous la main mais un cananl N capable de driver 500mA à 1A suffit !
+
+.. image:: images/ipd079N06pinout.jpg 
+   :width: 300 px
+
+.. WARNING:: Encore un échec ! le ventilateur siffle quand il est piloté en pwm. Pour les LED c'est OK
+   :class: without-title
+
+
+
+
+
+Essais d'un ventilo avec pwm : à voir ventilateur commandé sur AMAZON :download:`pure wing2 dts<fichiersJoints/Datasheet_Pure-Wings2_PWM_en.pdf>`
+Il n'est pas dit la frequence à laquelle, il faut piloter ce ventilo, on parle sur les doc de carte mère de 15 à 20kHz.
+
+Changer la fréquence du PWM dans le digispark
+****************************************************************************************************
+`Digispark tricks`_
+
+.. _`Digispark tricks` : http://digistump.com/wiki/digispark/tricks
+
+
+`Trying to increase PWM frequency`_ sur le forum Digispak
+
+.. _`Trying to increase PWM frequency` : http://digistump.com/board/index.php?topic=2312.0
+
+Un peu plus éloigné : `ATTiny85 PWM frequency selection`_
+
+.. _`ATTiny85 PWM frequency selection` : https://forum.arduino.cc/t/attiny85-pwm-frequency-selection/60785/5
+
+Attention les canaux analogiques ne sont pas numéroté de manière logique.
+
+Voir `Digistump basics`_
+
+.. _`Digistump basics` : http://digistump.com/wiki/digispark/tutorials/basics
+
+::
+
+   sensorValue = analogRead(1); //Read P2
+   //To set to input: pinMode(2, INPUT);
+   //THIS IS P2, P2 is analog input 1, so when you are using analog read, you refer to it as 1.
+
+   //sensorValue = analogRead(2); //Read P4
+   //To set to input: pinMode(4, INPUT);
+   //THIS IS P4, P4 is analog input 2, so when you are using analog read, you refer to it as 2.
+
+   //sensorValue = analogRead(3); //Read P3
+   //To set to input: pinMode(3, INPUT);
+   //THIS IS P3, P3 is analog input 3, so when you are using analog read, you refer to it as 3.
+
+   //sensorValue = analogRead(0); //Read P5
+   //To set to input: pinMode(5, INPUT);
+   //THIS IS P5, P5 is analog input 0, so when you are using analog read, you refer to it as 0.
 
 ====================================================================================================
 Module ampèremètre

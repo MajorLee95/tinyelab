@@ -70,26 +70,46 @@ schéma de câblage des modules
 XT60 : boîtier
 ----------------------------------------------------------------------------------------------------
 - dessin 3D avec vis pointeau
+- rien de probant sur le net
+- - prévoir 2 guides fils
+
+.. image:: images/xt60caseGuides.jpg 
 
 
 
 outillage switch
 ----------------------------------------------------------------------------------------------------
-- imprimer **OK**
-    - gcode **OK**
-- test méca **KO**
-    - trop long, raccourcir de 1 mm, modif chanfrein 4x2 vers 5x1 v004
-- ré-imprimer v0004
-    - stl **OK**
-    - gcode **OK**
-    - imprimer **OK**
-- re-tester **OK**
 - documenter !
 
 Concept du tiroir
 ----------------------------------------------------------------------------------------------------
 - rangement sonde/fils
     -  principe du petit tiroir basculant ou pas **à conceptualiser**
+
+====================================================================================================
+A finir modules
+====================================================================================================
+
+Module oscilo
+----------------------------------------------------------------------------------------------------
+- photo
+- schéma **OK**
+- IR
+- Design capo avec boutons
+
+Module voltmère / ampéremètre 
+----------------------------------------------------------------------------------------------------
+- test électrique
+     - à compléter en ampèremètre (peu précis dans les faibles courants)
+- nomenclatures 
+
+
+module triple tiny Voltmètre
+----------------------------------------------------------------------------------------------------
+- test électrique
+
+- nomenclatures
+- schéma
 
 ====================================================================================================
 A faire modules
@@ -99,6 +119,7 @@ Module ventilation
 ----------------------------------------------------------------------------------------------------
 - model ventilo 
     - Vérifier les dimension **OK**
+
 - design 3D
     - impression modèle tronqué pour test charnière et système de cran **OK**
     - intégrer les corrections **OK**
@@ -147,9 +168,8 @@ Module ventilation
             - exporter
             - imprimer
             - tester
-
-  
-    - Inclinateur à base de verrou élastique => version 028
+			
+    - Inclinateur à base de verrou élastique => version 029
         - dessiner : nouvelle branche git : **ventiloSystemInclinaison**
             - sur le côté droit du module. **OK**
             - sur la partie fixe une languette en arc de cercle de 1 mm d'épaisseur **OK**
@@ -162,17 +182,18 @@ Module ventilation
                 - export step, tronquage, export stl, gcode **OK**
                 - impression **OK**
             - impression partie fixe tronquee **OK**
-                - export step, tronquage, export stl, gcode
+                - export step, tronquage, export stl, gcode **OK**
                 - impression **OK**
             - test **A REVOIR**
                 - ménager un jeu d'épaisseur d'environ 1mm dans 
                   la partie plane de la partie fixe plutot mobile à cause de l'emprunte languette
-                - finir design partie fixe avec inter, potar et voltmètre
-                    - récupérer potar 
+                - finir design partie fixe potar avec inter, 
+                    - récupérer potar  avec inter (encombrement)
                         - sous Grabcad **OK**
                         - Vérifier dimensions
-                        - appro (mettre dans le carton)
-                - trous passage des fils ventilo et casquette
+                        - appro (amazon) **OK**
+
+                - trous passage des fils ventilo et casquette **OK**
                 - procéder alors à une impression complète
                     - partie fixe
                         - export stl, gcode
@@ -180,8 +201,24 @@ Module ventilation
                     - partie mobile
                         - export stl, gcode
                         - impression
+                    - casquette
+                        - export stl, gcode
+                        - impression
     - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **OK**
+    - repprendre au propre
+        - trou passage du fil LED (faire un trou carré au rectangle) **OK**
+        - suppression 1mm base partie mobile. **OK**
+        - reprendre le modèle potar avec inter
+        - faire trous pour potar avec inter
+        - paroi casquette led : ep 1mm hauteur 18mm **OK**
 
+- Electronique
+    - Pilotage ventilo et LED : LM2596S limité à 12V cf :ref:`pilotage LEDs et ventilo<pilotageLedVentilo>`
+        - Test réalisé **OK** 
+        - impléménter les 2 voies LED et ventilo **OK**
+        - vérifier le numéro du canal pwm pas de diff, analogRead **OK**
+        - programmer le composant **OK**
+        - Tester les 2 voies **OK**
 
 Module primaire prises PC multiples
 ----------------------------------------------------------------------------------------------------
@@ -206,11 +243,10 @@ Module alim 24V/10A
 - Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V
 
 
+
 Module 3.3, 5 et +12-12
 ----------------------------------------------------------------------------------------------------
 Alim fixe avec les 3 alimentations principales
-
-
 
 module triple tiny Voltmètre
 ----------------------------------------------------------------------------------------------------
@@ -278,9 +314,17 @@ Module renvoi d'angle
 ----------------------------------------------------------------------------------------------------
 En accordéon réglable.
 
+
 ====================================================================================================
 A terminer
 ====================================================================================================
+
+Module 3.3, 5V +/-12V
+----------------------------------------------------------------------------------------------------
+A faire avec fusible réarmables.
+Discutabele pour le 5 et le 3.3v vu que les carte de breadboard l'on, ne reste plus que le +/-15V
+
+
 
 Module oscilo
 ----------------------------------------------------------------------------------------------------
@@ -314,6 +358,50 @@ Appro
 BASE V008.1
 ----------------------------------------------------------------------------------------------------
 Passage des vis FAV en M3x6 ald M3x10 v008.1 **OK**
+
+Module ventilation
+----------------------------------------------------------------------------------------------------
+- design 3D
+    - impression modèle tronqué pour test charnière et système de cran **OK**
+    - intégrer les corrections **OK**
+        - diamètre trou charnière partie mobile et fixe 2+1*jeu ald 2+*2jeu fait en v016 **OK**
+        - augmenter la longueur de la fenêtre de passage de la butée
+        - épaissir le fond de la partie fixe **OK**
+            - j'ai passé le jeu de l'évidement charnière à 1xjeu ald 2x en v017 mais c'est juste **OK**
+            - passer le diam charn à 7.5 ald 8mm v018 **OK**
+    - designer la languette proto v019 **OK**
+    - imprimer languette proto **ABORTED**
+        - stl v019 **OK**
+        - gcode **OK**
+        - imprimer **OK**
+    - faire essais mécanique **ECHEC**
+        - augmenter de diamètre de la bille => 8mm  **ABORTED**
+        - Abandonner l'idée de lame et de bille imprimée regarder coté bille métal **ABORTED**
+    - Inclinateur à base d'aimant (solution à billes abandonnée)  **ABORTED**
+        - dessiner partie fixe **OK**
+        - dessiner partie mobile actuelle v027 **OK**
+        - imprimer version tronquée **mobile** v027 **OK**
+            - export stl trunqué **OK**
+                - export step **OK**
+                - import **OK**
+                - opération booleen (fichier freecad non concervé) **OK**
+                - export stl **OK**
+            - gcode (cura) **OK**
+                - gestion des supports : essayer version sans support **OK**
+            - impression **OK**
+
+        - imprimer version tronquée **fixe** **OK**
+            - export stl trunqué **OK**
+                - export step **OK**
+                - import **OK**
+                - opération booleen **OK**
+                - export stl **OK**
+            - gcode **OK**
+            - impression **OK**
+        - monter **OK**
+        - tester : trop faible **ECHEC**
+
+
 
 
 BASE reprise v007.3
@@ -442,6 +530,26 @@ module Ui
 - tester mécaniquement **ECHEC et ABANDON**
 - collage du module **OK**
 
+module triple tiny Voltmètre
+----------------------------------------------------------------------------------------------------
+- design 3D **OK**
+    - model volmetre sur GRABCAD **KO**
+        - mini-dc-voltmeter-1.snapshot.5.zip : entraxe incorecte **KO**
+        - dc-0-30v-voltmeter-panel-mount-1.snapshot.3.zip **KO**
+        - led-dc-digital-voltmeter-5v-display-green-1.snapshot.5 **OK**
+
+- export STL **OK**
+- préparation GCODE **OK**
+   - Fav **OK**
+   - Base 90mm **OK**
+- impression **OK**
+   - Fav **OK**
+   - Base **OK**
+   - teste mécanique **OK**
+- câblage
+    - couper barres laiton 73.62mm (vérifié le 24/4) **OK**
+
+
 Module voltmère / ampéremètre 
 ----------------------------------------------------------------------------------------------------
 - modélisation 3D **OK**
@@ -465,12 +573,15 @@ Module voltmère / ampéremètre
    - teste mécanique **OK**
 - câblage **OK**
     - couper barres laiton 78.62mm **OK**
+
 - test électrique
      - à compléter en ampèremètre (peu précis dans les faibles courants)
 - nomenclatures 
+
 - schéma **OK**
 - photo **OK**
     - une incluse **OK**
+
 
 
 module triple tiny Voltmètre
@@ -495,6 +606,19 @@ module triple tiny Voltmètre
 
 - nomenclatures
 - schéma
+
+outillage switch
+----------------------------------------------------------------------------------------------------
+- imprimer **OK**
+    - gcode **OK**
+- test méca **KO**
+    - trop long, raccourcir de 1 mm, modif chanfrein 4x2 vers 5x1 v004
+- ré-imprimer v0004
+    - stl **OK**
+    - gcode **OK**
+    - imprimer **OK**
+- re-tester **OK**
+
 
 ====================================================================================================
 Weblinks
