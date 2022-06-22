@@ -67,7 +67,7 @@ schéma de câblage des modules
     - Oscillo **OK**
     - VA
 
-XT60 : boîtier
+XT60 : boîtier ou capot de prise XT60
 ----------------------------------------------------------------------------------------------------
 - dessin 3D avec vis pointeau
 - rien de probant sur le net
@@ -97,7 +97,7 @@ Module oscilo
 - IR
 - Design capo avec boutons
 
-Module voltmère / ampéremètre 
+Module voltmètre / ampèremètre 
 ----------------------------------------------------------------------------------------------------
 - test électrique
      - à compléter en ampèremètre (peu précis dans les faibles courants)
@@ -115,53 +115,19 @@ module triple tiny Voltmètre
 A faire modules
 ====================================================================================================
 
+module USB 3A à refaire sniff
+----------------------------------------------------------------------------------------------------
+- trouver un convertisseur qui tienne
+    - le tester avant de l'intégrer
+
+
+
 Module ventilation
 ----------------------------------------------------------------------------------------------------
 - model ventilo 
     - Vérifier les dimension **OK**
 
 - design 3D
-    - impression modèle tronqué pour test charnière et système de cran **OK**
-    - intégrer les corrections **OK**
-        - diamètre trou charnière partie mobile et fixe 2+1*jeu ald 2+*2jeu fait en v016 **OK**
-        - augmenter la longueur de la fenêtre de passage de la butée
-        - épaissir le fond de la partie fixe **OK**
-            - j'ai passé le jeu de l'évidement charnière à 1xjeu ald 2x en v017 mais c'est juste **OK**
-            - passer le diam charn à 7.5 ald 8mm v018 **OK**
-    - designer la languette proto v019 **OK**
-    - imprimer languette proto **ABORTED**
-        - stl v019 **OK**
-        - gcode **OK**
-        - imprimer **OK**
-    - faire essais mécanique **ECHEC**
-        
-        - augmenter de diamètre de la bille => 8mm  **ABORTED**
-        - Abandonner l'idée de lame et de bille imprimée regarder coté bille métal **ABORTED**
-    - Inclinateur à base d'aimant (solution à billes abandonnée)  **ABORTED**
-        - dessiner partie fixe **OK**
-        - dessiner partie mobile actuelle v027 **OK**
-
-        - imprimer version tronquée **mobile** v027 **OK**
-            - export stl trunqué **OK**
-                - export step **OK**
-                - import **OK**
-                - opération booleen (fichier freecad non concervé) **OK**
-                - export stl **OK**
-            - gcode (cura) **OK**
-                - gestion des supports : essayer version sans support **OK**
-            - impression **OK**
-
-        - imprimer version tronquée **fixe** **OK**
-            - export stl trunqué **OK**
-                - export step **OK**
-                - import **OK**
-                - opération booleen **OK**
-                - export stl **OK**
-            - gcode **OK**
-            - impression **OK**
-        - monter **OK**
-        - tester : trop faible **ECHEC**
-
         - Essais avec les aimant en long
             - nouvelle branche **aimantsEnLong**
             - dessiner **OK**
@@ -187,28 +153,27 @@ Module ventilation
             - test **A REVOIR**
                 - ménager un jeu d'épaisseur d'environ 1mm dans 
                   la partie plane de la partie fixe plutot mobile à cause de l'emprunte languette **OK**
-                - finir design partie fixe potar avec inter, 
+                - finir design partie fixe potar avec inter, **OK**
                     - récupérer potar  avec inter (encombrement)  le switch n'est pas cliquable **ABANDON**
                         - sous Grabcad **OK**
                         - Vérifier dimensions **ABANDON**
                         - appro (amazon) **OK**
-
                 - trous passage des fils ventilo et casquette **OK**
                     - fixe **OK**
                     - mobile **OK**
                 - trous switch désépaissir **OK**
                 - pb casquette paroi LED comment on vis ? des gros trous pour les tête de vis **OK**
 
-    - fixation du Digispark
+    - fixation du Digispark un cube et de la colle **OK**
         - model sous Grabcad ? **OK**
         - conversion vers Freecad **OK**
-        - intégration
-            - design support
-    - design support DCDC
+        - intégration **OK**
+            - design support **OK**
+    - design support DCDC et testé **OK**
 
     - procéder alors à une impression complète
         - partie fixe
-            - export stl, gcode
+            - export stl, gcode **OK**
             - impression
         - partie mobile
             - export stl, gcode **OK**
@@ -217,28 +182,31 @@ Module ventilation
             - export stl, gcode **OK**
             - impression
     - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **OK**
-    - reprendre au propre
+    - reprendre au propre **OK**
         - trou passage du fil LED (faire un trou carré au rectangle) **OK**
         - suppression 1mm base partie mobile. **OK**
         - reprendre le modèle potar avec inter **ABANDON**
-        - faire trous pour potar et inter
-            - vérifier la designation des petits inter
+        - faire trous pour potar et inter **OK**
+            - vérifier la designation des petits inter **OK**
+                - plus le sachet **OK**
+                - sur le site amazon : il y a effectivement erreur sur le produit **OK** 
+                - dessus : KCD1-11 (quand on cherche sur AMAZON on tombe sur les bonnes dimensions) **OK**
         - paroi casquette led : ep 1mm hauteur 18mm **OK**
         - ne pas oublier le trous des fils ventilo/led dans la partie fixe **OK**
 
-- Electronique
+- Électronique
     - Pilotage ventilo et LED : LM2596S limité à 12V cf :ref:`pilotage LEDs et ventilo<pilotageLedVentilo>`
         - Test réalisé **OK** 
-        - impléménter les 2 voies LED et ventilo **OK**
+        - implémenter les 2 voies LED et ventilo **OK**
         - vérifier le numéro du canal pwm pas de diff, analogRead **OK**
         - programmer le composant **OK**
         - Tester les 2 voies **OK**
 
 - imprimer base
-    - exports, prepa
+    - exports, prepa **OK**
     - impression
 - imprimer fav
-    - exports, prepa
+    - exports, prepa **OK**
     - impression
 
 Module primaire prises PC multiples

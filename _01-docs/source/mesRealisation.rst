@@ -346,7 +346,9 @@ Il y est équipé d'un réglet disponible chez Castorama
 
 Largeur : 24mm +/-1 et moins de 1mm d'épaisseur
 
-toto
+====================================================================================================
+capot de Prise XT60
+====================================================================================================
 
 
 .. index::
@@ -770,6 +772,20 @@ R = 24v - 12v / 0.1A environ 120ohm P=1.2W bof ! 5 résistance 1/4W en //
 
 Revoir le courant 20mA par groupe de 4 led 4 groupe 80mA refaire les calculs.
 
+Interrupteurs rpuge miniature
+----------------------------------------------------------------------------------------------------
+Référence `KDC1-11 sur AMAZON`_ en noir mais en rouge ???
+
+.. _`KDC1-11 sur AMAZON` : https://www.amazon.fr/5x-Mini-Interrupteur-SPST-27int003/dp/B0749SC157/ref=sr_1_1?keywords=kcd1-11&qid=1655909025&sr=8-1
+
+J'ai commandé `des XCD en 21*15mm ici`_
+
+.. _`des XCD en 21*15mm ici` : https://www.amazon.fr/gp/product/B085B21DX1/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1
+
+J'ai l'impression qu'il s'agit d'une erreur, sur les autres photo on des KCD1. Un des commentaire 
+avec photo le montre clairement ! Mistère résolu.
+
+
 Avec un digispark
 ----------------------------------------------------------------------------------------------------
 :download:`Schema digispark<fichiersJoints/DigisparkSchematicFinal.pdf>`
@@ -854,6 +870,10 @@ Voir `Digistump basics`_
    //sensorValue = analogRead(0); //Read P5
    //To set to input: pinMode(5, INPUT);
    //THIS IS P5, P5 is analog input 0, so when you are using analog read, you refer to it as 0.
+
+
+
+
 
 ====================================================================================================
 Module ampèremètre
