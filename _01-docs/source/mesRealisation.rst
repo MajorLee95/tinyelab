@@ -39,13 +39,18 @@ Règles de nommage
 - une largeur = larg
 - une hauteur = haut
 - une épaisseur = ep
-- un entraxe ou une distance entre 2 points = dist
+- un entraxe = entraxe
+- une distance entre 2 points = dist
 - on ne répète pas le nom de l'objet dans les éléments de la spreadsheet
 - On suffixe en commençant par le plus générique
+- posX et posY font référence à la manière dont le scketch s'affiche de base X axe des abscisses 
+  Y celui des ordonnées (indépendant du repère XYZ de l'espace 3D de FreeCAD)
+
+
 
 exemples:
 
-- bonSp.bornierVisTrouDiam est incorrecte : bornierSp.VisTrouDiam serais correcte
+- *bornSp.bornierVisTrouDiam* est incorrecte, alors que *bornierSp.VisTrouDiam* serait correcte
 - suffixe : VisTrouDiam, VisTrouPosX....
 
 ====================================================================================================
@@ -63,12 +68,16 @@ pour ne pas avoir de nom de référence qui change tout le temps...
 ====================================================================================================
 Le model de base 35mm large
 ====================================================================================================
+Modèle
+----------------------------------------------------------------------------------------------------
 J'ai entièrement repris le modèle de base sous Freecad avec spreadsheet paramétrable.
 
-Face avant détachable.
+Face avant détachable & ventilation. Fortement inspiré du model de Cordless
 
-Insert filetés 
+ajout également d'une vis pointeau sous les XT60
 
+Insert filetés
+----------------------------------------------------------------------------------------------------
 `Sur AMAZON ruthex Boîte M2 + M3 + M4 + M5 insert fileté`_
 
 .. _`Sur AMAZON ruthex Boîte M2 + M3 + M4 + M5 insert fileté` : https://www.amazon.fr/gp/product/B08K1BVGN9/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1
@@ -81,12 +90,6 @@ Dimensions:
 
 .. image:: images/ruthexBoxDimension.JPG 
    :width: 300 px
-
-& ventilation.
-
-Fortement inspiré du model de Cordless
-
-ajout également d'une vis pointeau sous les XT60
 
 Calculs relatifs à la ventilation
 ----------------------------------------------------------------------------------------------------
@@ -161,6 +164,12 @@ Fabrcant ARCOLECTRIC (BULGIN LIMITED).
 :download:`datasheet C1500<fichiersJoints/C1500AT_2711451.pdf>`
 
 .. image:: images/c150AA.jpg 
+
+Cette version est assez encombrante 14x30mm. Mais c'est celle que je choisi de base car j'en ai 
+2 cartons pleins :-()
+
+Autre version plus petite 15x10 malheureusement ceux que j'ai commander sur amazon devaient mesurer
+20x10 et à l'arrivée ils sont plus petits mais du coup ça peut être utile.
 
 
 
@@ -715,7 +724,11 @@ Pilotage éléectrique du ventilo et des LED
 
 .. _`Potentiomètre Rotatif avec Interrupteur chez AMAZON` : https://www.amazon.fr/gp/product/B096NXK7L1/ref=ox_sc_act_title_1?smid=A2W68NJA5YNXUP&psc=1
 
-Un simple potentiomètre ne convient car la tension d'entrée peut varier de 12 à 24V.
+Abandon de l'idée du potar avec inter car l'inter n'est pas cliquable mais s'active en bout de rotation
+si bine que cela ne permet pas de concerner le réglage. Donc retour à une version avec switch séparé
+cela tombien j'en ai des petit 10x5.
+
+Un simple potentiomètre seul ne convient pas car la tension d'entrée peut varier de 12 à 24V.
 
 On est obligé de passer par un régulateur et comme on veut que cela soit variable, il convient de 
 limiter le module LM2596S à 12V max en sortie et de déporter le potar

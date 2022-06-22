@@ -186,31 +186,45 @@ Module ventilation
                 - impression **OK**
             - test **A REVOIR**
                 - ménager un jeu d'épaisseur d'environ 1mm dans 
-                  la partie plane de la partie fixe plutot mobile à cause de l'emprunte languette
+                  la partie plane de la partie fixe plutot mobile à cause de l'emprunte languette **OK**
                 - finir design partie fixe potar avec inter, 
-                    - récupérer potar  avec inter (encombrement)
+                    - récupérer potar  avec inter (encombrement)  le switch n'est pas cliquable **ABANDON**
                         - sous Grabcad **OK**
-                        - Vérifier dimensions
+                        - Vérifier dimensions **ABANDON**
                         - appro (amazon) **OK**
 
                 - trous passage des fils ventilo et casquette **OK**
-                - procéder alors à une impression complète
-                    - partie fixe
-                        - export stl, gcode
-                        - impression
-                    - partie mobile
-                        - export stl, gcode
-                        - impression
-                    - casquette
-                        - export stl, gcode
-                        - impression
+                    - fixe **OK**
+                    - mobile **OK**
+                - trous switch désépaissir **OK**
+                - pb casquette paroi LED comment on vis ? des gros trous pour les tête de vis **OK**
+
+    - fixation du Digispark
+        - model sous Grabcad ? **OK**
+        - conversion vers Freecad **OK**
+        - intégration
+            - design support
+    - design support DCDC
+
+    - procéder alors à une impression complète
+        - partie fixe
+            - export stl, gcode
+            - impression
+        - partie mobile
+            - export stl, gcode **OK**
+            - impression
+        - casquette
+            - export stl, gcode **OK**
+            - impression
     - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **OK**
-    - repprendre au propre
+    - reprendre au propre
         - trou passage du fil LED (faire un trou carré au rectangle) **OK**
         - suppression 1mm base partie mobile. **OK**
-        - reprendre le modèle potar avec inter
-        - faire trous pour potar avec inter
+        - reprendre le modèle potar avec inter **ABANDON**
+        - faire trous pour potar et inter
+            - vérifier la designation des petits inter
         - paroi casquette led : ep 1mm hauteur 18mm **OK**
+        - ne pas oublier le trous des fils ventilo/led dans la partie fixe **OK**
 
 - Electronique
     - Pilotage ventilo et LED : LM2596S limité à 12V cf :ref:`pilotage LEDs et ventilo<pilotageLedVentilo>`
@@ -219,6 +233,13 @@ Module ventilation
         - vérifier le numéro du canal pwm pas de diff, analogRead **OK**
         - programmer le composant **OK**
         - Tester les 2 voies **OK**
+
+- imprimer base
+    - exports, prepa
+    - impression
+- imprimer fav
+    - exports, prepa
+    - impression
 
 Module primaire prises PC multiples
 ----------------------------------------------------------------------------------------------------
