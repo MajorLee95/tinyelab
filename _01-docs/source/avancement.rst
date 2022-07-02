@@ -117,25 +117,23 @@ A faire modules
 
 module USB 3A à refaire sniff
 ----------------------------------------------------------------------------------------------------
-- trouver un convertisseur qui tienne
+- trouver un convertisseur qui tienne 24V **ET** 3A
     - le tester avant de l'intégrer
 
 
 
 Module ventilation
 ----------------------------------------------------------------------------------------------------
-- model ventilo 
+- model ventilo **OK**
     - Vérifier les dimension **OK**
 
 - design 3D
-        - Essais avec les aimant en long
+        - Essais avec les aimant en long **ABORTED**
             - nouvelle branche **aimantsEnLong**
             - dessiner **OK**
-            - exporter
-            - imprimer
-            - tester
+
 			
-    - Inclinateur à base de verrou élastique => version 029
+    - Inclinateur à base de verrou élastique => version 029 **OK**
         - dessiner : nouvelle branche git : **ventiloSystemInclinaison**
             - sur le côté droit du module. **OK**
             - sur la partie fixe une languette en arc de cercle de 1 mm d'épaisseur **OK**
@@ -171,16 +169,16 @@ Module ventilation
             - design support **OK**
     - design support DCDC et testé **OK**
 
-    - procéder alors à une impression complète
-        - partie fixe
+    - procéder alors à une impression complète **OK**
+        - partie fixe **OK**
             - export stl, gcode **OK**
-            - impression
-        - partie mobile
+            - impression **OK**
+        - partie mobile **OK**
             - export stl, gcode **OK**
-            - impression
-        - casquette
+            - impression **OK**
+        - casquette **OK**
             - export stl, gcode **OK**
-            - impression
+            - impression **OK**
     - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **OK**
     - reprendre au propre **OK**
         - trou passage du fil LED (faire un trou carré au rectangle) **OK**
@@ -194,7 +192,7 @@ Module ventilation
         - paroi casquette led : ep 1mm hauteur 18mm **OK**
         - ne pas oublier le trous des fils ventilo/led dans la partie fixe **OK**
 
-- Électronique
+- Électronique **OK**
     - Pilotage ventilo et LED : LM2596S limité à 12V cf :ref:`pilotage LEDs et ventilo<pilotageLedVentilo>`
         - Test réalisé **OK** 
         - implémenter les 2 voies LED et ventilo **OK**
@@ -202,12 +200,19 @@ Module ventilation
         - programmer le composant **OK**
         - Tester les 2 voies **OK**
 
-- imprimer base
+- imprimer base **OK**
     - exports, prepa **OK**
-    - impression
-- imprimer fav
+    - impression **OK**
+- imprimer fav **OK**
     - exports, prepa **OK**
-    - impression
+    - impression **OK**
+
+- casquette : ajouter trous cables LED **OK** v0.35
+
+- cabler
+- tester
+- nomenclature
+- schéma
 
 Module primaire prises PC multiples
 ----------------------------------------------------------------------------------------------------

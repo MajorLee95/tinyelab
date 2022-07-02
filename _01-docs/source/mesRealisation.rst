@@ -347,8 +347,24 @@ Il y est équipé d'un réglet disponible chez Castorama
 Largeur : 24mm +/-1 et moins de 1mm d'épaisseur
 
 ====================================================================================================
-capot de Prise XT60
+Capot de Prise XT60
 ====================================================================================================
+Sur le net:
+----------------------------------------------------------------------------------------------------
+
+
+`XT-60 Plug Covers`_
+
+.. _`XT-60 Plug Covers` : https://www.printables.com/fr/model/71594-xt-60-plug-covers
+
+
+
+Ma vision
+----------------------------------------------------------------------------------------------------
+Vis pointeau
+
+
+
 
 
 .. index::
@@ -440,6 +456,15 @@ Rendu FreeCad
 ----------------------------------------------------------------------------------------------------
 .. image:: images/oscillo.jpg 
    :width: 600 px
+
+
+Oscilloscope en situation
+----------------------------------------------------------------------------------------------------
+
+.. image:: images/oscilloEnSituation.jpg 
+   :width: 600 px
+
+Test du PWM pour le module Ventilo
 
 
 Nomenclature oscillo DSO138
@@ -871,6 +896,11 @@ Voir `Digistump basics`_
    //To set to input: pinMode(5, INPUT);
    //THIS IS P5, P5 is analog input 0, so when you are using analog read, you refer to it as 0.
 
+Rendu Freecad
+----------------------------------------------------------------------------------------------------
+
+.. image:: images/moduleVentilo.JPG 
+   :width: 600 px
 
 
 
