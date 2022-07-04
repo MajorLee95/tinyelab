@@ -48,7 +48,10 @@ Cela se résume en quelques commandes::
         Proposition : git push --set-upstream origin gh-pages
     git push origin gh-pages
 
-Problème de css non pris en charge : ``.nojekyll``
+.. WARNING:: Problème de css non pris en charge : ``.nojekyll`` dans le répertoire source de la doc
+   :class: without-title
+
+    Ne pas oublier de vider le cache du navigateur !!!
 
 
 ====================================================================================================
