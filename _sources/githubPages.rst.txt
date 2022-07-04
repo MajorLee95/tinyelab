@@ -28,6 +28,11 @@ Globalement
 - on fait le ménager
 - on génère la doc et on push
 
+Chemin vers la doc::
+
+    https://<utilisateur_Gihub>.github.io/[nom_du_dépot]/
+    https://MajorLee95.github.io/tinyelab
+
 Cela se résume en quelques commandes::
 
     git clone [url_copiée_depuis_GitHub] html
@@ -36,6 +41,14 @@ Cela se résume en quelques commandes::
     git symbolic-ref HEAD refs/heads/gh-pages
     del .git\index (rm .git/index sous windobe :-) 
     git clean -fdx
+    dans le dossier du projet : make html
+    git add .
+    git commit -m "commit doc"
+    git push => error : fatal: The current branch gh-pages has no upstream branch.
+        Proposition : git push --set-upstream origin gh-pages
+    git push origin gh-pages
+
+ 
 
 
 ====================================================================================================
