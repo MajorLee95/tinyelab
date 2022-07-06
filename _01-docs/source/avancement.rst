@@ -22,14 +22,14 @@ Mettre des photos dans la doc
 Mettre projet sous Volab/wiki et sous github
 ----------------------------------------------------------------------------------------------------
 - créer git local **OK**
-    - Arrêt du versionning par les noms de fichiers
+    - Arrêt du versionning par les noms de fichiers ou pas tout à fait **OK**
 - créer projet github **OK**
 - lier projet Github et git local (git ls-remote) **OK**
 - pusher le projet **OK**
 
-- créer github io
-- pusher la doc sur githubio
-- créer un readme.rst au niveau projet
+- créer github io **OK**
+- pusher la doc sur githubio **OK**
+- créer un readme.rst au niveau projet **OK**
 - créer le projet dans le Wiki du lab
 - Renseigner le projet dans le wiki du lab
 
@@ -46,6 +46,8 @@ Mettre les modules sous Thinkiverse
 - Oscillo
     - renseigner le lien dans la doc
 - VA
+    - renseigner le lien dans la doc
+- XT60 cover
     - renseigner le lien dans la doc
 
 
@@ -69,9 +71,11 @@ schéma de câblage des modules
 
 XT60 : boîtier ou capot de prise XT60
 ----------------------------------------------------------------------------------------------------
-- dessin 3D avec vis pointeau
-- rien de probant sur le net
-- - prévoir 2 guides fils
+- dessin 3D avec vis pointeau **OK**
+- rien de probant sur le net **OK**
+- prévoir 2 guides fils **OK**
+- imprimer femelle v006 paramétrée
+    - tester
 
 .. image:: images/xt60caseGuides.jpg 
 
@@ -92,24 +96,25 @@ A finir modules
 
 Module oscilo
 ----------------------------------------------------------------------------------------------------
-- photo
+- photo **OK**
 - schéma **OK**
-- IR
+- IR : images non retrouvées le 2/7/22
 - Design capo avec boutons
 
 Module voltmètre / ampèremètre 
 ----------------------------------------------------------------------------------------------------
 - test électrique
      - à compléter en ampèremètre (peu précis dans les faibles courants)
-- nomenclatures 
-
+- nomenclatures ``projet\_02-realisation\_03-cao_3D\mesCreations\moduleVoltAmperemetre`` **en cours**
+- photo **OK**
 
 module triple tiny Voltmètre
 ----------------------------------------------------------------------------------------------------
-- test électrique
-
+- test électrique+ réglage **OK**
+- photo
 - nomenclatures
 - schéma
+
 
 ====================================================================================================
 A faire modules
@@ -209,7 +214,9 @@ Module ventilation
 
 - casquette : ajouter trous cables LED **OK** v0.35
 
-- cabler
+- câbler
+    - faire plaque à LED
+    - Programmer Digispark
 - tester
 - nomenclature
 - schéma
@@ -241,11 +248,10 @@ Module alim 24V/10A
 Module 3.3, 5 et +12-12
 ----------------------------------------------------------------------------------------------------
 Alim fixe avec les 3 alimentations principales
+A faire avec fusible réarmables.
+Discutabele pour le 5 et le 3.3v vu que les carte de breadboard l'on, ne reste plus que le +/-15V
 
-module triple tiny Voltmètre
-----------------------------------------------------------------------------------------------------
-- nomenclatures
-- schéma
+
 
 Module Générateur de fonction
 ----------------------------------------------------------------------------------------------------
@@ -264,7 +270,6 @@ Module Générateur de fonction
 - refonte du code **DELAYED**
     - Trop de boulot peut-être pour une version ultérieure
 - 3D retouche BNC emprunte v008 **OK**
-
 
 
 
@@ -308,36 +313,13 @@ Module renvoi d'angle
 ----------------------------------------------------------------------------------------------------
 En accordéon réglable.
 
-
-====================================================================================================
-A terminer
-====================================================================================================
-
 Module 3.3, 5V +/-12V
 ----------------------------------------------------------------------------------------------------
-A faire avec fusible réarmables.
-Discutabele pour le 5 et le 3.3v vu que les carte de breadboard l'on, ne reste plus que le +/-15V
 
 
 
-Module oscilo
-----------------------------------------------------------------------------------------------------
-- photo
-- schéma **OK**
-- IR
 
 
-Module voltmère / ampéremètre 
-----------------------------------------------------------------------------------------------------
-- test électrique plus complet
-- photo **OK**
-
-module triple tiny Voltmètre
-----------------------------------------------------------------------------------------------------
-- test électrique + réglage **OK**
-- photo
-- nomenclatures
-- schéma
 
 
 ====================================================================================================

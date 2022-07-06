@@ -9,7 +9,7 @@ Tiny e-lab extension
 
 :Auteur: J.Soranzo
 :Date de création: 02/2022
-:Date dernière maj: 21/02/2022
+:Date dernière maj: 04/07/2022
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -21,6 +21,7 @@ Tiny e-lab extension
    presentation
    mesRealisation
    avancement
+   githubPages
 
 ====================================================================================================
 Indices and tables

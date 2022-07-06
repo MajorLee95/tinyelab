@@ -17,7 +17,7 @@ Mes réalisations
     :backlinks: top
 
 ====================================================================================================
-Réalisés
+Réalisés/terminés
 ====================================================================================================
 
 .. image:: images/realises01.jpg 
@@ -30,8 +30,10 @@ Manque sur la photo : Voltmètre/ampèremètre, triple tinyVoltmètre
 ====================================================================================================
 Règles de nommage
 ====================================================================================================
+Ci-dessous les règles que j'ai utilisé pour nommer les objects dans Freecad
+
 - nom du fichier = nom de l'objet (de préférence sa vrai référence)
-- chaque objet à un part
+- chaque objet à un part dans FreeCad
 - chaque part à **SA** spreadsheet cela permet d'avoir plusieurs fois le même terme (ex: long, larg)
 - spreadsheet = nomDeLObjetSp (permet d'identifier les spreadsheet parmi d'autres noms)
 - un diamètre = diam
@@ -62,7 +64,19 @@ vers 3 digits seuls (ça fait moins de caractères à taper)
 
 Passage sous git le 17/04/22 : on perd la notion de version numérotée. On peut s'en sortir avec le 
 hash du commit mais ce passage sous git va de paire avec le passage à des références dans freecad
-pour ne pas avoir de nom de référence qui change tout le temps...
+pour ne pas avoir de nom de référence qui change tout le temps... Mais on perd aussi en facilité
+en effet avec le versionnning fait sur le nom du fichier on travaille sans changer d'outil...
+
+
+====================================================================================================
+Génération des nomenclatures csv pour Restructured text
+====================================================================================================
+Outil : Libre office calc (c'est un des rare qui permette de chaisir l'encodage et le séparateur)
+
+Faire : Fichier / Enregistrer une copie sous...
+ 
+Choisir UTF-8 et , comme séparateur
+
 
 
 ====================================================================================================
@@ -74,7 +88,7 @@ J'ai entièrement repris le modèle de base sous Freecad avec spreadsheet param�
 
 Face avant détachable & ventilation. Fortement inspiré du model de Cordless
 
-ajout également d'une vis pointeau sous les XT60
+Ajout également d'une vis pointeau et d'un insert fileté pour bien tenir les XT60
 
 Insert filetés
 ----------------------------------------------------------------------------------------------------
@@ -349,8 +363,15 @@ Largeur : 24mm +/-1 et moins de 1mm d'épaisseur
 ====================================================================================================
 Capot de Prise XT60
 ====================================================================================================
+Afin d'améliorer la prise en main des XT60 connecté à l’extrémité de câbles, il s'agit de créer 
+un boîtier pour les connecteurs XT60 mâle et femelle.
+
+
 Sur le net:
 ----------------------------------------------------------------------------------------------------
+
+.. image:: images/xt60CovertSurPrintable.JPG 
+   :width: 500 px
 
 
 `XT-60 Plug Covers`_
@@ -361,7 +382,49 @@ Sur le net:
 
 Ma vision
 ----------------------------------------------------------------------------------------------------
-Vis pointeau
+Vis pointeau pour tenir fermement dans son logement, le connecteur.
+
+J'ai utilisé Freecad v0.20 afin d'exploiter la nouvelle fonctionnalité de configuration.
+
+Les explications sont fournies sur `le wiki Freecad Configurations tables`_
+
+.. _`le wiki Freecad Configurations tables` : https://wiki.freecad.org/Spreadsheet_Workbench#Configuration_tables
+
+
+
+Rendus Freecad 2.0
+****************************************************************************************************
+.. |aliasImagext60covmale| image:: images/xt60Male.JPG
+   :width: 200 px
+
+.. |aliasImagext60covfem| image:: images/xt60covfem.JPG
+  :width: 200 px
+
+.. list-table::
+   :widths: 27 27 
+   :header-rows: 1
+
+   * - XT60 covert mâle
+     - XT60 covert femelle
+
+   * - |aliasImagext60covmale|
+     - |aliasImagext60covfem|
+
+
+Nomenclature XT60 coverts
+----------------------------------------------------------------------------------------------------
+.. csv-table:: Nomenclature oscilloscope DSO138
+   :file: ../../_02-realisation/_03-cao_3D/mesCreations/xt60Cover/nomxt60cov.csv
+   :delim: ,
+   :encoding: UTF-8
+   :align: left
+   :header-rows: 1
+
+`Vis Sans Tête Hexagonale creuse à bout pointeau M3x6`_
+
+.. _`Vis Sans Tête Hexagonale creuse à bout pointeau M3x6` : https://www.bricovis.fr/produit-vis-sans-tete-hexagonale-creuse-bout-pointeau-acier-14-9-noir-din-914-sthcptono/
+
+
 
 
 
@@ -797,7 +860,7 @@ R = 24v - 12v / 0.1A environ 120ohm P=1.2W bof ! 5 résistance 1/4W en //
 
 Revoir le courant 20mA par groupe de 4 led 4 groupe 80mA refaire les calculs.
 
-Interrupteurs rpuge miniature
+Interrupteurs rouge miniature
 ----------------------------------------------------------------------------------------------------
 Référence `KDC1-11 sur AMAZON`_ en noir mais en rouge ???
 

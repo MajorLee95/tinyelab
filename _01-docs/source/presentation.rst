@@ -40,6 +40,8 @@ Sur `Thingiverse Tiny e-Lab`_ plus complet, auteur marcluer
 .. WARNING:: LIDL battery pack + chargeur pas livrée en France par correspondance.
    :class: without-title
 
+   Mais on peut facilement se le procurer en magasin.
+
 ====================================================================================================
 Liste des modules qui existent
 ====================================================================================================
