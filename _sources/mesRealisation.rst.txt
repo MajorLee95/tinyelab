@@ -860,7 +860,7 @@ R = 24v - 12v / 0.1A environ 120ohm P=1.2W bof ! 5 résistance 1/4W en //
 
 Revoir le courant 20mA par groupe de 4 led 4 groupe 80mA refaire les calculs.
 
-Interrupteurs rpuge miniature
+Interrupteurs rouge miniature
 ----------------------------------------------------------------------------------------------------
 Référence `KDC1-11 sur AMAZON`_ en noir mais en rouge ???
 
