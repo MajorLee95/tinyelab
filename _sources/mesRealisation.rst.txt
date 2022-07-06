@@ -17,7 +17,7 @@ Mes réalisations
     :backlinks: top
 
 ====================================================================================================
-Réalisés
+Réalisés/terminés
 ====================================================================================================
 
 .. image:: images/realises01.jpg 
@@ -30,8 +30,10 @@ Manque sur la photo : Voltmètre/ampèremètre, triple tinyVoltmètre
 ====================================================================================================
 Règles de nommage
 ====================================================================================================
+Ci-dessous les règles que j'ai utilisé pour nommer les objects dans Freecad
+
 - nom du fichier = nom de l'objet (de préférence sa vrai référence)
-- chaque objet à un part
+- chaque objet à un part dans FreeCad
 - chaque part à **SA** spreadsheet cela permet d'avoir plusieurs fois le même terme (ex: long, larg)
 - spreadsheet = nomDeLObjetSp (permet d'identifier les spreadsheet parmi d'autres noms)
 - un diamètre = diam
@@ -62,7 +64,8 @@ vers 3 digits seuls (ça fait moins de caractères à taper)
 
 Passage sous git le 17/04/22 : on perd la notion de version numérotée. On peut s'en sortir avec le 
 hash du commit mais ce passage sous git va de paire avec le passage à des références dans freecad
-pour ne pas avoir de nom de référence qui change tout le temps...
+pour ne pas avoir de nom de référence qui change tout le temps... Mais on perd aussi en facilité
+en effet avec le versionnning fait sur le nom du fichier on travaille sans changer d'outil...
 
 
 ====================================================================================================
@@ -85,7 +88,7 @@ J'ai entièrement repris le modèle de base sous Freecad avec spreadsheet param�
 
 Face avant détachable & ventilation. Fortement inspiré du model de Cordless
 
-ajout également d'une vis pointeau sous les XT60
+Ajout également d'une vis pointeau et d'un insert fileté pour bien tenir les XT60
 
 Insert filetés
 ----------------------------------------------------------------------------------------------------

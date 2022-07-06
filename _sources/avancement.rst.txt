@@ -22,14 +22,14 @@ Mettre des photos dans la doc
 Mettre projet sous Volab/wiki et sous github
 ----------------------------------------------------------------------------------------------------
 - créer git local **OK**
-    - Arrêt du versionning par les noms de fichiers
+    - Arrêt du versionning par les noms de fichiers ou pas tout à fait **OK**
 - créer projet github **OK**
 - lier projet Github et git local (git ls-remote) **OK**
 - pusher le projet **OK**
 
-- créer github io
-- pusher la doc sur githubio
-- créer un readme.rst au niveau projet
+- créer github io **OK**
+- pusher la doc sur githubio **OK**
+- créer un readme.rst au niveau projet **OK**
 - créer le projet dans le Wiki du lab
 - Renseigner le projet dans le wiki du lab
 
@@ -46,6 +46,8 @@ Mettre les modules sous Thinkiverse
 - Oscillo
     - renseigner le lien dans la doc
 - VA
+    - renseigner le lien dans la doc
+- XT60 cover
     - renseigner le lien dans la doc
 
 

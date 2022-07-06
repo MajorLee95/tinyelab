@@ -90,7 +90,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#mes-realisations" id="id95">Mes réalisations</a></p>
 <ul>
-<li><p><a class="reference internal" href="#realises" id="id96">Réalisés</a></p></li>
+<li><p><a class="reference internal" href="#realises-termines" id="id96">Réalisés/terminés</a></p></li>
 <li><p><a class="reference internal" href="#regles-de-nommage" id="id97">Règles de nommage</a></p></li>
 <li><p><a class="reference internal" href="#versionning" id="id98">Versionning</a></p></li>
 <li><p><a class="reference internal" href="#generation-des-nomenclatures-csv-pour-restructured-text" id="id99">Génération des nomenclatures csv pour Restructured text</a></p></li>
@@ -190,17 +190,18 @@
 </li>
 </ul>
 </div>
-<div class="section" id="realises">
-<h2><a class="toc-backref" href="#contents">Réalisés</a><a class="headerlink" href="#realises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="realises-termines">
+<h2><a class="toc-backref" href="#contents">Réalisés/terminés</a><a class="headerlink" href="#realises-termines" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/realises01.jpg"><img alt="_images/realises01.jpg" src="_images/realises01.jpg" style="width: 800px;" /></a>
 <p>De la gauche vers la droite : module tension/courant, USB 5V 3A, Oscillo, Alimentation stabilisé, re USB 5V 33A</p>
 <p>Manque sur la photo : Voltmètre/ampèremètre, triple tinyVoltmètre</p>
 </div>
 <div class="section" id="regles-de-nommage">
 <h2><a class="toc-backref" href="#contents">Règles de nommage</a><a class="headerlink" href="#regles-de-nommage" title="Permalink to this headline">¶</a></h2>
+<p>Ci-dessous les règles que j’ai utilisé pour nommer les objects dans Freecad</p>
 <ul class="simple">
 <li><p>nom du fichier = nom de l’objet (de préférence sa vrai référence)</p></li>
-<li><p>chaque objet à un part</p></li>
+<li><p>chaque objet à un part dans FreeCad</p></li>
 <li><p>chaque part à <strong>SA</strong> spreadsheet cela permet d’avoir plusieurs fois le même terme (ex: long, larg)</p></li>
 <li><p>spreadsheet = nomDeLObjetSp (permet d’identifier les spreadsheet parmi d’autres noms)</p></li>
 <li><p>un diamètre = diam</p></li>
@@ -228,7 +229,8 @@ les versions soit 3 digits soit 3 digits. 1 sous version. Je suis indécis. J’
 vers 3 digits seuls (ça fait moins de caractères à taper)</p>
 <p>Passage sous git le 17/04/22 : on perd la notion de version numérotée. On peut s’en sortir avec le
 hash du commit mais ce passage sous git va de paire avec le passage à des références dans freecad
-pour ne pas avoir de nom de référence qui change tout le temps…</p>
+pour ne pas avoir de nom de référence qui change tout le temps… Mais on perd aussi en facilité
+en effet avec le versionnning fait sur le nom du fichier on travaille sans changer d’outil…</p>
 </div>
 <div class="section" id="generation-des-nomenclatures-csv-pour-restructured-text">
 <h2><a class="toc-backref" href="#contents">Génération des nomenclatures csv pour Restructured text</a><a class="headerlink" href="#generation-des-nomenclatures-csv-pour-restructured-text" title="Permalink to this headline">¶</a></h2>
@@ -242,7 +244,7 @@ pour ne pas avoir de nom de référence qui change tout le temps…</p>
 <h3><a class="toc-backref" href="#contents">Modèle</a><a class="headerlink" href="#modele" title="Permalink to this headline">¶</a></h3>
 <p>J’ai entièrement repris le modèle de base sous Freecad avec spreadsheet paramétrable.</p>
 <p>Face avant détachable &amp; ventilation. Fortement inspiré du model de Cordless</p>
-<p>ajout également d’une vis pointeau sous les XT60</p>
+<p>Ajout également d’une vis pointeau et d’un insert fileté pour bien tenir les XT60</p>
 </div>
 <div class="section" id="insert-filetes">
 <h3><a class="toc-backref" href="#contents">Insert filetés</a><a class="headerlink" href="#insert-filetes" title="Permalink to this headline">¶</a></h3>
@@ -331,7 +333,7 @@ changer.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Insert Fileté M3</p></td>
-<td><p>MUTHEX</p></td>
+<td><p>RUTHEX</p></td>
 <td><p>sans</p></td>
 <td><p>4</p></td>
 <td><p>0,10 €</p></td>
@@ -531,7 +533,7 @@ un boîtier pour les connecteurs XT60 mâle et femelle.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Insert Fileté M3</p></td>
-<td><p>MUTHEX</p></td>
+<td><p>RUTHEX</p></td>
 <td><p>sur AMAZON</p></td>
 <td><p>2</p></td>
 <td><p>0,10 €</p></td>
@@ -588,7 +590,7 @@ un boîtier pour les connecteurs XT60 mâle et femelle.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Insert Fileteté M3</p></td>
-<td><p>MUTHEX</p></td>
+<td><p>RUTHEX</p></td>
 <td><p>sans</p></td>
 <td><p>4</p></td>
 <td><p>0,10 €</p></td>
@@ -713,7 +715,7 @@ Pas trouvé assemblée sur AMAZON</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Insert Fileteté M3</p></td>
-<td><p>MUTHEX</p></td>
+<td><p>RUTHEX</p></td>
 <td><p>sans</p></td>
 <td><p>6</p></td>
 <td><p>0,10 €</p></td>
@@ -852,7 +854,7 @@ d’<a class="reference external" href="https://www.amazon.fr/gp/product/B082TM9
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Insert Fileteté M3</p></td>
-<td><p>MUTHEX</p></td>
+<td><p>RUTHEX</p></td>
 <td><p>sans</p></td>
 <td><p>4</p></td>
 <td><p>0,10 €</p></td>
@@ -1273,7 +1275,7 @@ et 22€ pas en prime !</p>
     <h3><a href="index.html">Page contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Mes réalisations</a><ul>
-<li><a class="reference internal" href="#realises">Réalisés</a></li>
+<li><a class="reference internal" href="#realises-termines">Réalisés/terminés</a></li>
 <li><a class="reference internal" href="#regles-de-nommage">Règles de nommage</a></li>
 <li><a class="reference internal" href="#versionning">Versionning</a></li>
 <li><a class="reference internal" href="#generation-des-nomenclatures-csv-pour-restructured-text">Génération des nomenclatures csv pour Restructured text</a></li>
