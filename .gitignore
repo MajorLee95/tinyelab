@@ -28,6 +28,9 @@ _
 
 ## [ listes des extentions a ignorer ]
 *.FCStd1
+*.FCStd2
+*.FCStd3
+*.FCStd4
 *.264
 *.mkv
 *.mp4
