@@ -215,8 +215,9 @@ Module ventilation
 - casquette : ajouter trous cables LED **OK** v0.35
 
 - câbler
-    - faire plaque à LED
-    - Programmer Digispark
+    - faire plaque à LED **OK**
+    - Programmer Digispark **OK**
+    - saisir schéma KiCAD
 - tester
 - nomenclature
 - schéma
