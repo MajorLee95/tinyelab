@@ -98,7 +98,7 @@ Module oscilo
 ----------------------------------------------------------------------------------------------------
 - photo **OK**
 - schéma **OK**
-- IR : images non retrouvées le 2/7/22
+- IR : images non retrouvées le 2/7/22, elles ne sont pas dans la caméra 16/7/22 **ABANDON**
 - Design capo avec boutons
 
 Module voltmètre / ampèremètre 
@@ -115,6 +115,10 @@ module triple tiny Voltmètre
 - nomenclatures
 - schéma
 
+Module ventilation
+----------------------------------------------------------------------------------------------------
+- nomenclature
+- saisir schéma KiCAD
 
 ====================================================================================================
 A faire modules
@@ -122,104 +126,9 @@ A faire modules
 
 module USB 3A à refaire sniff
 ----------------------------------------------------------------------------------------------------
-- trouver un convertisseur qui tienne 24V **ET** 3A
+- trouver un convertisseur qui tienne 24V **ET** 3A **OK**
     - le tester avant de l'intégrer
 
-
-
-Module ventilation
-----------------------------------------------------------------------------------------------------
-- model ventilo **OK**
-    - Vérifier les dimension **OK**
-
-- design 3D
-        - Essais avec les aimant en long **ABORTED**
-            - nouvelle branche **aimantsEnLong**
-            - dessiner **OK**
-
-			
-    - Inclinateur à base de verrou élastique => version 029 **OK**
-        - dessiner : nouvelle branche git : **ventiloSystemInclinaison**
-            - sur le côté droit du module. **OK**
-            - sur la partie fixe une languette en arc de cercle de 1 mm d'épaisseur **OK**
-            - languette rapporté pour simplifier l'impression **OK**
-            - sur la partie mobile : des crans (trous cylindriques) **OK**
-            - impression languette, poignee **OK**
-                - stl, gcode **OK**
-                - impression **OK**
-            - impression partie fixe tronquee **OK**
-                - export step, tronquage, export stl, gcode **OK**
-                - impression **OK**
-            - impression partie fixe tronquee **OK**
-                - export step, tronquage, export stl, gcode **OK**
-                - impression **OK**
-            - test **A REVOIR**
-                - ménager un jeu d'épaisseur d'environ 1mm dans 
-                  la partie plane de la partie fixe plutot mobile à cause de l'emprunte languette **OK**
-                - finir design partie fixe potar avec inter, **OK**
-                    - récupérer potar  avec inter (encombrement)  le switch n'est pas cliquable **ABANDON**
-                        - sous Grabcad **OK**
-                        - Vérifier dimensions **ABANDON**
-                        - appro (amazon) **OK**
-                - trous passage des fils ventilo et casquette **OK**
-                    - fixe **OK**
-                    - mobile **OK**
-                - trous switch désépaissir **OK**
-                - pb casquette paroi LED comment on vis ? des gros trous pour les tête de vis **OK**
-
-    - fixation du Digispark un cube et de la colle **OK**
-        - model sous Grabcad ? **OK**
-        - conversion vers Freecad **OK**
-        - intégration **OK**
-            - design support **OK**
-    - design support DCDC et testé **OK**
-
-    - procéder alors à une impression complète **OK**
-        - partie fixe **OK**
-            - export stl, gcode **OK**
-            - impression **OK**
-        - partie mobile **OK**
-            - export stl, gcode **OK**
-            - impression **OK**
-        - casquette **OK**
-            - export stl, gcode **OK**
-            - impression **OK**
-    - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **OK**
-    - reprendre au propre **OK**
-        - trou passage du fil LED (faire un trou carré au rectangle) **OK**
-        - suppression 1mm base partie mobile. **OK**
-        - reprendre le modèle potar avec inter **ABANDON**
-        - faire trous pour potar et inter **OK**
-            - vérifier la designation des petits inter **OK**
-                - plus le sachet **OK**
-                - sur le site amazon : il y a effectivement erreur sur le produit **OK** 
-                - dessus : KCD1-11 (quand on cherche sur AMAZON on tombe sur les bonnes dimensions) **OK**
-        - paroi casquette led : ep 1mm hauteur 18mm **OK**
-        - ne pas oublier le trous des fils ventilo/led dans la partie fixe **OK**
-
-- Électronique **OK**
-    - Pilotage ventilo et LED : LM2596S limité à 12V cf :ref:`pilotage LEDs et ventilo<pilotageLedVentilo>`
-        - Test réalisé **OK** 
-        - implémenter les 2 voies LED et ventilo **OK**
-        - vérifier le numéro du canal pwm pas de diff, analogRead **OK**
-        - programmer le composant **OK**
-        - Tester les 2 voies **OK**
-
-- imprimer base **OK**
-    - exports, prepa **OK**
-    - impression **OK**
-- imprimer fav **OK**
-    - exports, prepa **OK**
-    - impression **OK**
-
-- casquette : ajouter trous cables LED **OK** v0.35
-
-- câbler
-    - faire plaque à LED
-    - Programmer Digispark
-- tester
-- nomenclature
-- schéma
 
 Module primaire prises PC multiples
 ----------------------------------------------------------------------------------------------------
@@ -234,22 +143,24 @@ Module batterie Lidl
 - Modéliser le haut de la batterie
 - modéliser le module
 
+Module batterie lidl ET prise PC multiples avec commute auto
+----------------------------------------------------------------------------------------------------
+Tout est dans le titre
 
 Module alim 24V/10A
 ----------------------------------------------------------------------------------------------------
 - faire cable 220V
 - faire cable XT60
-- En profiter pour cable rallonge XT60
-    - avec gros fil dans le tiroir
-- Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V
-
-
+- En profiter pour cable rallonge XT60 **OK**
+    - avec gros fil dans le tiroir **OK**
+- Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V si
 
 Module 3.3, 5 et +12-12
 ----------------------------------------------------------------------------------------------------
 Alim fixe avec les 3 alimentations principales
 A faire avec fusible réarmables.
 Discutabele pour le 5 et le 3.3v vu que les carte de breadboard l'on, ne reste plus que le +/-15V
+
 
 
 
@@ -313,8 +224,6 @@ Module renvoi d'angle
 ----------------------------------------------------------------------------------------------------
 En accordéon réglable.
 
-Module 3.3, 5V +/-12V
-----------------------------------------------------------------------------------------------------
 
 
 
@@ -595,6 +504,96 @@ outillage switch
     - imprimer **OK**
 - re-tester **OK**
 
+Module ventilation
+----------------------------------------------------------------------------------------------------
+- model ventilo **OK**
+    - Vérifier les dimension **OK**
+
+- design 3D **OK**
+        - Essais avec les aimant en long **ABORTED**
+            - nouvelle branche **aimantsEnLong**
+            - dessiner **OK**		
+    - Inclinateur à base de verrou élastique => version 029 **OK**
+        - dessiner : nouvelle branche git : **ventiloSystemInclinaison**
+            - sur le côté droit du module. **OK**
+            - sur la partie fixe une languette en arc de cercle de 1 mm d'épaisseur **OK**
+            - languette rapporté pour simplifier l'impression **OK**
+            - sur la partie mobile : des crans (trous cylindriques) **OK**
+            - impression languette, poignee **OK**
+                - stl, gcode **OK**
+                - impression **OK**
+            - impression partie fixe tronquee **OK**
+                - export step, tronquage, export stl, gcode **OK**
+                - impression **OK**
+            - impression partie fixe tronquee **OK**
+                - export step, tronquage, export stl, gcode **OK**
+                - impression **OK**
+            - test **A REVOIR**
+                - ménager un jeu d'épaisseur d'environ 1mm dans 
+                  la partie plane de la partie fixe plutot mobile à cause de l'emprunte languette **OK**
+                - finir design partie fixe potar avec inter, **OK**
+                    - récupérer potar  avec inter (encombrement)  le switch n'est pas cliquable **ABANDON**
+                        - sous Grabcad **OK**
+                        - Vérifier dimensions **ABANDON**
+                        - appro (amazon) **OK**
+                - trous passage des fils ventilo et casquette **OK**
+                    - fixe **OK**
+                    - mobile **OK**
+                - trous switch désépaissir **OK**
+                - pb casquette paroi LED comment on vis ? des gros trous pour les tête de vis **OK**
+
+    - fixation du Digispark un cube et de la colle **OK**
+        - model sous Grabcad ? **OK**
+        - conversion vers Freecad **OK**
+        - intégration **OK**
+            - design support **OK**
+    - design support DCDC et testé **OK**
+
+    - procéder alors à une impression complète **OK**
+        - partie fixe **OK**
+            - export stl, gcode **OK**
+            - impression **OK**
+        - partie mobile **OK**
+            - export stl, gcode **OK**
+            - impression **OK**
+        - casquette **OK**
+            - export stl, gcode **OK**
+            - impression **OK**
+    - réduire le jeu longitudinal de la charnière actuel mesuré 1.88mm **OK**
+    - reprendre au propre **OK**
+        - trou passage du fil LED (faire un trou carré au rectangle) **OK**
+        - suppression 1mm base partie mobile. **OK**
+        - reprendre le modèle potar avec inter **ABANDON**
+        - faire trous pour potar et inter **OK**
+            - vérifier la designation des petits inter **OK**
+                - plus le sachet **OK**
+                - sur le site amazon : il y a effectivement erreur sur le produit **OK** 
+                - dessus : KCD1-11 (quand on cherche sur AMAZON on tombe sur les bonnes dimensions) **OK**
+        - paroi casquette led : ep 1mm hauteur 18mm **OK**
+        - ne pas oublier le trous des fils ventilo/led dans la partie fixe **OK**
+
+- Électronique **OK**
+    - Pilotage ventilo et LED : LM2596S limité à 12V cf :ref:`pilotage LEDs et ventilo<pilotageLedVentilo>`
+        - Test réalisé **OK** 
+        - implémenter les 2 voies LED et ventilo **OK**
+        - vérifier le numéro du canal pwm pas de diff, analogRead **OK**
+        - programmer le composant **OK**
+        - Tester les 2 voies **OK**
+
+- imprimer base **OK**
+    - exports, prepa **OK**
+    - impression **OK**
+- imprimer fav **OK**
+    - exports, prepa **OK**
+    - impression **OK**
+
+- casquette : ajouter trous cables LED **OK** v0.35
+
+- câbler
+    - faire plaque à LED **OK**
+    - Programmer Digispark **OK**
+    
+- tester **OK**
 
 ====================================================================================================
 Weblinks

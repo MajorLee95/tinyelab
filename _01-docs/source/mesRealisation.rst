@@ -25,7 +25,10 @@ Réalisés/terminés
 
 De la gauche vers la droite : module tension/courant, USB 5V 3A, Oscillo, Alimentation stabilisé, re USB 5V 33A
 
-Manque sur la photo : Voltmètre/ampèremètre, triple tinyVoltmètre
+.. image:: images/vaTripleVentilo.JPG 
+   :width: 600 px
+
+Toujours de gauche à droite les modules Volt/ampèremètre, triple voltmètre, XTprolongateur et ventilo
 
 ====================================================================================================
 Règles de nommage
@@ -291,6 +294,13 @@ AC/DC adaptateur :
 
 .. image:: images/emboutPowerPC.jpg 
    :width: 600 px
+
+.. image:: images/emboutPowerPC_2.webp 
+   :width: 600 px
+
+.. image:: images/emboutPowerPC_3.webp 
+   :width: 600 px
+
 
 - prise pc DELL, diamètre extérieur mesuré: 7.4mm
 
@@ -965,6 +975,11 @@ Rendu Freecad
 .. image:: images/moduleVentilo.JPG 
    :width: 600 px
 
+
+Améliorations possibles/souhaitable
+----------------------------------------------------------------------------------------------------
+- possibilité de remplacement du filtre sans démonter la casquette
+- inclinaison de la barre de LED vers l'avant ( Elles éclairent actuellement la base du ventilo )
 
 
 
