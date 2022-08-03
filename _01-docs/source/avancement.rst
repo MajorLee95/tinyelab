@@ -11,6 +11,8 @@ Avancement
 .. contents::
     :backlinks: top
 
+.. _refAvancementGeneral:
+
 ====================================================================================================
 A faire général
 ====================================================================================================
@@ -130,13 +132,7 @@ module USB 3A à refaire sniff
     - le tester avant de l'intégrer
 
 
-Module primaire prises PC multiples
-----------------------------------------------------------------------------------------------------
-- recherche des standard de prises **OK**
-- appro des embase correspondantes **OK**
-- test des embase en question avant design
 
-- Design du module
 
 Module batterie Lidl
 ----------------------------------------------------------------------------------------------------
@@ -161,7 +157,9 @@ Alim fixe avec les 3 alimentations principales
 A faire avec fusible réarmables.
 Discutabele pour le 5 et le 3.3v vu que les carte de breadboard l'on, ne reste plus que le +/-15V
 
-
+Module alim low cost
+----------------------------------------------------------------------------------------------------
+Sur la base d'un DC/DC XL4605
 
 
 Module Générateur de fonction
@@ -240,55 +238,6 @@ Appro
 - alim 24V/10A commandée AMAZON le 4/4/22 24€ **OK**
 - approvisionner tige laiton 3mm voire 2.5mm **OK**
 
-BASE V008.1
-----------------------------------------------------------------------------------------------------
-Passage des vis FAV en M3x6 ald M3x10 v008.1 **OK**
-
-Module ventilation
-----------------------------------------------------------------------------------------------------
-- design 3D
-    - impression modèle tronqué pour test charnière et système de cran **OK**
-    - intégrer les corrections **OK**
-        - diamètre trou charnière partie mobile et fixe 2+1*jeu ald 2+*2jeu fait en v016 **OK**
-        - augmenter la longueur de la fenêtre de passage de la butée
-        - épaissir le fond de la partie fixe **OK**
-            - j'ai passé le jeu de l'évidement charnière à 1xjeu ald 2x en v017 mais c'est juste **OK**
-            - passer le diam charn à 7.5 ald 8mm v018 **OK**
-    - designer la languette proto v019 **OK**
-    - imprimer languette proto **ABORTED**
-        - stl v019 **OK**
-        - gcode **OK**
-        - imprimer **OK**
-    - faire essais mécanique **ECHEC**
-        - augmenter de diamètre de la bille => 8mm  **ABORTED**
-        - Abandonner l'idée de lame et de bille imprimée regarder coté bille métal **ABORTED**
-    - Inclinateur à base d'aimant (solution à billes abandonnée)  **ABORTED**
-        - dessiner partie fixe **OK**
-        - dessiner partie mobile actuelle v027 **OK**
-        - imprimer version tronquée **mobile** v027 **OK**
-            - export stl trunqué **OK**
-                - export step **OK**
-                - import **OK**
-                - opération booleen (fichier freecad non concervé) **OK**
-                - export stl **OK**
-            - gcode (cura) **OK**
-                - gestion des supports : essayer version sans support **OK**
-            - impression **OK**
-
-        - imprimer version tronquée **fixe** **OK**
-            - export stl trunqué **OK**
-                - export step **OK**
-                - import **OK**
-                - opération booleen **OK**
-                - export stl **OK**
-            - gcode **OK**
-            - impression **OK**
-        - monter **OK**
-        - tester : trop faible **ECHEC**
-
-
-
-
 BASE reprise v007.3
 ----------------------------------------------------------------------------------------------------
 - Reprendre le profile XT60 **OK**
@@ -302,6 +251,11 @@ BASE reprise v007.3
             - Tige 3mm ne rentre pas dans certaines XT60 !!!! **OK**
     - passer les fils : le pb ne se pose que pour le 35mm **ABANDONNE**
     - souder en extérieur **ABANDONNE**
+
+BASE V008.1
+----------------------------------------------------------------------------------------------------
+Passage des vis FAV en M3x6 ald M3x10 v008.1 **OK**
+
 
 module 2x USB 3A
 ----------------------------------------------------------------------------------------------------
@@ -333,6 +287,14 @@ module Ui
     - reprendre alors avec la base 007.5 **OK**
     - reprendre la face avant pour le module écran élargir le trou **OK**
     - Tester ? **NON**
+
+- ré-imprimer la nouvelle face avant v012 **ABORTED**
+    - stl **OK**
+    - g-code **OK**
+    - imprimer **OK**
+- tester mécaniquement **ECHEC et ABANDON**
+- collage du module **OK**
+
 
 Module alim DPS3005
 ----------------------------------------------------------------------------------------------------
@@ -406,14 +368,6 @@ Outillage pour la soudure des XT60
     - préparer GCODE **OK**
 - re-tester la nouvelle version **OK**
 
-module Ui
-----------------------------------------------------------------------------------------------------
-- ré-imprimer la nouvelle face avant v012 **ABORTED**
-    - stl **OK**
-    - g-code **OK**
-    - imprimer **OK**
-- tester mécaniquement **ECHEC et ABANDON**
-- collage du module **OK**
 
 module triple tiny Voltmètre
 ----------------------------------------------------------------------------------------------------
@@ -468,30 +422,6 @@ Module voltmère / ampéremètre
     - une incluse **OK**
 
 
-
-module triple tiny Voltmètre
-----------------------------------------------------------------------------------------------------
-- design 3D **OK**
-    - model volmetre sur GRABCAD **KO**
-        - mini-dc-voltmeter-1.snapshot.5.zip : entraxe incorecte **KO**
-        - dc-0-30v-voltmeter-panel-mount-1.snapshot.3.zip **KO**
-        - led-dc-digital-voltmeter-5v-display-green-1.snapshot.5 **OK**
-
-- export STL **OK**
-- préparation GCODE **OK**
-   - Fav **OK**
-   - Base 90mm **OK**
-- impression **OK**
-   - Fav **OK**
-   - Base **OK**
-   - teste mécanique **OK**
-- câblage
-    - couper barres laiton 73.62mm (vérifié le 24/4) **OK**
-- test électrique
-
-- nomenclatures
-- schéma
-
 outillage switch
 ----------------------------------------------------------------------------------------------------
 - imprimer **OK**
@@ -513,6 +443,7 @@ Module ventilation
         - Essais avec les aimant en long **ABORTED**
             - nouvelle branche **aimantsEnLong**
             - dessiner **OK**		
+
     - Inclinateur à base de verrou élastique => version 029 **OK**
         - dessiner : nouvelle branche git : **ventiloSystemInclinaison**
             - sur le côté droit du module. **OK**
@@ -594,6 +525,15 @@ Module ventilation
     - Programmer Digispark **OK**
     
 - tester **OK**
+
+Module primaire prises PC multiples **aborted**
+----------------------------------------------------------------------------------------------------
+- recherche des standard de prises **OK**
+- appro des embase correspondantes **OK**
+- test des embase en question avant design
+
+- Design du module
+
 
 ====================================================================================================
 Weblinks

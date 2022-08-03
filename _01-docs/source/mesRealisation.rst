@@ -30,9 +30,23 @@ De la gauche vers la droite : module tension/courant, USB 5V 3A, Oscillo, Alimen
 
 Toujours de gauche à droite les modules Volt/ampèremètre, triple voltmètre, XTprolongateur et ventilo
 
+
+.. NOTE::
+
+   Les chapitres suivants ne sont pas nécessairement dans l'ordre de création des objets. 
+   Pour connaître l'avancement du projet ainsi que la liste des objets à venir:  :ref:`voir le chapitre avancement<refAvancementGeneral>`.
+
 ====================================================================================================
+Avant d'entrer dans le vis du sujet
+====================================================================================================
+XT60 male ou femelle
+----------------------------------------------------------------------------------------------------
+Le Lecteur attentif remarquera que je me suis emmêlé les pinceau entre XT60 male et femelle, mais 
+comme tout mes fichiers sont nommés avec cette erreur, je la garde.
+
+
 Règles de nommage
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Ci-dessous les règles que j'ai utilisé pour nommer les objects dans Freecad
 
 - nom du fichier = nom de l'objet (de préférence sa vrai référence)
@@ -58,9 +72,9 @@ exemples:
 - *bornSp.bornierVisTrouDiam* est incorrecte, alors que *bornierSp.VisTrouDiam* serait correcte
 - suffixe : VisTrouDiam, VisTrouPosX....
 
-====================================================================================================
 Versionning
-====================================================================================================
+----------------------------------------------------------------------------------------------------
+
 Pas de git pour ce projet !
 les versions soit 3 digits soit 3 digits. 1 sous version. Je suis indécis. J'aurais tendance à tendre
 vers 3 digits seuls (ça fait moins de caractères à taper)
@@ -70,17 +84,88 @@ hash du commit mais ce passage sous git va de paire avec le passage à des réf�
 pour ne pas avoir de nom de référence qui change tout le temps... Mais on perd aussi en facilité
 en effet avec le versionnning fait sur le nom du fichier on travaille sans changer d'outil...
 
-
-====================================================================================================
 Génération des nomenclatures csv pour Restructured text
-====================================================================================================
+----------------------------------------------------------------------------------------------------
+
 Outil : Libre office calc (c'est un des rare qui permette de chaisir l'encodage et le séparateur)
 
 Faire : Fichier / Enregistrer une copie sous...
  
 Choisir UTF-8 et , comme séparateur
 
+Alimentation des modules en plus base tension
+----------------------------------------------------------------------------------------------------
 
+Pour les modules qui en ont besoin !
+
+
+.. _moduleDCDC2596:
+
+Module convertisseur réglable 2A
+----------------------------------------------------------------------------------------------------
+Ce convertisseur est nécessaire quand les éléments du module ne supportent pas des tension d'entrées
+comprise entre 15 et 24V.
+
+Il convient alors de régler la tension de sortie du convertisseur à la bonne valeur
+
+
+Convertisseur DC/DC 1A réglable
+
+Alimentation du rail : 19 à 25V environ
+
+Courant de sortie nominal annoncé : 2A
+
+Ce style de DCDC: 
+
+.. image:: images/dcdc2Areglable.jpg 
+   :width: 300 px
+
+13.57€ par 10pcs chez `Banggood lm2596 DC-DC`_
+
+.. WARNING:: Pb avec le model 3D récup sur GARCAD
+   :class: without-title
+
+   Écart entre trou mesuré : 31mm versus 30.26 sur le step
+
+.. image:: images/DCDC2596ModelPb.JPG 
+   :width: 600 px
+
+.. _`Banggood lm2596 DC-DC` : https://www.banggood.com/fr/10Pcs-LM2596-DC-DC-Adjustable-Step-Down-Power-Supply-Module-p-963307.html?rmmds=detail-left-hotproducts__7&cur_warehouse=CN
+
+
+Uin : 35V max
+
+Uout : de 1.35V à 35V mouais !
+
+pb la fixation: 2 trous M3 mais:
+
+.. WARNING:: ATTENTION Mettre des vis nylon : risque de contact avec un broche de capa 
+
+`VIS M3x6 NYLON AMAZON`_
+
+.. _`VIS M3x6 NYLON AMAZON` : https://www.amazon.fr/Maintient-Casquette-Convient-nombreux-endroits/dp/B097P43SJC/ref=sr_1_19?keywords=vis+nylon&qid=1649422582&sr=8-19
+
+.. image:: images/positionnementDCDC.jpg 
+   :width: 300 px
+
+
+Tige laiton (connexion des XT60)
+----------------------------------------------------------------------------------------------------
+Plutôt que d'utiliser des fils de cablage, j'ai utiliser des tiges rigides en laiton.
+
+Tige en laiton diam 2 pour les rails d'alimentation des modules chez Leroymerlin diam 3 (le mieux serait du 2)
+
+ou manomano tous les diamètre ou chez `AMAZON 20 Pièces T2 Baguettes de Soudage en laiton de 2mm x 250mm`_
+
+.. _`AMAZON 20 Pièces T2 Baguettes de Soudage en laiton de 2mm x 250mm` : https://www.amazon.fr/gp/product/B08S728MMZ/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1
+
+.. figure:: images/tigeLaitons.jpg
+    :width: 300 px
+    :align: left
+
+    Position des tiges en laiton
+
+20 tiges de 250mm 14€ soit 0.7€ les 250mm ou encore 0.0028€/mm
 
 ====================================================================================================
 Le model de base 35mm large
@@ -212,78 +297,7 @@ Nomenclature de base
    :header-rows: 1
 
 
-====================================================================================================
-Alimentation des modules en plus base tension
-====================================================================================================
-Pour les modules qui en ont besoin !
 
-
-.. _moduleDCDC2596:
-
-Module convertisseur réglable 2A
-----------------------------------------------------------------------------------------------------
-Ce convertisseur est nécessaire quand les éléments du module ne supportent pas des tension d'entrées
-comprise entre 15 et 24V.
-
-Il convient alors de régler la tension de sortie du convertisseur à la bonne valeur
-
-
-Convertisseur DC/DC 1A réglable
-
-Alimentation du rail : 19 à 25V environ
-
-Courant de sortie nominal annoncé : 2A
-
-Ce style de DCDC: 
-
-.. image:: images/dcdc2Areglable.jpg 
-   :width: 300 px
-
-13.57€ par 10pcs chez `Banggood lm2596 DC-DC`_
-
-.. WARNING:: Pb avec le model 3D récup sur GARCAD
-   :class: without-title
-
-   Écart entre trou mesuré : 31mm versus 30.26 sur le step
-
-.. image:: images/DCDC2596ModelPb.JPG 
-   :width: 600 px
-
-.. _`Banggood lm2596 DC-DC` : https://www.banggood.com/fr/10Pcs-LM2596-DC-DC-Adjustable-Step-Down-Power-Supply-Module-p-963307.html?rmmds=detail-left-hotproducts__7&cur_warehouse=CN
-
-
-Uin : 35V max
-
-Uout : de 1.35V à 35V mouais !
-
-pb la fixation: 2 trous M3 mais:
-
-.. WARNING:: ATTENTION Mettre des vis nylon : risque de contact avec un broche de capa 
-
-`VIS M3x6 NYLON AMAZON`_
-
-.. _`VIS M3x6 NYLON AMAZON` : https://www.amazon.fr/Maintient-Casquette-Convient-nombreux-endroits/dp/B097P43SJC/ref=sr_1_19?keywords=vis+nylon&qid=1649422582&sr=8-19
-
-.. image:: images/positionnementDCDC.jpg 
-   :width: 300 px
-
-
-Tige laiton (connexion des XT60)
-----------------------------------------------------------------------------------------------------
-
-Tige en laiton diam 2 pour les rails chez Leroymerlin diam 3 (le mieux serait du 2)
-
-ou manomano tous les diamètre ou chez `AMAZON 20 Pièces T2 Baguettes de Soudage en laiton de 2mm x 250mm`_
-
-.. _`AMAZON 20 Pièces T2 Baguettes de Soudage en laiton de 2mm x 250mm` : https://www.amazon.fr/gp/product/B08S728MMZ/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1
-
-.. figure:: images/tigeLaitons.jpg
-    :width: 300 px
-    :align: left
-
-    Position des tiges en laiton
-
-20 tiges de 250mm 14€ soit 0.7€ les 250mm
 
 ====================================================================================================
 Module primaire
@@ -322,17 +336,20 @@ N'ayant pas trouvé simplement d'embase 7.4x5.0mm j'opte pour un adaptateur vers
   
 Donc en résumé pour ce module : 1 XT-60 normal + à l'arrière ou du même côté que le XT ou les 2:
 
-- DC5025
-- `DC5020`_
+- DC5525
+- `DC5521`_
 
 
 .. _`Embase verte du LAB à vis` : https://www.amazon.fr/Connecteur-femelle-verser-cam%C3%A9ra-surveillance/dp/B00Z2LMT2O/ref=sr_1_11?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1TMH52S91RFIR&keywords=DC5521&qid=1651395134&sprefix=dc5521%2Caps%2C50&sr=8-11
 
 .. _`AMAZON DC5525` : https://www.amazon.fr/gp/product/B01LQGESUO/ref=ox_sc_act_title_2?smid=AQ1IBDB6G2RRD&psc=1
 
-.. _`DC5020` : https://www.amazon.fr/gp/product/B07D4DLJ69/ref=ox_sc_act_title_1?smid=A2HAOQPNQ6T9Y5&psc=1 
+.. _`DC5521` : https://www.amazon.fr/gp/product/B07D4DLJ69/ref=ox_sc_act_title_1?smid=A2HAOQPNQ6T9Y5&psc=1 
 
+.. NOTE:: Finalement
+   :class: without-title
 
+   Ajout de 2 prises DC5525 et DC5521 au module mesure de Tension/courant de ligne ci-après.
 
 .. index::
     pair: Modules; U/I en ligne
@@ -349,7 +366,39 @@ Module mesure Tension/courant de la ligne
    :width: 300 px
 
 Le but de ce module est d'indiquer la tension et le courant consommé par les modules qui se trouvent
-après lui dans la chaîne. C'est le seul module qui n'est pas en parallèle.
+après lui dans la chaîne. 
+
+C'est le seul module qui n'est pas en parallèle sur les 2 tiges d'alimentation.
+
+.. image:: images/moduleUILigne.jpg 
+   :width: 500 px
+
+
+
+.. figure:: images/moduleUILigneAjoutDC552x.jpg
+    :width: 300 px
+    :figwidth: 100%
+    :align: center
+
+    Ajout de connecteurs DC5525 et DC5521 
+
+Schéma électrique
+----------------------------------------------------------------------------------------------------
+
+.. image:: images/moduleUILigneSch.JPG
+
+
+Nomenclature
+----------------------------------------------------------------------------------------------------
+
+.. csv-table:: Nomenclature USB5V 3A
+   :file: ../../_02-realisation/_03-cao_3D/mesCreations/moduleUI/nomUILigne.csv
+   :delim: ,
+   :encoding: UTF-8
+   :align: left
+   :header-rows: 1
+
+
 
 
 .. index::
@@ -761,6 +810,10 @@ Module Parkside
 Recherche de model internet : pas grand chose d'exploitable, surtout des stl !
 
 Mieux vaut tout re-modéliser ça n'a pas l'air très compliqué si on s'inspire du chargeur !
+
+Un peu d'électronique
+----------------------------------------------------------------------------------------------------
+LGT8P22 : pas trouvé la datsheet.
 
 ====================================================================================================
 Module triple tiny voltmètre
