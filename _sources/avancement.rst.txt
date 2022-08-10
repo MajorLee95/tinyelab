@@ -57,7 +57,7 @@ Les nomenclatures
 ----------------------------------------------------------------------------------------------------
     - base **OK**
     - USB **OK**
-    - Module U/I en ligne
+    - Module U/I en ligne **OK**
     - Alim DPS3005 **OK**
     - Oscillo **OK**
     - VA
@@ -96,12 +96,6 @@ Concept du tiroir
 A finir modules
 ====================================================================================================
 
-Module courant/tension de ligne
-----------------------------------------------------------------------------------------------------
-- schéma
-- nomenclature
-- éventuellement photo
-
 Module oscilo
 ----------------------------------------------------------------------------------------------------
 - photo **OK**
@@ -138,18 +132,24 @@ module USB 3A à refaire sniff
     - le tester avant de l'intégrer
 
 
-Module primaire prises PC multiples
-----------------------------------------------------------------------------------------------------
-- recherche des standard de prises **OK**
-- appro des embase correspondantes **OK**
-- test des embase en question avant design
 
-- Design du module
 
 Module batterie Lidl
 ----------------------------------------------------------------------------------------------------
-- Modéliser le haut de la batterie
-- modéliser le module
+- Modéliser le haut de la batterie pas vraiment utile
+- modéliser le module **OK**
+- stl, gcode FAV et base et adaptateur **OK**
+- imprimer
+    - adapt **OK**
+    - fav
+    - base
+- câbler
+- tester
+- voir la version avec inter et porte fuse : est-elle utile ?
+- documenter
+    - photo
+    - screenshot
+    - nomenclature
 
 Module batterie lidl ET prise PC multiples avec commute auto
 ----------------------------------------------------------------------------------------------------
@@ -161,17 +161,18 @@ Module alim 24V/10A
 - faire cable XT60
 - En profiter pour cable rallonge XT60 **OK**
     - avec gros fil dans le tiroir **OK**
-- Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V si
+- Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V ? Si
 
-Module 3.3, 5 et +12-12
+Module 3.3, 5 et +12-12, + alim variable low cost (regroupement)
 ----------------------------------------------------------------------------------------------------
 Alim fixe avec les 3 alimentations principales
 A faire avec fusible réarmables.
 Discutabele pour le 5 et le 3.3v vu que les carte de breadboard l'on, ne reste plus que le +/-15V
 
-Module alim low cost
-----------------------------------------------------------------------------------------------------
-Sur la base d'un DC/DC XL4605
+- Module alim low cost : sur la base d'un DC/DC XL4605 avec poter multi-tours déporté
+
+Quelle connectique ? Les connectique façon HP ne conviennent pas pour l'alim symétrique et risquent
+de prendre pas mal de place.
 
 
 Module Générateur de fonction
@@ -197,8 +198,8 @@ Module Générateur de fonction
 
 module ampèremètre seul 0/3A
 ----------------------------------------------------------------------------------------------------
-- trouver la bête
-- commande AMAZON à aiguille
+- trouver la bête **OK**
+- commande AMAZON à aiguille **OK**
 
 
 Module LCR mètre
@@ -537,6 +538,15 @@ Module ventilation
     - Programmer Digispark **OK**
     
 - tester **OK**
+
+Module primaire prises PC multiples **aborted**
+----------------------------------------------------------------------------------------------------
+- recherche des standard de prises **OK**
+- appro des embase correspondantes **OK**
+- test des embase en question avant design
+
+- Design du module
+
 
 ====================================================================================================
 Weblinks
