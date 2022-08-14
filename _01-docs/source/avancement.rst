@@ -32,8 +32,10 @@ Mettre projet sous Volab/wiki et sous github
 - créer github io **OK**
 - pusher la doc sur githubio **OK**
 - créer un readme.rst au niveau projet **OK**
-- créer le projet dans le Wiki du lab
-- Renseigner le projet dans le wiki du lab
+- créer le projet dans le Wiki du lab **OK**
+- Renseigner le projet dans le wiki du lab **OK**
+- Créer une vignette projet dans le Wiki
+- peut-être compléter la description
 
 Mettre les modules sous Thinkiverse
 ----------------------------------------------------------------------------------------------------
@@ -60,7 +62,7 @@ Les nomenclatures
     - Module U/I en ligne **OK**
     - Alim DPS3005 **OK**
     - Oscillo **OK**
-    - VA
+    - VA **OK**
     - multi-voltmètres
 
 schéma de câblage des modules
@@ -96,6 +98,11 @@ Concept du tiroir
 A finir modules
 ====================================================================================================
 
+Module alim DPS3005
+----------------------------------------------------------------------------------------------------
+- faire une jolie photo module seule en box photo
+- l'intégrée dans la doc
+
 Module oscilo
 ----------------------------------------------------------------------------------------------------
 - photo **OK**
@@ -107,13 +114,14 @@ Module voltmètre / ampèremètre
 ----------------------------------------------------------------------------------------------------
 - test électrique
      - à compléter en ampèremètre (peu précis dans les faibles courants)
-- nomenclatures ``projet\_02-realisation\_03-cao_3D\mesCreations\moduleVoltAmperemetre`` **en cours**
+- nomenclatures  **OK**
 - photo **OK**
 
 module triple tiny Voltmètre
 ----------------------------------------------------------------------------------------------------
 - test électrique+ réglage **OK**
-- photo
+- explications **OK**
+- photo **OK**
 - nomenclatures
 - schéma
 
@@ -126,34 +134,31 @@ Module ventilation
 A faire modules
 ====================================================================================================
 
+Module batterie Lidl
+----------------------------------------------------------------------------------------------------
+- Modéliser le haut de la batterie pas vraiment utile **OK**
+- modéliser le module **OK**
+- stl, gcode FAV et base et adaptateur **OK**
+- imprimer **OK**
+    - adapt **OK**
+    - fav **OK**
+    - base **OK**
+- câbler **OK**
+- tester **OK**
+- voir la version avec inter et porte fuse : est-elle utile ? **A voir beaucoup plus tard**
+- documenter
+    - photo
+    - screenshot (rendu Freecad)
+    - nomenclature
+
 module USB 3A à refaire sniff
 ----------------------------------------------------------------------------------------------------
 - trouver un convertisseur qui tienne 24V **ET** 3A **OK**
     - le tester avant de l'intégrer
 
-
-
-
-Module batterie Lidl
+Module USB-C fast charge
 ----------------------------------------------------------------------------------------------------
-- Modéliser le haut de la batterie pas vraiment utile
-- modéliser le module **OK**
-- stl, gcode FAV et base et adaptateur **OK**
-- imprimer
-    - adapt **OK**
-    - fav
-    - base
-- câbler
-- tester
-- voir la version avec inter et porte fuse : est-elle utile ?
-- documenter
-    - photo
-    - screenshot
-    - nomenclature
-
-Module batterie lidl ET prise PC multiples avec commute auto
-----------------------------------------------------------------------------------------------------
-Tout est dans le titre
+- tout
 
 Module alim 24V/10A
 ----------------------------------------------------------------------------------------------------
@@ -162,6 +167,21 @@ Module alim 24V/10A
 - En profiter pour cable rallonge XT60 **OK**
     - avec gros fil dans le tiroir **OK**
 - Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V ? Si
+
+module ampèremètre seul 0/3A
+----------------------------------------------------------------------------------------------------
+- trouver la bête **OK**
+- commande AMAZON à aiguille **OK**
+- Design 3D
+    - trouver ou faire le modele
+    - Tout
+
+Module LCR mètre
+----------------------------------------------------------------------------------------------------
+- tout
+- Est-ce que cel permet de tester les LED ? OUI
+- LCR-T4 https://www.amazon.fr/gp/product/B0798JNLCJ/ref=sw_img_1?smid=A1NBUX8FDB1DWX&psc=1
+- 
 
 Module 3.3, 5 et +12-12, + alim variable low cost (regroupement)
 ----------------------------------------------------------------------------------------------------
@@ -192,19 +212,30 @@ Module Générateur de fonction
 - refonte du code **DELAYED**
     - Trop de boulot peut-être pour une version ultérieure
 - 3D retouche BNC emprunte v008 **OK**
+- Design 3D
+    - Tout
 
 
 
 
-module ampèremètre seul 0/3A
-----------------------------------------------------------------------------------------------------
-- trouver la bête **OK**
-- commande AMAZON à aiguille **OK**
 
 
-Module LCR mètre
+
+Voltmètre avec masse flottante
 ----------------------------------------------------------------------------------------------------
 - tout
+- Quoique en repartant de tiny voltmètre avec 3 DC/DC isolés
+
+Module Horloge et musique
+----------------------------------------------------------------------------------------------------
+A faire.
+
+Horloge ok mais musique ? quoi ?
+
+
+Module batterie lidl ET prise PC multiples avec commute auto **UTILITE ?**
+----------------------------------------------------------------------------------------------------
+Tout est dans le titre
 
 
 
@@ -216,7 +247,7 @@ Dévidoir de fil
 ----------------------------------------------------------------------------------------------------
 - tout
 - Modéliser les bobines
-    - diam 55mm, large 21mm, moyen diam 25mm, Flan 1.5mm
+    - diam 55mm, large 21mm, moyeu diam 25mm, Flan 1.5mm
     - 6 couleurs
     - AWG 24
 
@@ -227,9 +258,7 @@ Module fer à souder
 - tout : présente peu d'intérêt avec le fer TS100 un simple cable de bout de chaîne pourrait suffire !
 
 
-Module Horloge et musique
-----------------------------------------------------------------------------------------------------
-A faire.
+
 
 Module renvoi d'angle
 ----------------------------------------------------------------------------------------------------
