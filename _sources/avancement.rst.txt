@@ -134,14 +134,6 @@ Module ventilation
 A faire modules
 ====================================================================================================
 
-module USB 3A à refaire sniff
-----------------------------------------------------------------------------------------------------
-- trouver un convertisseur qui tienne 24V **ET** 3A **OK**
-    - le tester avant de l'intégrer
-
-
-
-
 Module batterie Lidl
 ----------------------------------------------------------------------------------------------------
 - Modéliser le haut de la batterie pas vraiment utile **OK**
@@ -151,17 +143,22 @@ Module batterie Lidl
     - adapt **OK**
     - fav **OK**
     - base **OK**
-- câbler
-- tester
-- voir la version avec inter et porte fuse : est-elle utile ?
+- câbler **OK**
+- tester **OK**
+- voir la version avec inter et porte fuse : est-elle utile ? **A voir beaucoup plus tard**
 - documenter
     - photo
-    - screenshot
+    - screenshot (rendu Freecad)
     - nomenclature
 
-Module batterie lidl ET prise PC multiples avec commute auto **UTILITE ?**
+module USB 3A à refaire sniff
 ----------------------------------------------------------------------------------------------------
-Tout est dans le titre
+- trouver un convertisseur qui tienne 24V **ET** 3A **OK**
+    - le tester avant de l'intégrer
+
+Module USB-C fast charge
+----------------------------------------------------------------------------------------------------
+- tout
 
 Module alim 24V/10A
 ----------------------------------------------------------------------------------------------------
@@ -170,6 +167,21 @@ Module alim 24V/10A
 - En profiter pour cable rallonge XT60 **OK**
     - avec gros fil dans le tiroir **OK**
 - Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V ? Si
+
+module ampèremètre seul 0/3A
+----------------------------------------------------------------------------------------------------
+- trouver la bête **OK**
+- commande AMAZON à aiguille **OK**
+- Design 3D
+    - trouver ou faire le modele
+    - Tout
+
+Module LCR mètre
+----------------------------------------------------------------------------------------------------
+- tout
+- Est-ce que cel permet de tester les LED ? OUI
+- LCR-T4 https://www.amazon.fr/gp/product/B0798JNLCJ/ref=sw_img_1?smid=A1NBUX8FDB1DWX&psc=1
+- 
 
 Module 3.3, 5 et +12-12, + alim variable low cost (regroupement)
 ----------------------------------------------------------------------------------------------------
@@ -206,22 +218,26 @@ Module Générateur de fonction
 
 
 
-module ampèremètre seul 0/3A
-----------------------------------------------------------------------------------------------------
-- trouver la bête **OK**
-- commande AMAZON à aiguille **OK**
-- Design 3D
-    - trouver ou faire le modele
-    - Tout
 
-Module LCR mètre
-----------------------------------------------------------------------------------------------------
-- tout
+
 
 Voltmètre avec masse flottante
 ----------------------------------------------------------------------------------------------------
 - tout
 - Quoique en repartant de tiny voltmètre avec 3 DC/DC isolés
+
+Module Horloge et musique
+----------------------------------------------------------------------------------------------------
+A faire.
+
+Horloge ok mais musique ? quoi ?
+
+
+Module batterie lidl ET prise PC multiples avec commute auto **UTILITE ?**
+----------------------------------------------------------------------------------------------------
+Tout est dans le titre
+
+
 
 Étagère system
 ----------------------------------------------------------------------------------------------------
@@ -242,9 +258,7 @@ Module fer à souder
 - tout : présente peu d'intérêt avec le fer TS100 un simple cable de bout de chaîne pourrait suffire !
 
 
-Module Horloge et musique
-----------------------------------------------------------------------------------------------------
-A faire.
+
 
 Module renvoi d'angle
 ----------------------------------------------------------------------------------------------------
