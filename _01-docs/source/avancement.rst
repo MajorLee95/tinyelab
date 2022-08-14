@@ -134,23 +134,6 @@ Module ventilation
 A faire modules
 ====================================================================================================
 
-Module batterie Lidl
-----------------------------------------------------------------------------------------------------
-- Modéliser le haut de la batterie pas vraiment utile **OK**
-- modéliser le module **OK**
-- stl, gcode FAV et base et adaptateur **OK**
-- imprimer **OK**
-    - adapt **OK**
-    - fav **OK**
-    - base **OK**
-- câbler **OK**
-- tester **OK**
-- voir la version avec inter et porte fuse : est-elle utile ? **A voir beaucoup plus tard**
-- documenter
-    - photo
-    - screenshot (rendu Freecad)
-    - nomenclature
-
 module USB 3A à refaire sniff
 ----------------------------------------------------------------------------------------------------
 - trouver un convertisseur qui tienne 24V **ET** 3A **OK**
@@ -576,6 +559,22 @@ Module primaire prises PC multiples **aborted**
 
 - Design du module
 
+Module batterie Lidl
+----------------------------------------------------------------------------------------------------
+- Modéliser le haut de la batterie pas vraiment utile **OK**
+- modéliser le module **OK**
+- stl, gcode FAV et base et adaptateur **OK**
+- imprimer **OK**
+    - adapt **OK**
+    - fav **OK**
+    - base **OK**
+- câbler **OK**
+- tester **OK**
+- voir la version avec inter et porte fuse : est-elle utile ? **A voir beaucoup plus tard**
+- documenter **OK**
+    - photo **OK**
+    - screenshot (rendu Freecad) **OK**
+    - nomenclature **OK**
 
 ====================================================================================================
 Weblinks
