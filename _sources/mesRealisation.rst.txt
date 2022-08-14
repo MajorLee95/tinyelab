@@ -839,7 +839,7 @@ Modélisation 3D
 - 3D écran
 - 3D nano (pas utile puisque pcb dédié) si en fait pour les volumes en attendant le pcb
 - 3D boutons
-- 
+
 
 KICAD project started.
 
@@ -860,11 +860,24 @@ LGT8P22 : pas trouvé la datsheet.
 ====================================================================================================
 Module triple tiny voltmètre
 ====================================================================================================
+L'objectif ici est de mettre le plus possible de voltmètre dans un seul module de taille raisonnable.
+
+J'ai opté pour de petit voltèmtre tout intégrés avec alimentation séparée dans 3 fils. Cela permet
+d'alimenter les module même en l'absence de tension à mesurer. Mais nécessite l'utilisation d'un 
+convertisseur DC/DC cf :ref:`ci-dessus<moduleDCDC2596>`
+
+Pour la connectique, les prise audio feront l'affaire elle permettent des branchements rapides.
+
+.. WARNING:: ATTENTION GND commun à tout ce petit monde
+   :class: without-title
+
 2.4 to 30V 0.28" chez Banggood Aliexpress ou 
 
-`AMAZON YIXISI 4pcs Mini Voltmètre Numérique, 0.28 Pouce Deux Lignes DC Voltmètre, 4 Couleurs Rouge/Jaune/Vert/Bleu`_
 
-.. _`AMAZON YIXISI 4pcs Mini Voltmètre Numérique, 0.28 Pouce Deux Lignes DC Voltmètre, 4 Couleurs Rouge/Jaune/Vert/Bleu` : https://www.amazon.fr/YIXISI-Voltm%C3%A8tre-Num%C3%A9rique-Lignes-Couleurs/dp/B082ZLRY1Y/ref=asc_df_B082ZLRY1Y/?tag=googshopfr-21&linkCode=df0&hvadid=411439987151&hvpos=&hvnetw=g&hvrand=12753950135123075235&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9056228&hvtargid=pla-864257550626&psc=1&tag=&ref=&adgrpid=95238321811&hvpone=&hvptwo=&hvadid=411439987151&hvpos=&hvnetw=g&hvrand=12753950135123075235&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9056228&hvtargid=pla-864257550626
+`GTIWUNG 4Pcs Mini Voltmètre, Numérique DC Voltmètre 0.28 Pouce, Panneau 0-100V DC 3 Fils`_
+
+.. _`GTIWUNG 4Pcs Mini Voltmètre, Numérique DC Voltmètre 0.28 Pouce, Panneau 0-100V DC 3 Fils` : https://www.amazon.fr/gp/product/B07VCN8YQ4/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1
+
 
 .. image:: images/028voltmeter.jpg 
    :width: 300 px
@@ -873,6 +886,13 @@ Rendu FreeCAD
 ----------------------------------------------------------------------------------------------------
 .. image:: images/tripleVolmetre.jpg 
    :width: 600 px
+
+Photo
+----------------------------------------------------------------------------------------------------
+
+.. image:: images/tripleVolt.JPG 
+   :width: 600 px
+
 
 .. index::
     pair: Modules; Ventilo

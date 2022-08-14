@@ -181,24 +181,25 @@
 <li><p><a class="reference internal" href="#module-triple-tiny-voltmetre" id="id155">Module triple tiny voltmètre</a></p>
 <ul>
 <li><p><a class="reference internal" href="#id4" id="id156">Rendu FreeCAD</a></p></li>
+<li><p><a class="reference internal" href="#photo" id="id157">Photo</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#module-ventilo" id="id157">Module ventilo</a></p>
+<li><p><a class="reference internal" href="#module-ventilo" id="id158">Module ventilo</a></p>
 <ul>
-<li><p><a class="reference internal" href="#conception-du-systeme-d-inclinaison" id="id158">Conception du système d’inclinaison</a></p></li>
-<li><p><a class="reference internal" href="#pilotage-eleectrique-du-ventilo-et-des-led" id="id159">Pilotage éléectrique du ventilo et des LED</a></p></li>
-<li><p><a class="reference internal" href="#interrupteurs-rouge-miniature" id="id160">Interrupteurs rouge miniature</a></p></li>
-<li><p><a class="reference internal" href="#avec-un-digispark" id="id161">Avec un digispark</a></p>
+<li><p><a class="reference internal" href="#conception-du-systeme-d-inclinaison" id="id159">Conception du système d’inclinaison</a></p></li>
+<li><p><a class="reference internal" href="#pilotage-eleectrique-du-ventilo-et-des-led" id="id160">Pilotage éléectrique du ventilo et des LED</a></p></li>
+<li><p><a class="reference internal" href="#interrupteurs-rouge-miniature" id="id161">Interrupteurs rouge miniature</a></p></li>
+<li><p><a class="reference internal" href="#avec-un-digispark" id="id162">Avec un digispark</a></p>
 <ul>
-<li><p><a class="reference internal" href="#changer-la-frequence-du-pwm-dans-le-digispark" id="id162">Changer la fréquence du PWM dans le digispark</a></p></li>
+<li><p><a class="reference internal" href="#changer-la-frequence-du-pwm-dans-le-digispark" id="id163">Changer la fréquence du PWM dans le digispark</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#id5" id="id163">Rendu Freecad</a></p></li>
-<li><p><a class="reference internal" href="#ameliorations-possibles-souhaitable" id="id164">Améliorations possibles/souhaitable</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id164">Rendu Freecad</a></p></li>
+<li><p><a class="reference internal" href="#ameliorations-possibles-souhaitable" id="id165">Améliorations possibles/souhaitable</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#module-amperemetre" id="id165">Module ampèremètre</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id166">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#module-amperemetre" id="id166">Module ampèremètre</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id167">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -1256,7 +1257,6 @@ De plus n’oubliez pas que le GND est commun avec les autres modules.</p>
 <li><p>3D écran</p></li>
 <li><p>3D nano (pas utile puisque pcb dédié) si en fait pour les volumes en attendant le pcb</p></li>
 <li><p>3D boutons</p></li>
-<li></li>
 </ul>
 <p>KICAD project started.</p>
 </div>
@@ -1272,12 +1272,25 @@ De plus n’oubliez pas que le GND est commun avec les autres modules.</p>
 </div>
 <div class="section" id="module-triple-tiny-voltmetre">
 <h2><a class="toc-backref" href="#contents">Module triple tiny voltmètre</a><a class="headerlink" href="#module-triple-tiny-voltmetre" title="Permalink to this headline">¶</a></h2>
+<p>L’objectif ici est de mettre le plus possible de voltmètre dans un seul module de taille raisonnable.</p>
+<p>J’ai opté pour de petit voltèmtre tout intégrés avec alimentation séparée dans 3 fils. Cela permet
+d’alimenter les module même en l’absence de tension à mesurer. Mais nécessite l’utilisation d’un
+convertisseur DC/DC cf <a class="reference internal" href="#moduledcdc2596"><span class="std std-ref">ci-dessus</span></a></p>
+<p>Pour la connectique, les prise audio feront l’affaire elle permettent des branchements rapides.</p>
+<div class="without-title admonition warning">
+<p class="admonition-title">Warning</p>
+<p>ATTENTION GND commun à tout ce petit monde</p>
+</div>
 <p>2.4 to 30V 0.28” chez Banggood Aliexpress ou</p>
-<p><a class="reference external" href="https://www.amazon.fr/YIXISI-Voltm%C3%A8tre-Num%C3%A9rique-Lignes-Couleurs/dp/B082ZLRY1Y/ref=asc_df_B082ZLRY1Y/?tag=googshopfr-21&amp;linkCode=df0&amp;hvadid=411439987151&amp;hvpos=&amp;hvnetw=g&amp;hvrand=12753950135123075235&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9056228&amp;hvtargid=pla-864257550626&amp;psc=1&amp;tag=&amp;ref=&amp;adgrpid=95238321811&amp;hvpone=&amp;hvptwo=&amp;hvadid=411439987151&amp;hvpos=&amp;hvnetw=g&amp;hvrand=12753950135123075235&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9056228&amp;hvtargid=pla-864257550626">AMAZON YIXISI 4pcs Mini Voltmètre Numérique, 0.28 Pouce Deux Lignes DC Voltmètre, 4 Couleurs Rouge/Jaune/Vert/Bleu</a> <a class="footnote-reference brackets" href="#id73" id="id74">28</a></p>
+<p><a class="reference external" href="https://www.amazon.fr/gp/product/B07VCN8YQ4/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&amp;psc=1">GTIWUNG 4Pcs Mini Voltmètre, Numérique DC Voltmètre 0.28 Pouce, Panneau 0-100V DC 3 Fils</a> <a class="footnote-reference brackets" href="#id73" id="id74">28</a></p>
 <a class="reference internal image-reference" href="_images/028voltmeter.jpg"><img alt="_images/028voltmeter.jpg" src="_images/028voltmeter.jpg" style="width: 300px;" /></a>
 <div class="section" id="id4">
 <h3><a class="toc-backref" href="#contents">Rendu FreeCAD</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/tripleVolmetre.jpg"><img alt="_images/tripleVolmetre.jpg" src="_images/tripleVolmetre.jpg" style="width: 600px;" /></a>
+</div>
+<div class="section" id="photo">
+<h3><a class="toc-backref" href="#contents">Photo</a><a class="headerlink" href="#photo" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/tripleVolt.JPG"><img alt="_images/tripleVolt.JPG" src="_images/tripleVolt.JPG" style="width: 600px;" /></a>
 </div>
 </div>
 <div class="section" id="module-ventilo">
@@ -1501,7 +1514,7 @@ et 22€ pas en prime !</p>
 <dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B093PSZPW6/ref=crt_ewc_title_dp_1?ie=UTF8&amp;psc=1&amp;smid=A3MM3V4F4Z0CQN">https://www.amazon.fr/gp/product/B093PSZPW6/ref=crt_ewc_title_dp_1?ie=UTF8&amp;psc=1&amp;smid=A3MM3V4F4Z0CQN</a></p>
 </dd>
 <dt class="label" id="id73"><span class="brackets"><a class="fn-backref" href="#id74">28</a></span></dt>
-<dd><p><a class="reference external" href="https://www.amazon.fr/YIXISI-Voltm%C3%A8tre-Num%C3%A9rique-Lignes-Couleurs/dp/B082ZLRY1Y/ref=asc_df_B082ZLRY1Y/?tag=googshopfr-21&amp;linkCode=df0&amp;hvadid=411439987151&amp;hvpos=&amp;hvnetw=g&amp;hvrand=12753950135123075235&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9056228&amp;hvtargid=pla-864257550626&amp;psc=1&amp;tag=&amp;ref=&amp;adgrpid=95238321811&amp;hvpone=&amp;hvptwo=&amp;hvadid=411439987151&amp;hvpos=&amp;hvnetw=g&amp;hvrand=12753950135123075235&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9056228&amp;hvtargid=pla-864257550626">https://www.amazon.fr/YIXISI-Voltm%C3%A8tre-Num%C3%A9rique-Lignes-Couleurs/dp/B082ZLRY1Y/ref=asc_df_B082ZLRY1Y/?tag=googshopfr-21&amp;linkCode=df0&amp;hvadid=411439987151&amp;hvpos=&amp;hvnetw=g&amp;hvrand=12753950135123075235&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9056228&amp;hvtargid=pla-864257550626&amp;psc=1&amp;tag=&amp;ref=&amp;adgrpid=95238321811&amp;hvpone=&amp;hvptwo=&amp;hvadid=411439987151&amp;hvpos=&amp;hvnetw=g&amp;hvrand=12753950135123075235&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9056228&amp;hvtargid=pla-864257550626</a></p>
+<dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B07VCN8YQ4/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&amp;psc=1">https://www.amazon.fr/gp/product/B07VCN8YQ4/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&amp;psc=1</a></p>
 </dd>
 <dt class="label" id="id75"><span class="brackets"><a class="fn-backref" href="#id76">29</a></span></dt>
 <dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B096NXK7L1/ref=ox_sc_act_title_1?smid=A2W68NJA5YNXUP&amp;psc=1">https://www.amazon.fr/gp/product/B096NXK7L1/ref=ox_sc_act_title_1?smid=A2W68NJA5YNXUP&amp;psc=1</a></p>
@@ -1633,6 +1646,7 @@ et 22€ pas en prime !</p>
 </li>
 <li><a class="reference internal" href="#module-triple-tiny-voltmetre">Module triple tiny voltmètre</a><ul>
 <li><a class="reference internal" href="#id4">Rendu FreeCAD</a></li>
+<li><a class="reference internal" href="#photo">Photo</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-ventilo">Module ventilo</a><ul>
