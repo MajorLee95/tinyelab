@@ -100,7 +100,7 @@ A finir modules
 
 Module alim DPS3005
 ----------------------------------------------------------------------------------------------------
-- faire une jolie photo module seule en box photo
+- faire une jolie photo module seule en box photo **OK**
 - l'intégrée dans la doc
 
 Module oscilo
@@ -133,23 +133,6 @@ Module ventilation
 ====================================================================================================
 A faire modules
 ====================================================================================================
-
-Module batterie Lidl
-----------------------------------------------------------------------------------------------------
-- Modéliser le haut de la batterie pas vraiment utile **OK**
-- modéliser le module **OK**
-- stl, gcode FAV et base et adaptateur **OK**
-- imprimer **OK**
-    - adapt **OK**
-    - fav **OK**
-    - base **OK**
-- câbler **OK**
-- tester **OK**
-- voir la version avec inter et porte fuse : est-elle utile ? **A voir beaucoup plus tard**
-- documenter
-    - photo
-    - screenshot (rendu Freecad)
-    - nomenclature
 
 module USB 3A à refaire sniff
 ----------------------------------------------------------------------------------------------------
@@ -297,6 +280,12 @@ BASE reprise v007.3
 BASE V008.1
 ----------------------------------------------------------------------------------------------------
 Passage des vis FAV en M3x6 ald M3x10 v008.1 **OK**
+
+BASE v012
+----------------------------------------------------------------------------------------------------
+- retirer un peu de matière de part et d'autre de la lèvre **OK**
+    - A terminer v010 **OK**
+- positionnement XT et insert de gauche auto en fonction de largeurmodule **OK** v12
 
 
 module 2x USB 3A
@@ -576,6 +565,22 @@ Module primaire prises PC multiples **aborted**
 
 - Design du module
 
+Module batterie Lidl
+----------------------------------------------------------------------------------------------------
+- Modéliser le haut de la batterie pas vraiment utile **OK**
+- modéliser le module **OK**
+- stl, gcode FAV et base et adaptateur **OK**
+- imprimer **OK**
+    - adapt **OK**
+    - fav **OK**
+    - base **OK**
+- câbler **OK**
+- tester **OK**
+- voir la version avec inter et porte fuse : est-elle utile ? **A voir beaucoup plus tard**
+- documenter **OK**
+    - photo **OK**
+    - screenshot (rendu Freecad) **OK**
+    - nomenclature **OK**
 
 ====================================================================================================
 Weblinks
