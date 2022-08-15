@@ -687,6 +687,12 @@ Rendu final sous Freecad
 .. image:: images/moduleDPS3005.JPG 
    :width: 600 px
 
+Photos
+----------------------------------------------------------------------------------------------------
+.. image:: images/moduleDPS3005_photo.JPG 
+   :width: 600 px
+
+
 Nomenclature module DPS3005
 ----------------------------------------------------------------------------------------------------
 .. csv-table:: Nomenclature DPS3005
@@ -765,6 +771,13 @@ Rendu Freecad
     :align: left
 
 |clearer|
+
+Photo
+----------------------------------------------------------------------------------------------------
+.. image:: images/moduleVAPhoto.jpg 
+   :width: 600 px
+   :align: center
+
 
 Nomenclature
 ----------------------------------------------------------------------------------------------------

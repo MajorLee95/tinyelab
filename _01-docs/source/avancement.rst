@@ -100,7 +100,7 @@ A finir modules
 
 Module alim DPS3005
 ----------------------------------------------------------------------------------------------------
-- faire une jolie photo module seule en box photo
+- faire une jolie photo module seule en box photo **OK**
 - l'intégrée dans la doc
 
 Module oscilo
@@ -280,6 +280,12 @@ BASE reprise v007.3
 BASE V008.1
 ----------------------------------------------------------------------------------------------------
 Passage des vis FAV en M3x6 ald M3x10 v008.1 **OK**
+
+BASE v012
+----------------------------------------------------------------------------------------------------
+- retirer un peu de matière de part et d'autre de la lèvre **OK**
+    - A terminer v010 **OK**
+- positionnement XT et insert de gauche auto en fonction de largeurmodule **OK** v12
 
 
 module 2x USB 3A
