@@ -98,11 +98,6 @@ Concept du tiroir
 A finir modules
 ====================================================================================================
 
-Module alim DPS3005
-----------------------------------------------------------------------------------------------------
-- faire une jolie photo module seule en box photo **OK**
-- l'intégrée dans la doc
-
 Module oscilo
 ----------------------------------------------------------------------------------------------------
 - photo **OK**
@@ -137,7 +132,95 @@ A faire modules
 module USB 3A à refaire sniff
 ----------------------------------------------------------------------------------------------------
 - trouver un convertisseur qui tienne 24V **ET** 3A **OK**
-    - le tester avant de l'intégrer
+    - le tester avant de l'intégrer **OK**
+    - `TECNOIOT 5pcs 5A XL4015 DC-DC Step Down Adjustable Power Supply Module LED Lithium Charger`_
+    - également : `TECNOIOT 5pcs 5A Max XL4015 DC to DC CC CV Step-Down`_ avec limiteur de courant
+        - évaluer
+        - rentre difficilement (par de trous de fixation)
+  
+Full doc: `DC to DC Converter with Constant Current (CC) and Constant Voltage (CV) Control - Schematics, PCB, Parts List, and Working`_
+        
+- attention le ventilo ne passe pas ! SI **OK**           
+
+- alimentation ventilateur et ARDUINO **OK**
+    - design et maquettage **OK**
+    - saisir schéma KiCAD **OK**
+    - récupérer un potentiomètre multi tours 10k ou un simple de pcb, j'en ai plein ! **OK**
+- pcb support arduino, INA, OLED et alim
+    - plaquette à trou découper **OK**
+    - câbler
+    - tester avant intégration
+    - prévoir trous de fixation
+    - Prévoir dissipateur 7805
+
+- ampèremètre
+    - en trouver un petit **KO**
+    - ou le faire
+        - définir l'électronique INA219 **OK**
+        - maquetter **OK**
+        - tester **OK**
+        - intégrer
+
+
+
+
+- design3D
+    - modèles 3D
+        - Vérifier les dimensions et au passage préparer la spreadsheet **OK**
+            - XL4015, modèle retouché **OK**
+            - ventilo 40mm **OK**
+            - connectique USB **OK**
+            - INA219 **OK**
+    - éprouver emprunte DC/DC **OK**
+    - trous de fixation du pcb **OK**
+    - faire une découpe broche oled dans la fav **OK**
+    - prévoir 7805 dans le flux d'air du ventilateur **OK**
+    - design cale OLED **OK**
+    - Éprouver les perçages
+        - Connecteurs USB
+        - pcb
+        - oled
+    - Fav
+        - trous switch **OK**
+        - trous usb **OK**
+        - trous écran **OK**
+        - trous de ventilation dans la FAV **OK**
+        - trous pcb **OK**
+    - refaire les trous de ventilation dans la base
+
+
+
+- préparer INA2 : changer adresse I2C
+- coller et cabler les potar
+
+- Préparer le convertiseur 2
+    - déssouder le potar **OK**
+    - couper le dissipateur
+    - coller les 2 moitiés de dissipateur
+
+- imprimer
+    - STL, GCODE
+        - fav
+        - base **OK**
+    - tige laiton, couper
+- câbler
+- tester
+
+
+
+.. _`TECNOIOT 5pcs 5A XL4015 DC-DC Step Down Adjustable Power Supply Module LED Lithium Charger` : https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1
+
+.. _`TECNOIOT 5pcs 5A Max XL4015 DC to DC CC CV Step-Down` : https://www.amazon.fr/gp/product/B084BVKGDK/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&psc=1 
+
+.. _`DC to DC Converter with Constant Current (CC) and Constant Voltage (CV) Control - Schematics, PCB, Parts List, and Working` : https://circuitdigest.com/electronic-circuits/diy-xl4015-dc-dc-buck-converter-module
+
+USB double mais plus simple
+----------------------------------------------------------------------------------------------------
+- étude du concept sous Freecad **OK**
+    - ``_03-cao_3D\mesCreations\moduleUSBsimpleDouble`` **OK**
+
+- trouver un buck qui tienne la charge et les 24V !
+    - recherches veines pour le moment....
 
 Module USB-C fast charge
 ----------------------------------------------------------------------------------------------------
@@ -351,6 +434,10 @@ Module alim DPS3005
         - Base **OK**
     - câblage **OK**
     - test **OK**
+
+- faire une jolie photo module seule en box photo **OK**
+- l'intégrée dans la doc **OK**
+
 
 Module oscilo
 ----------------------------------------------------------------------------------------------------
