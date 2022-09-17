@@ -633,6 +633,32 @@ En parcourant la datasheet du 7805, je suis tombé sur cette figure:
 Il est donc possible à partir du 7805 de faire du 9V qui pourrait servir à alimenter le ventilo ET 
 l'ARDUINO sur son  Vin.
 
+Module USB 3A Aliexpress
+----------------------------------------------------------------------------------------------------
+`QC3.0 QC2.0 BC1.2 FCP AFC, Module de chargeur de voiture rapide, convertisseur abaisseur Buck, carte d'alimentation pour téléphone`_
+
+.. _`QC3.0 QC2.0 BC1.2 FCP AFC, Module de chargeur de voiture rapide, convertisseur abaisseur Buck, carte d'alimentation pour téléphone` : https://fr.aliexpress.com/item/4000075527172.html?spm=a2g0o.order_list.0.0.1e2b5e5btOZjOc&gatewayAdapt=glo2fra
+
+
+A tester.
+
+
+Rendus FreeCad
+----------------------------------------------------------------------------------------------------
+L'intérieur du module très chargé et encore, il n'y a pas les fils de cablage...
+
+.. image:: images/usb2x3Av2_interne.jpg 
+   :width: 600 px
+
+La même avec en plus la base, les switch et les prise USB:
+
+.. image:: images/usb2x3Av2_sansFAV.jpg 
+   :width: 400 px
+
+Et avec
+
+.. image:: images/usb2x3Av2_avecFAV.jpg 
+   :width: 400 px
 
 
 

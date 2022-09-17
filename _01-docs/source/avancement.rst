@@ -148,10 +148,10 @@ Full doc: `DC to DC Converter with Constant Current (CC) and Constant Voltage (C
     - récupérer un potentiomètre multi tours 10k ou un simple de pcb, j'en ai plein ! **OK**
 - pcb support arduino, INA, OLED et alim
     - plaquette à trou découper **OK**
-    - câbler
+    - câbler **OK**
     - tester avant intégration
-    - prévoir trous de fixation
-    - Prévoir dissipateur 7805
+    - prévoir trous de fixation **OK**
+    - Prévoir dissipateur 7805 **OK**
 
 - ampèremètre
     - en trouver un petit **KO**
@@ -176,11 +176,11 @@ Full doc: `DC to DC Converter with Constant Current (CC) and Constant Voltage (C
     - faire une découpe broche oled dans la fav **OK**
     - prévoir 7805 dans le flux d'air du ventilateur **OK**
     - design cale OLED **OK**
-    - Éprouver les perçages
-        - Connecteurs USB
-        - pcb
-        - oled
-    - Fav
+    - Éprouver les perçages **OK**
+        - Connecteurs USB **OK**
+        - pcb **OK**
+        - oled **OK**
+    - Fav **OK**
         - trous switch **OK**
         - trous usb **OK**
         - trous écran **OK**
@@ -190,17 +190,17 @@ Full doc: `DC to DC Converter with Constant Current (CC) and Constant Voltage (C
 
 
 
-- préparer INA2 : changer adresse I2C
-- coller et cabler les potar
+- préparer INA2 : changer adresse I2C **OK**
+- coller et cabler les potar **OK**
 
 - Préparer le convertiseur 2
     - déssouder le potar **OK**
-    - couper le dissipateur
+    - couper le dissipateur **OK**
     - coller les 2 moitiés de dissipateur
 
 - imprimer
-    - STL, GCODE
-        - fav
+    - STL, GCODE **OK**
+        - fav **OK**
         - base **OK**
     - tige laiton, couper
 - câbler
@@ -221,6 +221,8 @@ USB double mais plus simple
 
 - trouver un buck qui tienne la charge et les 24V !
     - recherches veines pour le moment....
+
+Peut-etre trouvé chez aliExpres...
 
 Module USB-C fast charge
 ----------------------------------------------------------------------------------------------------
