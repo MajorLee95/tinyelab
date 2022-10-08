@@ -1,0 +1,377 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Module alimentation primaire à base de batterie PARKSIDE de chez LIDL &#8212; Tiny e-lab extension  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/cloud.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+
+    
+    
+     
+        <script src="_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Avancement" href="avancement.html" />
+    <link rel="prev" title="Module alimentation stabilisée DPS3005" href="moduleAlimStabiliseeDPS3005.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="avancement.html" title="Avancement"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="moduleAlimStabiliseeDPS3005.html" title="Module alimentation stabilisée DPS3005"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" accesskey="U">Mes réalisations</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Module alimentation primaire à base de batterie PARKSIDE de chez LIDL</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-alimentation-primaire-a-base-de-batterie-parkside-de-chez-lidl">
+<h1>Module alimentation primaire à base de batterie PARKSIDE de chez LIDL<a class="headerlink" href="#module-alimentation-primaire-a-base-de-batterie-parkside-de-chez-lidl" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Projet</dt>
+<dd class="field-odd"><p>Tiny e-lab</p>
+</dd>
+<dt class="field-even">Auteur</dt>
+<dd class="field-even"><p>J.Soranzo</p>
+</dd>
+<dt class="field-odd">Date de création</dt>
+<dd class="field-odd"><p>10/2022</p>
+</dd>
+<dt class="field-even">Date dernière maj</dt>
+<dd class="field-even"><p>10/2022</p>
+</dd>
+<dt class="field-odd">Societe</dt>
+<dd class="field-odd"><p>VoRoBoTics</p>
+</dd>
+<dt class="field-even">Entity</dt>
+<dd class="field-even"><p>VoLAB</p>
+</dd>
+</dl>
+<section id="module-parkside-x20">
+<span id="index-0"></span><h2>Module Parkside X20<a class="headerlink" href="#module-parkside-x20" title="Permalink to this headline">¶</a></h2>
+<p>Recherche de model internet : pas grand chose d’exploitable, surtout des stl !</p>
+<p>Mieux vaut tout re-modéliser ça n’a pas l’air très compliqué si on s’inspire du chargeur !</p>
+<a class="reference internal image-reference" href="_images/parkSideBatterieEtChargeur.jpg"><img alt="_images/parkSideBatterieEtChargeur.jpg" class="align-center" src="_images/parkSideBatterieEtChargeur.jpg" style="width: 400px;" /></a>
+</section>
+<section id="un-peu-d-electronique">
+<h2>Un peu d’électronique<a class="headerlink" href="#un-peu-d-electronique" title="Permalink to this headline">¶</a></h2>
+<p>Le composant principal est un LGT8P30 : pas trouvé la datsheet. Et un LGT8P22 côté chargeur.</p>
+<p>Le design a l’air très sain.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pack vue d’ensemble</p></th>
+<th class="head"><p>Un élément 2000mHA 3.6V</p></th>
+<th class="head"><p>le contrôleur LGT8P30</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/parksideInside001.jpg"><img alt="pks_Image1" src="_images/parksideInside001.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/parksideInside002.jpg"><img alt="pks_Image2" src="_images/parksideInside002.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/parksideInside003.jpg"><img alt="pks_Image3" src="_images/parksideInside003.jpg" style="width: 200px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Les 5 éléments sont montés en série soir 5x3.6V = 18V de tension nominale… Pas 20V.</p>
+<p><div class="clearer"></div></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Chargeur côté “composant”</p></th>
+<th class="head"><p>Chargeur côté “soudure” lol</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/parksideInside004.jpg"><img alt="pks_Image4" src="_images/parksideInside004.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/parksideInside005.jpg"><img alt="pks_Image5" src="_images/parksideInside005.jpg" style="width: 200px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="rendu-frecad">
+<h2>Rendu Frecad<a class="headerlink" href="#rendu-frecad" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/moduleParkSideFreecad.JPG"><img alt="_images/moduleParkSideFreecad.JPG" src="_images/moduleParkSideFreecad.JPG" style="width: 600px;" /></a>
+</section>
+<section id="le-cablage">
+<h2>Le câblage<a class="headerlink" href="#le-cablage" title="Permalink to this headline">¶</a></h2>
+<p>Rien de très compliqué pour cette partie puisque 2 fils <strong>souple</strong> de forte section suffisent.</p>
+<p>Les languettes de connecxion sont réalisées en mailleshort de 0.3mm d’épaisseur plié.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Essais du pack et de languettes</p></th>
+<th class="head"><p>Câblage des languettes</p></th>
+<th class="head"><p>Pistocolle pour solidifier le tout</p></th>
+<th class="head"><p>Passage des cables</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/parksideInside006.jpg"><img alt="pks_Image6" src="_images/parksideInside006.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/parksideInside007.jpg"><img alt="pks_Image7" src="_images/parksideInside007.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/parksideInside008.jpg"><img alt="pks_Image8" src="_images/parksideInside008.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/parksideInside009.jpg"><img alt="pks_Image9" src="_images/parksideInside009.jpg" style="width: 200px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="without-title admonition note">
+<p class="admonition-title">Note</p>
+<p>le côté gauche du boîtier n’est pas équipé du XT60 femelle.</p>
+</div>
+<p>Source mailleshort : <a class="reference external" href="https://micro-modele.fr/fr/plaques-en-maillechort/5167-plaque-de-maillechort-format-200x100x050mm.html">Plaque de maillechort format 280x200x0,40mm chez micromodel</a> <a class="footnote-reference brackets" href="#id4" id="id5">2</a></p>
+<p>56.000mm2 à 24€ soit 0.042cts le mm2 il en faut environ 8*25mm 200m2 8.4cts et biensûr x2 pour le 2
+languettes.</p>
+<p>J’ai choisi ce matériaux pour son aspect, sa maléabilité et sa sodabilité.</p>
+<p>Source fil de câblage : sur <a class="reference external" href="https://www.amazon.fr/gp/product/B074QR9DT9/ref=ppx_yo_dt_b_asin_title_o05_s01?ie=UTF8&amp;psc=1">AMAZON Fil de silicone de calibre 14, 5 mètres</a> <a class="footnote-reference brackets" href="#id2" id="id3">1</a> pour environ 0.3€</p>
+</section>
+<section id="en-situation">
+<h2>En situation<a class="headerlink" href="#en-situation" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/packParksideEnsituation.jpg"><img alt="_images/packParksideEnsituation.jpg" src="_images/packParksideEnsituation.jpg" style="width: 600px;" /></a>
+</section>
+<section id="nomenclature">
+<h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-left" id="id1">
+<caption><span class="caption-text">Nomenclature module Parkside</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Désignation</p></td>
+<td><p>Fab</p></td>
+<td><p>Ref fab</p></td>
+<td><p>Qté</p></td>
+<td><p>Pu</p></td>
+<td><p>Pt</p></td>
+</tr>
+<tr class="row-even"><td><p>Insert Fileté M3</p></td>
+<td><p>RUTHEX</p></td>
+<td><p>sans</p></td>
+<td><p>8</p></td>
+<td><p>0,10 €</p></td>
+<td><p>0,80 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>VIS THC M3x6</p></td>
+<td><p>BRICOVIS</p></td>
+<td><p>TC HC M3x6ANEF</p></td>
+<td><p>2</p></td>
+<td><p>0,06 €</p></td>
+<td><p>0,12 €</p></td>
+</tr>
+<tr class="row-even"><td><p>VIS STHC M3x10</p></td>
+<td><p>BRICOVIS</p></td>
+<td><p>STHC Pointeau M3X10ANEF</p></td>
+<td><p>2</p></td>
+<td><p>0,08 €</p></td>
+<td><p>0,17 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>VIS THC M3x6</p></td>
+<td><p>BRICOVIS</p></td>
+<td><p>TC HC M3x8ANEF</p></td>
+<td><p>4</p></td>
+<td><p>0,06 €</p></td>
+<td><p>0,24 €</p></td>
+</tr>
+<tr class="row-even"><td><p>XT60 MALE</p></td>
+<td><p>AMAZON</p></td>
+<td><p>celui de droite ;-)</p></td>
+<td><p>1</p></td>
+<td><p>0,60 €</p></td>
+<td><p>0,60 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>MAILLESHORT</p></td>
+<td><p>MICROMODEL</p></td>
+<td><p>8x25mm</p></td>
+<td><p>2</p></td>
+<td><p>0,08 €</p></td>
+<td><p>0,16 €</p></td>
+</tr>
+<tr class="row-even"><td><p>FIL NOIr ROUGE</p></td>
+<td><p>AMAZON</p></td>
+<td><p>AWG14</p></td>
+<td><p>2</p></td>
+<td><p>0,30 €</p></td>
+<td><p>0,60 €</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>TOTAL</p></td>
+<td><p>2,69 €</p></td>
+</tr>
+</tbody>
+</table>
+<p>Mise à part la batterie et son chargeur 20 à 25€.</p>
+</section>
+<section id="weblinks">
+<h2>Weblinks<a class="headerlink" href="#weblinks" title="Permalink to this headline">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B074QR9DT9/ref=ppx_yo_dt_b_asin_title_o05_s01?ie=UTF8&amp;psc=1">https://www.amazon.fr/gp/product/B074QR9DT9/ref=ppx_yo_dt_b_asin_title_o05_s01?ie=UTF8&amp;psc=1</a></p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
+<dd><p><a class="reference external" href="https://micro-modele.fr/fr/plaques-en-maillechort/5167-plaque-de-maillechort-format-200x100x050mm.html">https://micro-modele.fr/fr/plaques-en-maillechort/5167-plaque-de-maillechort-format-200x100x050mm.html</a></p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="sphinx-toc sphinxlocaltoc">
+    <h3><a href="index.html">Page contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Module alimentation primaire à base de batterie PARKSIDE de chez LIDL</a><ul>
+<li><a class="reference internal" href="#module-parkside-x20">Module Parkside X20</a></li>
+<li><a class="reference internal" href="#un-peu-d-electronique">Un peu d’électronique</a></li>
+<li><a class="reference internal" href="#rendu-frecad">Rendu Frecad</a></li>
+<li><a class="reference internal" href="#le-cablage">Le câblage</a></li>
+<li><a class="reference internal" href="#en-situation">En situation</a></li>
+<li><a class="reference internal" href="#nomenclature">Nomenclature</a></li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div class="sphinxprev">
+    <h4>Page précédente</h4>
+    <p class="topless"><a href="moduleAlimStabiliseeDPS3005.html"
+                          title="Page précédente">&larr; Module alimentation stabilisée DPS3005</a></p>
+  </div>
+  <div class="sphinxnext">
+    <h4>Page suivante</h4>
+    <p class="topless"><a href="avancement.html"
+                          title="Page suivante">&rarr; Avancement</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/moduleAlimentationParkSide.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="avancement.html" title="Avancement"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="moduleAlimStabiliseeDPS3005.html" title="Module alimentation stabilisée DPS3005"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" >Mes réalisations</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Module alimentation primaire à base de batterie PARKSIDE de chez LIDL</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, J.Soranzo.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

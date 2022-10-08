@@ -1,0 +1,308 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Module primaire mesure Tension/courant de la ligne &#8212; Tiny e-lab extension  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/cloud.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+
+    
+    
+     
+        <script src="_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Avancement" href="avancement.html" />
+    <link rel="prev" title="Mes réalisations" href="mesRealisation.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="avancement.html" title="Avancement"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="mesRealisation.html" title="Mes réalisations"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" accesskey="U">Mes réalisations</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Module primaire mesure Tension/courant de la ligne</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-primaire-mesure-tension-courant-de-la-ligne">
+<h1>Module primaire mesure Tension/courant de la ligne<a class="headerlink" href="#module-primaire-mesure-tension-courant-de-la-ligne" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Projet</dt>
+<dd class="field-odd"><p>Tiny e-lab</p>
+</dd>
+<dt class="field-even">Auteur</dt>
+<dd class="field-even"><p>J.Soranzo</p>
+</dd>
+<dt class="field-odd">Date de création</dt>
+<dd class="field-odd"><p>10/2022</p>
+</dd>
+<dt class="field-even">Date dernière maj</dt>
+<dd class="field-even"><p>07/10/2022</p>
+</dd>
+<dt class="field-odd">Societe</dt>
+<dd class="field-odd"><p>VoRoBoTics</p>
+</dd>
+<dt class="field-even">Entity</dt>
+<dd class="field-even"><p>VoLAB</p>
+</dd>
+</dl>
+<section id="presentation">
+<span id="index-0"></span><h2>Présentation<a class="headerlink" href="#presentation" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/uimodule.JPG"><img alt="_images/uimodule.JPG" src="_images/uimodule.JPG" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/uiWatmetreAmazon.jpg"><img alt="_images/uiWatmetreAmazon.jpg" src="_images/uiWatmetreAmazon.jpg" style="width: 300px;" /></a>
+<p>Le but de ce module est d’indiquer la tension et le courant consommé par les modules qui se trouvent
+après lui dans la chaîne.</p>
+<p>C’est le seul module qui n’est pas en parallèle sur les 2 tiges d’alimentation.</p>
+<a class="reference internal image-reference" href="_images/moduleUILigne.jpg"><img alt="_images/moduleUILigne.jpg" src="_images/moduleUILigne.jpg" style="width: 500px;" /></a>
+<figure class="align-center" id="id1" style="width: 100%">
+<a class="reference internal image-reference" href="_images/moduleUILigneAjoutDC552x.jpg"><img alt="_images/moduleUILigneAjoutDC552x.jpg" src="_images/moduleUILigneAjoutDC552x.jpg" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">Ajout de connecteurs DC5525 et DC5521</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="schema-electrique">
+<h2>Schéma électrique<a class="headerlink" href="#schema-electrique" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/moduleUILigneSch.JPG" src="_images/moduleUILigneSch.JPG" />
+</section>
+<section id="nomenclature">
+<h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-left" id="id2">
+<caption><span class="caption-text">Nomenclature USB5V 3A</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Désignation</p></th>
+<th class="head"><p>Fab</p></th>
+<th class="head"><p>Ref fab</p></th>
+<th class="head"><p>Qté</p></th>
+<th class="head"><p>Pu</p></th>
+<th class="head"><p>Pt</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Insert Fileté M3</p></td>
+<td><p>RUTHEX</p></td>
+<td><p>sans</p></td>
+<td><p>4</p></td>
+<td><p>0,10 €</p></td>
+<td><p>0,40 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Switch</p></td>
+<td><p>ARCOLECTRIC</p></td>
+<td><p>C1500AT</p></td>
+<td><p>1</p></td>
+<td><p>2,70 €</p></td>
+<td><p>2,70 €</p></td>
+</tr>
+<tr class="row-even"><td><p>VIS THC M3x6</p></td>
+<td><p>BRICOVIS</p></td>
+<td><p>TC HC M3x6ANEF</p></td>
+<td><p>2</p></td>
+<td><p>0,06 €</p></td>
+<td><p>0,12 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>VIS STHC M3x10</p></td>
+<td><p>BRICOVIS</p></td>
+<td><p>STHC Pointeau M3X10ANEF</p></td>
+<td><p>2</p></td>
+<td><p>0,08 €</p></td>
+<td><p>0,17 €</p></td>
+</tr>
+<tr class="row-even"><td><p>XT60 MALE</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>0,60 €</p></td>
+<td><p>0,60 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>XT60 FEM</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>0,60 €</p></td>
+<td><p>0,60 €</p></td>
+</tr>
+<tr class="row-even"><td><p>Tige Laiton diam 2mm</p></td>
+<td><p>AMAZON</p></td>
+<td><p>2*98,62mm</p></td>
+<td><p>2</p></td>
+<td><p>0,27</p></td>
+<td><p>0,54 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Porte fusible</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>1,4</p></td>
+<td><p>1,40 €</p></td>
+</tr>
+<tr class="row-even"><td><p>ETOTEK Voltmetre Amperemetre</p></td>
+<td><p>AMAZON/KETOTEK</p></td>
+<td><p>KT-D132</p></td>
+<td><p>1</p></td>
+<td><p>25</p></td>
+<td><p>25,00 €</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>TOTAL</p></td>
+<td><p>31,53 €</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="weblinks">
+<h2>Weblinks<a class="headerlink" href="#weblinks" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="sphinx-toc sphinxlocaltoc">
+    <h3><a href="index.html">Page contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Module primaire mesure Tension/courant de la ligne</a><ul>
+<li><a class="reference internal" href="#presentation">Présentation</a></li>
+<li><a class="reference internal" href="#schema-electrique">Schéma électrique</a></li>
+<li><a class="reference internal" href="#nomenclature">Nomenclature</a></li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div class="sphinxprev">
+    <h4>Page précédente</h4>
+    <p class="topless"><a href="mesRealisation.html"
+                          title="Page précédente">&larr; Mes réalisations</a></p>
+  </div>
+  <div class="sphinxnext">
+    <h4>Page suivante</h4>
+    <p class="topless"><a href="avancement.html"
+                          title="Page suivante">&rarr; Avancement</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/modulePrimaireTensionCourant.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="avancement.html" title="Avancement"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="mesRealisation.html" title="Mes réalisations"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" >Mes réalisations</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Module primaire mesure Tension/courant de la ligne</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, J.Soranzo.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>

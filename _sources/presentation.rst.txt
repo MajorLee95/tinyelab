@@ -2,14 +2,13 @@
 Presentation
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+:Projet: Tiny e-lab
 :Auteur: J.Soranzo
 :Date de création: 02/2022
-:Date dernière maj: 21/02/2022
+:Date dernière maj: 07/10/2022
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
-.. contents::
-    :backlinks: top
 
 
 .. |clearer|  raw:: html
@@ -20,6 +19,10 @@ Presentation
 ====================================================================================================
 Présentation
 ====================================================================================================
+github du projet : `cliquez ici`_ si vous voulez accéder au Github des données du projet.
+
+.. _`cliquez ici` : https://github.com/MajorLee95/tinyelab 
+
 Il s'agit d'un projet de source internet. Je n'en suis pas l'auteur, juste un contributeur.
 
 Je l'ai détecté sur la chaîne du "Guy with the swiss accent", Andreas Spiess  dans la vidéo 
@@ -109,8 +112,6 @@ Plus avantageux serait :
 
 
 
-
-
 Adaptateur batterie LIDL sur Prusa Printers
 ----------------------------------------------------------------------------------------------------
 Sur `Prusa Printers Lidl Parkside X20V Team Battery Adapter for Tiny e-Lab`_
@@ -171,13 +172,18 @@ Ceux que je vais faire
 
    - voir accessoir dremel en 19V
 
-Puissance besoin : ? 3x 5A 5V = 75W
-fer 20W : total 95W sous 19V environ 5A
+Puissance besoin : ? 
+
+- 3x 5A 5V = 75W
+- fer 20W 
+
+- total 95W sous 19V environ 5A
 
 `KETOTEK Voltmetre Amperemetre 12V DC 6.5-100V 20A`_
 
 .. _`KETOTEK Voltmetre Amperemetre 12V DC 6.5-100V 20A` : https://www.amazon.fr/KETOTEK-Voltmetre-Amperemetre-Multimetre-Multim%C3%A8tre/dp/B07M8T3T2C/ref=pd_day0_1/261-1112629-2310512?pd_rd_w=hbAe2&pf_rd_p=5a3d874f-f0eb-4ad9-ac25-35518704bcec&pf_rd_r=DH6T21J6SWHXN14FSGEK&pd_rd_r=750cbf0b-ce80-4417-b3f2-3d1e529806af&pd_rd_wg=QEHru&pd_rd_i=B07M8T3T2C&th=1
 
+Cliquez :ref:`ICI<refMesContributions>` pour accéder à mes contributions
 
 Oscillo
 ----------------------------------------------------------------------------------------------------
@@ -185,14 +191,9 @@ Oscillo
 voir :ref:`ici<refOscilloRealisation>`
 
 
-
-
-
-
-
 ----------------------------------------------------------------------------------------------------
 
-**Autres solutions**
+**Autres solutions de scope**
 
 `hackaday ScopeIO (9 chanel digital)`_
 
