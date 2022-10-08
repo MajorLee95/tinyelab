@@ -6,36 +6,43 @@
 #include <Adafruit_INA219.h>
 
 #define CONSIGNE_TEMP A0
+
+// pwm ventilo abandonné
 #define VENTILO_OUT 3 //pin2
 
 Adafruit_INA219 ina219;
+Adafruit_INA219 ina219_2(0x41);
 
+// 2 adresse 0x40 et 0x41
 
 #define OLED_RESET 4
 Adafruit_SSD1306 display(OLED_RESET);
 
+#define LM35_1 A0
+#define LM35_2 A1
+
 void setup()   {                
-	// Serial.begin(9600);
+	// Serial.begin(115200);
 	display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 	
 	ina219.begin();
+	ina219_2.begin();
 	
 	display.clearDisplay();
 	
-	display.setTextSize(1);
+	display.setTextSize(2);
 	display.setTextColor(WHITE);
 	display.setCursor(0,0);
+	display.println("VoRoBoTics");
+	display.println("Tiny e-lab");
 	
-	display.println("Hello, pwm");
-	display.println("31kHz");
+	//               123456789012345678901
+	// display.println("31kHz");
 	display.display();
-	delay(1000);
+	delay(4000);
 	display.clearDisplay();
 	display.display();
-	TCCR2B = TCCR2B & B11111000 | B00000010; // for PWM frequency of 3921.16 Hz
-	TCCR2B = TCCR2B & B11111000 | B00000001; // for PWM frequency of 31372.55 Hz
-	pinMode( VENTILO_OUT, OUTPUT );
-	digitalWrite( VENTILO_OUT, 0 );
+	display.setTextSize(1);
 	
 }
 
@@ -51,44 +58,49 @@ void loop(){
 	float current_A = 0;
 	float loadvoltage = 0;
 	
-	shuntvoltage = ina219.getShuntVoltage_mV();
-	busvoltage = ina219.getBusVoltage_V();
-	current_A = ina219.getCurrent_mA()/1050;
+	int temp1 = int( float(analogRead( LM35_1 ) ) * 500.0/1023.0);
+	int temp2 = int( float(analogRead( LM35_2 ) ) * 500.0/1023.0);
+	// Serial.print("Valeur brute :" );
+	// Serial.println(temp1);
+	
+	
+	shuntvoltage = ina219_2.getShuntVoltage_mV();
+	busvoltage = ina219_2.getBusVoltage_V();
+	current_A = -ina219_2.getCurrent_mA()/1050;// inversion du sens après essais ;-)
 	loadvoltage = busvoltage + (shuntvoltage / 1000);
 	
-	// display.setCursor(0,0);
-	// dtostrf(shuntvoltage,5,2,tmp_sv);
-	// dtostrf(busvoltage,5,2,tmp_bv);
-	dtostrf(loadvoltage,5,2,tmp_u);
-	dtostrf(current_A,5,2,tmp_i);
-	// sprintf( ligne, "Shunt : %sV", tmp_sv );
-	// display.println(ligne);
-	// sprintf( ligne, "bus : %sV", tmp_bv );
-	// display.println(ligne);	
-	// sprintf( ligne, "load : %sV", tmp_u );
-	// display.println(ligne);
-	// sprintf( ligne, "i : %sA", tmp_i );
-	// display.println(ligne);	
-	// display.display();
 	
+	//CH2 en haut ! Inattention au moment du cablage !
+	// On aurait pu les appeler A et B avec A = CH2 mais bon
+	dtostrf(loadvoltage,2,2,tmp_u);
+	dtostrf(current_A,2,2,tmp_i);
 	display.setCursor(0,6);
-	// float u=5.232365;
-	// float i=2.9569;
-	// dtostrf(u,1,2,tmp_u);
-	// dtostrf(i,1,2,tmp_i);
-	sprintf( ligne, "CH1: %sV / %sA", tmp_u, tmp_i );
+	//display.setCursor(0,20);
+	sprintf( ligne, "CH2 %sV %sA %d C", tmp_u, tmp_i, temp2 );
 	display.println(ligne);
+	// display.setCursor(0,9); // avce les println seuls c'est un peu trop serré
+	//display.println("Temp : "); // pour la température
 	
+	shuntvoltage = ina219.getShuntVoltage_mV();
+	busvoltage = ina219.getBusVoltage_V();
+	current_A = -ina219.getCurrent_mA()/1050; // inversion du sens après essais ;-)
+	loadvoltage = busvoltage + (shuntvoltage / 1000);
 	
-	// display.setCursor(0,20);
-	// display.println("CH2 : 4.94v / 2.3A");
+	dtostrf(loadvoltage,2,2,tmp_u);
+	dtostrf(current_A,2,2,tmp_i);
+	display.setCursor(0,24);
+	sprintf( ligne, "CH1 %sV %sA %d C", tmp_u, tmp_i, temp1 );
+	display.println(ligne);
+	// display.setCursor(0,27);
+	//display.println("Temp :"); // pour la température
+
 	display.display();
 	
 	delay (200);
 	display.clearDisplay();
 	
-	int val = analogRead( A0 ); //Read P2
-	int pwm = map( val, 0,1023, 0, 255);
-	analogWrite( VENTILO_OUT , pwm);
+	// int val = analogRead( A0 ); //Read P2
+	// int pwm = map( val, 0,1023, 0, 255);
+	// analogWrite( VENTILO_OUT , pwm);
 	
 }

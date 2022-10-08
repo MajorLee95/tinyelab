@@ -2,9 +2,10 @@
 Mes réalisations
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+:Projet: Tiny e-lab
 :Auteur: J.Soranzo
 :Date de création: 02/2022
-:Date dernière maj: 13/03/2022
+:Date dernière maj: 07/10/2022
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -12,9 +13,15 @@ Mes réalisations
 
    <div class="clearer"></div>
 
+.. _refMesContributions:
 
-.. contents::
-    :backlinks: top
+.. toctree::
+   :maxdepth: 1
+   :caption: Articles dédiés
+
+   modulePrimaireTensionCourant
+   moduleAlimStabiliseeDPS3005
+   moduleAlimentationParkSide
 
 ====================================================================================================
 Réalisés/terminés
@@ -302,15 +309,13 @@ Nomenclature de base
    :align: left
    :header-rows: 1
 
-
-
-
 ====================================================================================================
-Module primaire
+Module primaire: **abandonné**
 ====================================================================================================
-AC/DC adaptateur :
+Le but de se module est de se placer devant le module prmaire afin de recevoir tout type d'adaptateur
+secteur.
 
-
+AC/DC adaptateur (alimentations de PC portables):
 
 .. image:: images/emboutPowerPC.jpg 
    :width: 600 px
@@ -352,57 +357,10 @@ Donc en résumé pour ce module : 1 XT-60 normal + à l'arrière ou du même cô
 
 .. _`DC5521` : https://www.amazon.fr/gp/product/B07D4DLJ69/ref=ox_sc_act_title_1?smid=A2HAOQPNQ6T9Y5&psc=1 
 
-.. NOTE:: Finalement
+.. NOTE:: **Finalement**:
    :class: without-title
 
    Ajout de 2 prises DC5525 et DC5521 au module mesure de Tension/courant de ligne ci-après.
-
-.. index::
-    pair: Modules; U/I en ligne
-
-====================================================================================================
-Module mesure Tension/courant de la ligne
-====================================================================================================
-
-.. image:: images/uimodule.JPG 
-   :width: 600 px
-
-
-.. image:: images/uiWatmetreAmazon.jpg 
-   :width: 300 px
-
-Le but de ce module est d'indiquer la tension et le courant consommé par les modules qui se trouvent
-après lui dans la chaîne. 
-
-C'est le seul module qui n'est pas en parallèle sur les 2 tiges d'alimentation.
-
-.. image:: images/moduleUILigne.jpg 
-   :width: 500 px
-
-
-
-.. figure:: images/moduleUILigneAjoutDC552x.jpg
-    :width: 300 px
-    :figwidth: 100%
-    :align: center
-
-    Ajout de connecteurs DC5525 et DC5521 
-
-Schéma électrique
-----------------------------------------------------------------------------------------------------
-
-.. image:: images/moduleUILigneSch.JPG
-
-
-Nomenclature
-----------------------------------------------------------------------------------------------------
-
-.. csv-table:: Nomenclature USB5V 3A
-   :file: ../../_02-realisation/_03-cao_3D/mesCreations/moduleUI/nomUILigne.csv
-   :delim: ,
-   :encoding: UTF-8
-   :align: left
-   :header-rows: 1
 
 
 
@@ -458,7 +416,7 @@ Les explications sont fournies sur `le wiki Freecad Configurations tables`_
 
 
 Rendus Freecad
-****************************************************************************************************
+----------------------------------------------------------------------------------------------------
 .. |aliasImagext60covmale| image:: images/xt60Male.JPG
    :width: 200 px
 
@@ -535,7 +493,7 @@ J'ai tester :
 
 
 ====================================================================================================
-Module USB 5V/3A 2 voies : redesign
+Module USB 5V/3A 2 voies : redesign avec écran OLED
 ====================================================================================================
 Avec ampèremètre
 
@@ -633,14 +591,31 @@ En parcourant la datasheet du 7805, je suis tombé sur cette figure:
 Il est donc possible à partir du 7805 de faire du 9V qui pourrait servir à alimenter le ventilo ET 
 l'ARDUINO sur son  Vin.
 
-Module USB 3A Aliexpress
+I2C scan : 0x3C, 0x40 et 0x41
+
+
+Schéma électronique
 ----------------------------------------------------------------------------------------------------
-`QC3.0 QC2.0 BC1.2 FCP AFC, Module de chargeur de voiture rapide, convertisseur abaisseur Buck, carte d'alimentation pour téléphone`_
 
-.. _`QC3.0 QC2.0 BC1.2 FCP AFC, Module de chargeur de voiture rapide, convertisseur abaisseur Buck, carte d'alimentation pour téléphone` : https://fr.aliexpress.com/item/4000075527172.html?spm=a2g0o.order_list.0.0.1e2b5e5btOZjOc&gatewayAdapt=glo2fra
+.. image:: images/usb5V3AOledSch.jpg 
+   :width: 600 px
 
 
-A tester.
+
+
+Mesure de température
+----------------------------------------------------------------------------------------------------
+Ajout de denière minute.
+
+Comment : l'arduino à des entrée analogique dispo.
+
+Qu'est ce que j'ai ?
+
+- LM35 :download:`datasheet<fichiersJoints/lm35dts.pdf>`
+
+J'ai câblé ce capteur sur l'entrée analogique A
+
+
 
 
 Rendus FreeCad
@@ -660,6 +635,47 @@ Et avec
 .. image:: images/usb2x3Av2_avecFAV.jpg 
    :width: 400 px
 
+Nomenclature
+----------------------------------------------------------------------------------------------------
+Pour la nom : tige de laiton longueur : 68.62mm
+
+
+
+====================================================================================================
+USB 5V 3A simple 2 voies  : redisign module ALIExpress
+====================================================================================================
+Redsign avec les modules :
+
+`QC3.0 QC2.0 BC1.2 FCP AFC, Module de chargeur de voiture rapide, convertisseur abaisseur Buck, carte d'alimentation pour téléphone`_
+
+.. _`QC3.0 QC2.0 BC1.2 FCP AFC, Module de chargeur de voiture rapide, convertisseur abaisseur Buck, carte d'alimentation pour téléphone` : https://fr.aliexpress.com/item/4000075527172.html?spm=a2g0o.order_list.0.0.1e2b5e5btOZjOc&gatewayAdapt=glo2fra
+
+.. image:: images/usb3AAliexpressQC3.0.jpg 
+   :width: 300 px
+
+.. NOTE:: Testé le 12/10/2022 Vin 24V load 5V 3A Temp max 70°C
+   :class: without-title
+
+
+
+Pas de modèle 3D sous GRABCAD. En réalité, on ne sait pas quoi rechercher. La référence sur le
+composant principal a été effacé. Je souspsonne qu'il s'agisse d'un IP6505
+
+J'ai trouvé ceci :
+
+`Module abaisseur USB 12V 24V vers QC2.0 QC3.0, panneau de Charge rapide pour téléphone portable, pour Apple Huawei FCP, ip6505`_
+
+.. _`Module abaisseur USB 12V 24V vers QC2.0 QC3.0, panneau de Charge rapide pour téléphone portable, pour Apple Huawei FCP, ip6505` : https://fr.aliexpress.com/item/1005003438953493.html
+
+.. image:: images/usb5v3a_autreModule.jpg 
+   :width: 300 px
+
+
+
+====================================================================================================
+Module USB-C Quick charger
+====================================================================================================
+Dossier : moduleUSBC_QC3
 
 
 ----------------------------------------------------------------------------------------------------
@@ -744,102 +760,6 @@ Nomenclature oscillo DSO138
    :header-rows: 1
 
 
-.. index::
-    pair: Modules; Alim
-
-====================================================================================================
-Alimentation stabilisé DPS3005
-====================================================================================================
-DPS3005
-----------------------------------------------------------------------------------------------------
-Éléments mécaniques
-****************************************************************************************************
-
-`Sur AMAZON DollaTek DPS3005`_ mais aussi sur ebay `DP20V2A 30V5A 50V5A DC32V/3A DPS3003 Programmable Step-down Power Supply Module`_
-
-.. _`DP20V2A 30V5A 50V5A DC32V/3A DPS3003 Programmable Step-down Power Supply Module` : https://www.ebay.fr/itm/173505693618?mkevt=1&mkcid=1&mkrid=709-53476-19255-0&campid=5338765827&toolid=20006&customid=FR_12576_173505693618.133461549755~1597688752702-g_CjwKCAjw3cSSBhBGEiwAVII0Zw5sQiVouWsO5nVVTwOw-ZJhONAWM9nyral4nl8BqnXoW3bqRb2HxhoCokkQAvD_BwE
-
-
-
- et aliexpress
-
-.. _`Sur AMAZON DollaTek DPS3005` : https://www.amazon.fr/gp/product/B07PLFZ3H2/ref=ppx_yo_dt_b_asin_title_o09_s01?ie=UTF8&psc=1
-
-.. image:: images/DPS3005_51c1779dvnL._AC_SL1000_.jpg 
-   :width: 300 px
-
-|clearer|
-
-.. image:: images/DPS3005_domensions.jpg 
-   :width: 300 px
-
-Software
-****************************************************************************************************
-Ce module peut être piloter en USB, il est fourni avec un carte d'interface.
-
-`TheHWcave Controlling a DPS5005 power supply module`_
-
-.. _`TheHWcave Controlling a DPS5005 power supply module` : https://www.youtube.com/watch?v=7sy249Ikzvc
-
-Avec exemple de code en Python sous `github DPS5005-control`_
-
-.. _`github DPS5005-control` : https://github.com/TheHWcave/DPS5005-control
-
-
-Fiches bananes
-----------------------------------------------------------------------------------------------------
-
-.. image:: images/ficheBananeRSNoire.jpg 
-   :width: 300 px
-
-|clearer|
-
-.. image:: images/ficheBananeRSRougeNoirLowCost.jpg 
-   :width: 300 px
-   
-
-Avec :download:`la datasheet<fichiersJoints/dtsFichesBananes_A700000006792413.pdf>`
-
-.. image:: images/ficheBananeRSRougeNoirLowCost_mountingHole.jpg 
-
-
-Connecteurs Audio
-----------------------------------------------------------------------------------------------------
-Utilisation de connecteurs audio pour avoir des connections rapides.
-
-
-.. figure:: images/connecteursAudio.jpg
-    :width: 300 px
-    :align: left
-
-    Connecteurs audio  
-
-
-Disponibles un peu partout sur internet mais ceux que j'ai utilisés pour la modélisation proviennent 
-d'`Amazon Bornier 2 Voies pour Enceinte Haut Parleur`_
-
-.. _`Amazon Bornier 2 Voies pour Enceinte Haut Parleur` : https://www.amazon.fr/gp/product/B082TM9QXK/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1 
-
-Rendu final sous Freecad
-----------------------------------------------------------------------------------------------------
-
-.. image:: images/moduleDPS3005.JPG 
-   :width: 600 px
-
-Photos
-----------------------------------------------------------------------------------------------------
-.. image:: images/moduleDPS3005_photo.JPG 
-   :width: 600 px
-
-
-Nomenclature module DPS3005
-----------------------------------------------------------------------------------------------------
-.. csv-table:: Nomenclature DPS3005
-   :file: ../../_02-realisation/_03-cao_3D/mesCreations/moduleAlimStabDPS3005/nomDPS3005.csv
-   :delim: ,
-   :encoding: UTF-8
-   :align: left
-   :header-rows: 1
 
 .. index::
     pair: Modules; Volt/ampèremètre
@@ -862,7 +782,8 @@ Source possible mais non garantie au niveau des dimension notament:
 
 J'ai facilement trouvé le modèle 3D sur Grabcad.
 
-J'ai réutilisé la connectique du module `Alimentation stabilisé DPS3005`_
+J'ai réutilisé la connectique du module :ref:`alimentation stabilisée DPS3005<refAlimStabDPS3005>`
+
 
 
 
@@ -995,145 +916,6 @@ Modélisation 3D
 
 KICAD project started.
 
-.. index::
-    pair: Modules; PARKSIDE
-
-====================================================================================================
-Module Parkside X20
-====================================================================================================
-Recherche de model internet : pas grand chose d'exploitable, surtout des stl !
-
-Mieux vaut tout re-modéliser ça n'a pas l'air très compliqué si on s'inspire du chargeur !
-
-.. image:: images/parkSideBatterieEtChargeur.jpg 
-   :width: 400 px
-   :align: center
-
-Un peu d'électronique
-----------------------------------------------------------------------------------------------------
-Le composant prinipale est un LGT8P30 : pas trouvé la datsheet. Et un LGT8P22 côté chargeur.
-
-
-
-
-Le design a l'air très sain.
-
-.. |pks_Image1| image:: images/parkside/parksideInside001.jpg
-   :width: 200 px
-
-.. |pks_Image2| image:: images/parkside/parksideInside002.jpg
-  :width: 200 px
-
-.. |pks_Image3| image:: images/parkside/parksideInside003.jpg
-  :width: 200 px
-
-.. list-table::
-   :widths: 27 27 27
-   :header-rows: 1
-
-   * - Pack vue d'ensemble
-     - Un élément 2000mHA 3.6V
-     - le contrôleur LGT8P30
-
-   * - |pks_Image1|
-     - |pks_Image2|
-     - |pks_Image3|
-
-Les 5 éléments sont montés en série soir 5x3.6V = 18V de tension nominale... Pas 20V.
-
-|clearer|
-
-.. |pks_Image4| image:: images/parkside/parksideInside004.jpg
-   :width: 200 px
-
-.. |pks_Image5| image:: images/parkside/parksideInside005.jpg
-  :width: 200 px
-
-
-
-.. list-table::
-   :widths: 27 27
-   :header-rows: 1
-
-   * - Chargeur côté "composant"
-     - Chargeur côté "soudure" lol
-
-
-   * - |pks_Image4|
-     - |pks_Image5|
-
-
-Rendu Frecad
-----------------------------------------------------------------------------------------------------
-
-.. image:: images/moduleParkSideFreecad.JPG 
-   :width: 600 px
-
-
-Le câblage
-----------------------------------------------------------------------------------------------------
-Rien de très compliqué pour cette partie puisque 2 fils **souple** de forte section suffisent.
-
-Les languettes de connecxion sont réalisées en mailleshort de 0.3mm d'épaisseur plié.
-
-.. |pks_Image6| image:: images/parkside/parksideInside006.jpg
-   :width: 200 px
-
-.. |pks_Image7| image:: images/parkside/parksideInside007.jpg
-  :width: 200 px
-
-.. |pks_Image8| image:: images/parkside/parksideInside008.jpg
-  :width: 200 px
-
-.. |pks_Image9| image:: images/parkside/parksideInside009.jpg
-  :width: 200 px
-
-.. list-table::
-   :widths: 27 27 27 27
-   :header-rows: 1
-
-   * - Essais du pack et de languettes
-     - Câblage des languettes
-     - Pistocolle pour solidifier le tout
-     - Passage des cables
-
-   * - |pks_Image6|
-     - |pks_Image7|
-     - |pks_Image8|
-     - |pks_Image9|
-
-.. NOTE:: le côté gauche du boîtier n'est pas équipé du XT60 femelle.
-   :class: without-title
-
-Source mailleshort : `Plaque de maillechort format 280x200x0,40mm chez micromodel`_
-
-56.000mm2 à 24€ soit 0.042cts le mm2 il en faut environ 8*25mm 200m2 8.4cts et biensûr x2 pour le 2 
-languettes.
-
-J'ai choisi ce matériaux pour son aspect, sa maléabilité et sa sodabilité.
-
-Source fil de câblage : sur `AMAZON Fil de silicone de calibre 14, 5 mètres`_ pour environ 0.3€
-
-.. _`AMAZON Fil de silicone de calibre 14, 5 mètres` : https://www.amazon.fr/gp/product/B074QR9DT9/ref=ppx_yo_dt_b_asin_title_o05_s01?ie=UTF8&psc=1
-
-
-.. _`Plaque de maillechort format 280x200x0,40mm chez micromodel` : https://micro-modele.fr/fr/plaques-en-maillechort/5167-plaque-de-maillechort-format-200x100x050mm.html
-
-En situation
-----------------------------------------------------------------------------------------------------
-.. image:: images/parkside/packParksideEnsituation.jpg 
-   :width: 600 px
-
-
-Nomenclature
-----------------------------------------------------------------------------------------------------
-.. csv-table:: Nomenclature module Parkside
-   :file: ../../_02-realisation/_03-cao_3D/mesCreations/lidlParckSideBat/nomParkside.csv
-   :delim: ,
-   :encoding: UTF-8
-   :align: left
-
-Mise à part la batterie et son chargeur 20 à 25€.
 
 ====================================================================================================
 Module triple tiny voltmètre

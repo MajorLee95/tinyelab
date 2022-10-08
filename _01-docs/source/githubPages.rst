@@ -25,7 +25,7 @@ Globalement
 - on va dedans
 - on crée la branche spéciale gh-pages
 - on la lie au dépôt distant
-- on fait le ménager
+- on fait le ménage
 - on génère la doc et on push
 
 Chemin vers la doc::
@@ -42,13 +42,14 @@ Cela se résume en quelques commandes::
     del .git\index (rm .git/index sous windobe :-) 
     git clean -fdx
     dans le dossier du projet : make html
+    Puis de nouveau dans le répertoire html:
     git add .
     git commit -m "commit doc"
     git push => error : fatal: The current branch gh-pages has no upstream branch.
         Proposition : git push --set-upstream origin gh-pages
     git push origin gh-pages
 
-.. WARNING:: Problème de css non pris en charge : ``.nojekyll`` dans le répertoire source de la doc
+.. WARNING:: Problème de css non pris en charge : ``.nojekyll`` dans le répertoire source de la doc et/ou dans le html
    :class: without-title
 
     Ne pas oublier de vider le cache du navigateur !!!

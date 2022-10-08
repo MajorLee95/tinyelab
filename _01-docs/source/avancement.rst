@@ -2,9 +2,10 @@
 Avancement
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+:Projet: Tiny e-lab
 :Auteur: J.Soranzo
 :Date de création: 03/2022
-:Date dernière maj: 19/04/2022
+:Date dernière maj: 07/10/2022
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -94,9 +95,31 @@ Concept du tiroir
 - rangement sonde/fils
     -  principe du petit tiroir basculant ou pas **à conceptualiser**
 
+module USB 3A à refaire sniff
+----------------------------------------------------------------------------------------------------
+- design3D
+    - refaire les trous de ventilation dans la base dans Freecad
+
+- mesure de température
+
+- câblage définitif
+
+- une petite face avant
+
+- nomenclature
+
+- schéma :
+    - de la carte : fait mais à ajouter dans la doc
+    - de cablage
+      - à faire
+      - ajouter à la doc
+
+
 ====================================================================================================
 A finir modules
 ====================================================================================================
+- Ajout parkside et USB3A au chapitre modules terminés avec photos
+
 
 Module oscilo
 ----------------------------------------------------------------------------------------------------
@@ -125,94 +148,27 @@ Module ventilation
 - nomenclature
 - saisir schéma KiCAD
 
+module USB 3A Refait 
+----------------------------------------------------------------------------------------------------
+- design3D
+    - refaire les trous de ventilation dans la base dans Freecad
+
+
+- une petite face avant
+
+- nomenclature
+- schéma
+    - de la carte : à intégrer dans la doc
+    - de cablage
+
+
+- Le code
+
+
 ====================================================================================================
 A faire modules
 ====================================================================================================
 
-module USB 3A à refaire sniff
-----------------------------------------------------------------------------------------------------
-- trouver un convertisseur qui tienne 24V **ET** 3A **OK**
-    - le tester avant de l'intégrer **OK**
-    - `TECNOIOT 5pcs 5A XL4015 DC-DC Step Down Adjustable Power Supply Module LED Lithium Charger`_
-    - également : `TECNOIOT 5pcs 5A Max XL4015 DC to DC CC CV Step-Down`_ avec limiteur de courant
-        - évaluer
-        - rentre difficilement (par de trous de fixation)
-  
-Full doc: `DC to DC Converter with Constant Current (CC) and Constant Voltage (CV) Control - Schematics, PCB, Parts List, and Working`_
-        
-- attention le ventilo ne passe pas ! SI **OK**           
-
-- alimentation ventilateur et ARDUINO **OK**
-    - design et maquettage **OK**
-    - saisir schéma KiCAD **OK**
-    - récupérer un potentiomètre multi tours 10k ou un simple de pcb, j'en ai plein ! **OK**
-- pcb support arduino, INA, OLED et alim
-    - plaquette à trou découper **OK**
-    - câbler **OK**
-    - tester avant intégration
-    - prévoir trous de fixation **OK**
-    - Prévoir dissipateur 7805 **OK**
-
-- ampèremètre
-    - en trouver un petit **KO**
-    - ou le faire
-        - définir l'électronique INA219 **OK**
-        - maquetter **OK**
-        - tester **OK**
-        - intégrer
-
-
-
-
-- design3D
-    - modèles 3D
-        - Vérifier les dimensions et au passage préparer la spreadsheet **OK**
-            - XL4015, modèle retouché **OK**
-            - ventilo 40mm **OK**
-            - connectique USB **OK**
-            - INA219 **OK**
-    - éprouver emprunte DC/DC **OK**
-    - trous de fixation du pcb **OK**
-    - faire une découpe broche oled dans la fav **OK**
-    - prévoir 7805 dans le flux d'air du ventilateur **OK**
-    - design cale OLED **OK**
-    - Éprouver les perçages **OK**
-        - Connecteurs USB **OK**
-        - pcb **OK**
-        - oled **OK**
-    - Fav **OK**
-        - trous switch **OK**
-        - trous usb **OK**
-        - trous écran **OK**
-        - trous de ventilation dans la FAV **OK**
-        - trous pcb **OK**
-    - refaire les trous de ventilation dans la base
-
-
-
-- préparer INA2 : changer adresse I2C **OK**
-- coller et cabler les potar **OK**
-
-- Préparer le convertiseur 2
-    - déssouder le potar **OK**
-    - couper le dissipateur **OK**
-    - coller les 2 moitiés de dissipateur
-
-- imprimer
-    - STL, GCODE **OK**
-        - fav **OK**
-        - base **OK**
-    - tige laiton, couper
-- câbler
-- tester
-
-
-
-.. _`TECNOIOT 5pcs 5A XL4015 DC-DC Step Down Adjustable Power Supply Module LED Lithium Charger` : https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1
-
-.. _`TECNOIOT 5pcs 5A Max XL4015 DC to DC CC CV Step-Down` : https://www.amazon.fr/gp/product/B084BVKGDK/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&psc=1 
-
-.. _`DC to DC Converter with Constant Current (CC) and Constant Voltage (CV) Control - Schematics, PCB, Parts List, and Working` : https://circuitdigest.com/electronic-circuits/diy-xl4015-dc-dc-buck-converter-module
 
 USB double mais plus simple
 ----------------------------------------------------------------------------------------------------
@@ -670,6 +626,96 @@ Module batterie Lidl
     - photo **OK**
     - screenshot (rendu Freecad) **OK**
     - nomenclature **OK**
+
+module USB 3A à refaire sniff
+----------------------------------------------------------------------------------------------------
+- trouver un convertisseur qui tienne 24V **ET** 3A **OK**
+    - le tester avant de l'intégrer **OK**
+    - `TECNOIOT 5pcs 5A XL4015 DC-DC Step Down Adjustable Power Supply Module LED Lithium Charger`_
+    - également : `TECNOIOT 5pcs 5A Max XL4015 DC to DC CC CV Step-Down`_ avec limiteur de courant
+        - évaluer
+        - rentre difficilement (par de trous de fixation)
+  
+Full doc: `DC to DC Converter with Constant Current (CC) and Constant Voltage (CV) Control - Schematics, PCB, Parts List, and Working`_
+        
+- attention le ventilo ne passe pas ! SI **OK**           
+
+- alimentation ventilateur et ARDUINO **OK**
+    - design et maquettage **OK**
+    - saisir schéma KiCAD **OK**
+    - récupérer un potentiomètre multi tours 10k ou un simple de pcb, j'en ai plein ! **OK**
+- pcb support arduino, INA, OLED et alim
+    - plaquette à trou découper **OK**
+    - câbler **OK**
+    - tester avant intégration
+    - prévoir trous de fixation **OK**
+    - Prévoir dissipateur 7805 **OK**
+
+- ampèremètre **OK**
+    - en trouver un petit **KO**
+    - ou le faire
+        - définir l'électronique INA219 **OK**
+        - maquetter **OK**
+        - tester **OK**
+        - intégrer **OK**
+
+
+
+
+- design3D
+    - modèles 3D
+        - Vérifier les dimensions et au passage préparer la spreadsheet **OK**
+            - XL4015, modèle retouché **OK**
+            - ventilo 40mm **OK**
+            - connectique USB **OK**
+            - INA219 **OK**
+    - éprouver emprunte DC/DC **OK**
+    - trous de fixation du pcb **OK**
+    - faire une découpe broche oled dans la fav **OK**
+    - prévoir 7805 dans le flux d'air du ventilateur **OK**
+    - design cale OLED **OK**
+    - Éprouver les perçages **OK**
+        - Connecteurs USB **OK**
+        - pcb **OK**
+        - oled **OK**
+    - Fav **OK**
+        - trous switch **OK**
+        - trous usb **OK**
+        - trous écran **OK**
+        - trous de ventilation dans la FAV **OK**
+        - trous pcb **OK**
+    - refaire les trous de ventilation dans la base dans Freecad
+
+
+
+- préparer INA2 : changer adresse I2C **OK**
+- coller et cabler les potar **OK**
+
+- Préparer le convertiseur 2 **OK**
+    - déssouder le potar **OK**
+    - couper le dissipateur **OK**
+    - coller les 2 moitiés de dissipateur **OK**
+
+- imprimer **OK**
+    - STL, GCODE **OK**
+        - fav **OK**
+        - base **OK**
+    - tige laiton, couper **OK**
+- câbler : cablage provisoire pour essais **OK**
+- tester **OK**
+- câblage définitif
+
+- une petite face avant
+
+
+
+.. _`TECNOIOT 5pcs 5A XL4015 DC-DC Step Down Adjustable Power Supply Module LED Lithium Charger` : https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1
+
+.. _`TECNOIOT 5pcs 5A Max XL4015 DC to DC CC CV Step-Down` : https://www.amazon.fr/gp/product/B084BVKGDK/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&psc=1 
+
+.. _`DC to DC Converter with Constant Current (CC) and Constant Voltage (CV) Control - Schematics, PCB, Parts List, and Working` : https://circuitdigest.com/electronic-circuits/diy-xl4015-dc-dc-buck-converter-module
+
+
 
 ====================================================================================================
 Weblinks
