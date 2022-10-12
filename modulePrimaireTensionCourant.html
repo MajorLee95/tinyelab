@@ -6,18 +6,17 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
     <title>Module primaire mesure Tension/courant de la ligne &#8212; Tiny e-lab extension  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/cloud.css" />
+    <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
 
     
     
@@ -37,7 +36,7 @@
 
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Avancement" href="avancement.html" />
+    <link rel="next" title="Module alimentation stabilisée DPS3005" href="moduleAlimStabiliseeDPS3005.html" />
     <link rel="prev" title="Mes réalisations" href="mesRealisation.html" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
   </head><body>
@@ -50,15 +49,14 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="avancement.html" title="Avancement"
+          <a href="moduleAlimStabiliseeDPS3005.html" title="Module alimentation stabilisée DPS3005"
              accesskey="N">next</a> &nbsp; &nbsp;</li>
         <li class="right" >
           <a href="mesRealisation.html" title="Mes réalisations"
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
     <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="mesRealisation.html" accesskey="U">Mes réalisations</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Module primaire mesure Tension/courant de la ligne</a></li> 
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" accesskey="U">Mes réalisations</a> &#187;</li> 
       </ul>
     </div>
     </div>
@@ -69,7 +67,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="module-primaire-mesure-tension-courant-de-la-ligne">
+  <div class="section" id="module-primaire-mesure-tension-courant-de-la-ligne">
 <h1>Module primaire mesure Tension/courant de la ligne<a class="headerlink" href="#module-primaire-mesure-tension-courant-de-la-ligne" title="Permalink to this headline">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Projet</dt>
@@ -91,7 +89,7 @@
 <dd class="field-even"><p>VoLAB</p>
 </dd>
 </dl>
-<section id="presentation">
+<div class="section" id="presentation">
 <span id="index-0"></span><h2>Présentation<a class="headerlink" href="#presentation" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/uimodule.JPG"><img alt="_images/uimodule.JPG" src="_images/uimodule.JPG" style="width: 600px;" /></a>
 <a class="reference internal image-reference" href="_images/uiWatmetreAmazon.jpg"><img alt="_images/uiWatmetreAmazon.jpg" src="_images/uiWatmetreAmazon.jpg" style="width: 300px;" /></a>
@@ -99,18 +97,16 @@
 après lui dans la chaîne.</p>
 <p>C’est le seul module qui n’est pas en parallèle sur les 2 tiges d’alimentation.</p>
 <a class="reference internal image-reference" href="_images/moduleUILigne.jpg"><img alt="_images/moduleUILigne.jpg" src="_images/moduleUILigne.jpg" style="width: 500px;" /></a>
-<figure class="align-center" id="id1" style="width: 100%">
+<div class="figure align-center" id="id1" style="width: 100%">
 <a class="reference internal image-reference" href="_images/moduleUILigneAjoutDC552x.jpg"><img alt="_images/moduleUILigneAjoutDC552x.jpg" src="_images/moduleUILigneAjoutDC552x.jpg" style="width: 300px;" /></a>
-<figcaption>
-<p><span class="caption-text">Ajout de connecteurs DC5525 et DC5521</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="schema-electrique">
+<p class="caption"><span class="caption-text">Ajout de connecteurs DC5525 et DC5521</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="schema-electrique">
 <h2>Schéma électrique<a class="headerlink" href="#schema-electrique" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/moduleUILigneSch.JPG" src="_images/moduleUILigneSch.JPG" />
-</section>
-<section id="nomenclature">
+</div>
+<div class="section" id="nomenclature">
 <h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-left" id="id2">
 <caption><span class="caption-text">Nomenclature USB5V 3A</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
@@ -204,14 +200,13 @@ après lui dans la chaîne.</p>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="weblinks">
+</div>
+<div class="section" id="weblinks">
 <h2>Weblinks<a class="headerlink" href="#weblinks" title="Permalink to this headline">¶</a></h2>
-</section>
-</section>
+</div>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -236,8 +231,8 @@ après lui dans la chaîne.</p>
   </div>
   <div class="sphinxnext">
     <h4>Page suivante</h4>
-    <p class="topless"><a href="avancement.html"
-                          title="Page suivante">&rarr; Avancement</a></p>
+    <p class="topless"><a href="moduleAlimStabiliseeDPS3005.html"
+                          title="Page suivante">&rarr; Module alimentation stabilisée DPS3005</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -250,7 +245,7 @@ après lui dans la chaîne.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -286,22 +281,21 @@ après lui dans la chaîne.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="avancement.html" title="Avancement"
+          <a href="moduleAlimStabiliseeDPS3005.html" title="Module alimentation stabilisée DPS3005"
              >next</a> &nbsp; &nbsp;</li>
         <li class="right" >
           <a href="mesRealisation.html" title="Mes réalisations"
              >previous</a> &nbsp; &nbsp;</li>
     <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="mesRealisation.html" >Mes réalisations</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Module primaire mesure Tension/courant de la ligne</a></li> 
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" >Mes réalisations</a> &#187;</li> 
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2022, J.Soranzo.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>
