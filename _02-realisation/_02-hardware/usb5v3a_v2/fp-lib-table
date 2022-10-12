@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name "pcbLibUSB5V3A")(type "KiCad")(uri "${KIPRJMOD}/pcbLibUSB5V3A.pretty")(options "")(descr ""))
-)

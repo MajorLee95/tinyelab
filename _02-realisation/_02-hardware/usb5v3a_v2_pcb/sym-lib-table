@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "localLibUSB5V3A_v2")(type "KiCad")(uri "${KIPRJMOD}/localLibUSB5V3A_v2.kicad_sym")(options "")(descr ""))
+)

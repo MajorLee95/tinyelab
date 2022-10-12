@@ -158,8 +158,8 @@ module USB 3A Refait
 
 - nomenclature
 - schéma
-    - de la carte : à intégrer dans la doc
-    - de cablage
+    - de la carte : à intégrer dans la doc **OK**
+    - de câblage **en cours**
 
 
 - Le code
