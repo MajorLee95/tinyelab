@@ -150,7 +150,7 @@ Module ventilation
 
 module USB 3A Refait 
 ----------------------------------------------------------------------------------------------------
-- design3D
+- design3D **OK**
     - refaire les trous de ventilation dans la base dans Freecad
 
 
@@ -162,7 +162,7 @@ module USB 3A Refait
     - de câblage **OK**
 
 
-- Le code !
+- Le code ! **OK**
 
 - la face avant **OK**
 
