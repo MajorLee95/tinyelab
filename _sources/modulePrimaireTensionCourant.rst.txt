@@ -52,14 +52,16 @@ Schéma électrique
 Nomenclature
 ====================================================================================================
 
-.. csv-table:: Nomenclature USB5V 3A
+.. csv-table:: Nomenclature module primaire U/I
    :file: ../../_02-realisation/_03-cao_3D/mesCreations/moduleUI/nomUILigne.csv
    :delim: ,
    :encoding: UTF-8
    :align: left
    :header-rows: 1
 
+Module KT-D132 `KETOTEK Voltmetre Amperemetre 12V DC 6.5-100V 20A`_
 
+.. _`KETOTEK Voltmetre Amperemetre 12V DC 6.5-100V 20A` : https://www.amazon.fr/gp/product/B07M8T3T2C/ref=ppx_yo_dt_b_asin_title_o08_s01?ie=UTF8&psc=1
 
 ====================================================================================================
 Weblinks

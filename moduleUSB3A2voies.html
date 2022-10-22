@@ -1,0 +1,587 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Module USB 2x 5A avec ampèremètre &#8212; Tiny e-lab extension  documentation</title>
+    <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+
+    
+    
+     
+        <script src="_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Avancement" href="avancement.html" />
+    <link rel="prev" title="Module alimentation primaire à base de batterie PARKSIDE de chez LIDL" href="moduleAlimentationParkSide.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="avancement.html" title="Avancement"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="moduleAlimentationParkSide.html" title="Module alimentation primaire à base de batterie PARKSIDE de chez LIDL"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" accesskey="U">Mes réalisations</a> &#187;</li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-usb-2x-5a-avec-amperemetre">
+<h1>Module USB 2x 5A avec ampèremètre<a class="headerlink" href="#module-usb-2x-5a-avec-amperemetre" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/moduleUSB2x3AComplet.jpg"><img alt="_images/moduleUSB2x3AComplet.jpg" class="align-right" src="_images/moduleUSB2x3AComplet.jpg" style="width: 300px;" /></a>
+<dl class="field-list simple">
+<dt class="field-odd">Auteur</dt>
+<dd class="field-odd"><p>J.Soranzo</p>
+</dd>
+<dt class="field-even">Date de création</dt>
+<dd class="field-even"><p>10/2022</p>
+</dd>
+<dt class="field-odd">Date dernière maj</dt>
+<dd class="field-odd"><p>10/2022</p>
+</dd>
+<dt class="field-even">Societe</dt>
+<dd class="field-even"><p>VoRoBoTics</p>
+</dd>
+<dt class="field-odd">Entity</dt>
+<dd class="field-odd"><p>VoLAB</p>
+</dd>
+</dl>
+<div class="section" id="presentation-objectif">
+<h2>Présentation/objectif<a class="headerlink" href="#presentation-objectif" title="Permalink to this headline">¶</a></h2>
+<p>On souhaite ici un module avec 2 prise USB capable de délivrer chacune 3A pour éventuellement
+alimenter 2 Raspberry pi avec un écran qui affiche tension courant pour chaque voie.</p>
+</div>
+<div class="section" id="module-xl4015-evaluation-a-3a">
+<h2>Module XL4015 évaluation à 3A<a class="headerlink" href="#module-xl4015-evaluation-a-3a" title="Permalink to this headline">¶</a></h2>
+<p>La base est le convertisseur DCDC XL4015</p>
+<p><a class="reference external" href="https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1">TECNOIOT 5pcs 5A XL4015 DC-DC Step Down Adjustable Power Supply Module LED Lithium Charger</a> <a class="footnote-reference brackets" href="#id3" id="id4">1</a></p>
+<p>En testant ce module en charge (avec une charge active) à 5V 3A, on s’aperçoit que ce n’est pas
+régulateur qui chauffe mais la diode et la self comme le montre les images infra-rouge.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Image IR</p></th>
+<th class="head"><p>Image réelle</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/XL4015IR.jpg"><img alt="aliasXL4015IR_1" src="_images/XL4015IR.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/XL4015TestImageReelle.jpg"><img alt="aliasXL4015IR_2" src="_images/XL4015TestImageReelle.jpg" style="width: 200px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Ces images ont été réalisées avec la <a class="reference external" href="https://www.amazon.fr/gp/product/B07BDJZ845/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&amp;psc=1">caméra infra-rouge Hti-Xintai HT18</a> <a class="footnote-reference brackets" href="#id5" id="id6">2</a> sur l’image réelle la
+parallaxe des 2 objectifs fait que les température ne sont  pas aux bons endroits. C’est l’image IR
+qui compte</p>
+<p>Lorsque le module délivre 5V / 3A la température de la diode se situe aux environs de 120°C. C’est
+beaucoup</p>
+</div>
+<div class="section" id="design-du-module">
+<h2>Design du module<a class="headerlink" href="#design-du-module" title="Permalink to this headline">¶</a></h2>
+<p>Compte tenu de l’essai ci-dessus je décide d’incorporer un ventilateur de 40mm au module.</p>
+<p>Je décide également de mettre 2 voies 5V/3A donc d’utiliser 2 convertisseurs.</p>
+<p>De plus étant donné que cela doit pouvoir servir à alimenter un raspberry pi, il serait bien de
+disposer d’une lecture du courant. Je n’est rien trouvé de suffisamment petit.</p>
+<p>J’envisage de réaliser le double ampèremètre grâce à:</p>
+<ul class="simple">
+<li><p>2 modules INA219</p></li>
+<li><p>1 ARDUINO NANO</p></li>
+<li><p>1 écran <a class="reference external" href="https://www.amazon.fr/gp/product/B08CDN5PSJ/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&amp;psc=1">OLED I2C monocrome de 0.91” 128 x 32</a> <a class="footnote-reference brackets" href="#id7" id="id8">3</a></p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/oled128x32.jpg"><img alt="_images/oled128x32.jpg" src="_images/oled128x32.jpg" style="width: 300px;" /></a>
+<p>Toutefois à 3A la chute de tension provoqué par le module INA219 et son shunt de 0.1 ohm risque
+d’être non négligeable : 0.3V. Il est possible de compenser cela en dessoudant le potar de feedback
+et en le plaçant après le shunt.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Nouveau pb :</p>
+<p>alimentation ventilo: en 24V, il fait énormément de bruit, je ne suis pas certain que
+ce soit un ventilo 24V.</p>
+<p>Il tourne bien en 5V mais le débit d’air semble un peu faible. 8, 9V
+semble un bon compromis. Sauf que je n’ai pas d’alim à cette valeur dans le module.</p>
+</div>
+<p>Conso ventilo : 24mA en 12V ventilo 1 (avec étiquette 24V), 49mA en 12V ventilo 2 origine ?</p>
+<p>Solutions:</p>
+<ul class="simple">
+<li><p>un autre DC/DC XL4015 : pas la place et un peu riche pour un ventilo</p></li>
+<li><dl class="simple">
+<dt>du PWM depuis l’ARDUINO<span class="classifier">maîtrise de la vitesse et possibilité de régul en fonction de T°c</span></dt><dd><ul>
+<li><p>Echec: le ventilateur siffle (même à 32kHz en PWM) et la plage de réglage et très courte</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Mettre un simple régulateur : Lm1084 ou 7805</p></li>
+</ul>
+<p>7805 pour alimenter l’arduino.</p>
+<p>Conso : environ 50mA (mesuré à 25) soit à dissiper 24-5 = 19V P=UxI = 19x0.05 = 0.95W</p>
+<p>En parcourant la datasheet du 7805, je suis tombé sur cette figure:</p>
+<img alt="_images/7805_high_output.JPG" class="align-center" src="_images/7805_high_output.JPG" />
+<p>Il est donc possible à partir du 7805 de faire du 9V qui pourrait servir à alimenter le ventilo ET
+l’ARDUINO sur son  Vin.</p>
+<div class="section" id="prise-usb-utilisees">
+<h3>Prise USB utilisées<a class="headerlink" href="#prise-usb-utilisees" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/usbBreakOutBoard.jpg"><img alt="_images/usbBreakOutBoard.jpg" src="_images/usbBreakOutBoard.jpg" style="width: 300px;" /></a>
+</div>
+<div class="section" id="les-adresses-sur-le-bus-i2c">
+<h3>Les adresses sur le bus I2C<a class="headerlink" href="#les-adresses-sur-le-bus-i2c" title="Permalink to this headline">¶</a></h3>
+<p>I2C scan : 0x3C, 0x40 et 0x41 (écran, INA1, INA2)</p>
+</div>
+</div>
+<div class="section" id="schemas-electroniques">
+<h2>Schémas électroniques<a class="headerlink" href="#schemas-electroniques" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="de-la-carte-sans-les-lm35">
+<h3>De la carte (sans les LM35)<a class="headerlink" href="#de-la-carte-sans-les-lm35" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/usb5V3AOledSch.jpg"><img alt="_images/usb5V3AOledSch.jpg" src="_images/usb5V3AOledSch.jpg" style="width: 600px;" /></a>
+<p>Les LM35 ont été ajoutés après coup en fil volant.</p>
+<p><strong>Pseudo PCB KiCAD</strong></p>
+<a class="reference internal image-reference" href="_images/usb2x3a_pseudoPCB.jpg"><img alt="_images/usb2x3a_pseudoPCB.jpg" src="_images/usb2x3a_pseudoPCB.jpg" style="width: 600px;" /></a>
+<p>Pseudo pcb car réalisé sur de la plaque à trous à pastille carrées Veroboard.</p>
+</div>
+<div class="section" id="schema-de-cablage">
+<h3>Schéma de câblage<a class="headerlink" href="#schema-de-cablage" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/usb2x3ACabalge221009_1106.svg"><img alt="_images/usb2x3ACabalge221009_1106.svg" src="_images/usb2x3ACabalge221009_1106.svg" width="600px" /></a>
+<p><div class="clearer"></div></p>
+<a class="reference internal image-reference" href="_images/usb2x3ACabalge_filaire221020_0026.svg"><img alt="_images/usb2x3ACabalge_filaire221020_0026.svg" src="_images/usb2x3ACabalge_filaire221020_0026.svg" width="600px" /></a>
+</div>
+</div>
+<div class="section" id="mesure-de-temperature-lm35">
+<h2>Mesure de température (LM35)<a class="headerlink" href="#mesure-de-temperature-lm35" title="Permalink to this headline">¶</a></h2>
+<p>Ajout de dernière minute.</p>
+<p>Comment : l’arduino à des entrée analogique dispo.</p>
+<p>Qu’est ce que j’ai ?</p>
+<ul class="simple">
+<li><p>LM35 <a class="reference download internal" download="" href="_downloads/62fc23ffe55c005b3120672855361de1/lm35dts.pdf"><code class="xref download docutils literal notranslate"><span class="pre">datasheet</span></code></a></p></li>
+</ul>
+<p>J’ai câblé 2 de ces capteur sur les entrées analogique A0 et A1</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Câblage LM35 sous l’ARDUINO</p></th>
+<th class="head"><p>Câblage LM35 collés au dissipateurs</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/USB2X3A_LM35Cablage01.png"><img alt="LM35_cablage01" src="_images/USB2X3A_LM35Cablage01.png" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/USB2X3A_LM35Cablage02.png"><img alt="LM35_cablage02" src="_images/USB2X3A_LM35Cablage02.png" style="width: 200px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Les 2 capteurs sont collés aux dissipateurs grâce à de la colle thermique
+(pas de la pate mais bien de la colle ! ).</p>
+<a class="reference internal image-reference" href="_images/colleThermique.jpg"><img alt="_images/colleThermique.jpg" src="_images/colleThermique.jpg" style="width: 300px;" /></a>
+</div>
+<div class="section" id="quelques-photos-de-la-realisation">
+<h2>Quelques photos de la réalisation<a class="headerlink" href="#quelques-photos-de-la-realisation" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Maquette</p></th>
+<th class="head"><p>XL4015 en charge</p></th>
+<th class="head"><p>INA219 + trimer</p></th>
+<th class="head"><p>Carte en cours</p></th>
+<th class="head"><p>Carte verso</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/mequettagePrelimi.jpg"><img alt="aliasImage1" src="_images/mequettagePrelimi.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/xl4015EnCharge.jpg"><img alt="aliasImage2" src="_images/xl4015EnCharge.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/ina219EtTrimerDeporte.jpg"><img alt="aliasImage3" src="_images/ina219EtTrimerDeporte.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/carteEnCoursDeSoudure.jpg"><img alt="aliasImage4" src="_images/carteEnCoursDeSoudure.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/carteEnCoursDeSoudureRecto.jpg"><img alt="aliasImage5" src="_images/carteEnCoursDeSoudureRecto.jpg" style="width: 200px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Maquette</p></th>
+<th class="head"><p>XL4015 en charge</p></th>
+<th class="head"><p>INA219 + trimer</p></th>
+<th class="head"><p>Carte en cours</p></th>
+<th class="head"><p>Carte verso</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/decoupeDissipateurALaDremel.jpg"><img alt="aliasImage6" src="_images/decoupeDissipateurALaDremel.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/carteEssaiStatique.jpg"><img alt="aliasImage7" src="_images/carteEssaiStatique.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/cablageFaceAvantEtBase.jpg"><img alt="aliasImage8" src="_images/cablageFaceAvantEtBase.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/connexionFavBase.jpg"><img alt="aliasImage9" src="_images/connexionFavBase.jpg" style="width: 200px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/essaisTemp.jpg"><img alt="aliasImage10" src="_images/essaisTemp.jpg" style="width: 200px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="une-jolie-face-avant-pour-combler-le-vide">
+<h2>Une jolie face avant (pour combler le vide)<a class="headerlink" href="#une-jolie-face-avant-pour-combler-le-vide" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/fav221017_2030.svg"><img alt="_images/fav221017_2030.svg" src="_images/fav221017_2030.svg" width="300px" /></a>
+<p>Découpé avec notre antique craftrobot…</p>
+<a class="reference internal image-reference" href="_images/craftrobot.jpg"><img alt="_images/craftrobot.jpg" src="_images/craftrobot.jpg" style="width: 300px;" /></a>
+<p>Compatible du logiciel Silhouette Studio (je conseille la v3.6.057, pour les repère de coupe old
+style)</p>
+</div>
+<div class="section" id="rendus-freecad">
+<h2>Rendus FreeCad<a class="headerlink" href="#rendus-freecad" title="Permalink to this headline">¶</a></h2>
+<p>L’intérieur du module très chargé et encore, il n’y a pas les fils de cablage…</p>
+<a class="reference internal image-reference" href="_images/usb2x3Av2_interne.jpg"><img alt="_images/usb2x3Av2_interne.jpg" src="_images/usb2x3Av2_interne.jpg" style="width: 600px;" /></a>
+<p>La même avec en plus la base, les switch et les prise USB:</p>
+<a class="reference internal image-reference" href="_images/usb2x3Av2_sansFAV.jpg"><img alt="_images/usb2x3Av2_sansFAV.jpg" src="_images/usb2x3Av2_sansFAV.jpg" style="width: 400px;" /></a>
+<p>Et avec</p>
+<a class="reference internal image-reference" href="_images/usb2x3Av2_avecFAV.jpg"><img alt="_images/usb2x3Av2_avecFAV.jpg" src="_images/usb2x3Av2_avecFAV.jpg" style="width: 400px;" /></a>
+</div>
+<div class="section" id="arduino-code">
+<h2>Arduino code<a class="headerlink" href="#arduino-code" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/ArduinoCommunityLogo_SVG.svg" class="align-center" src="_images/ArduinoCommunityLogo_SVG.svg" /><img alt="_images/doc.svg" class="align-left" src="_images/doc.svg" /><p>Vous le trouverez sur le <a class="reference external" href="https://github.com/MajorLee95/tinyelab/blob/main/_02-realisation/_01-software/usb3a/usb3a.ino">github du projet</a> <a class="footnote-reference brackets" href="#id9" id="id10">4</a></p>
+</div>
+<div class="section" id="nomenclature">
+<h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-left" id="id2">
+<caption><span class="caption-text">Nomenclature USB5V 3A</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Désignation</p></th>
+<th class="head"><p>Fab</p></th>
+<th class="head"><p>Ref fab ou boutique</p></th>
+<th class="head"><p>Qté</p></th>
+<th class="head"><p>Pu</p></th>
+<th class="head"><p>Pt</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Insert Fileteté M3</p></td>
+<td><p>RUTHEX</p></td>
+<td><p>sans</p></td>
+<td><p>10</p></td>
+<td><p>0,10 €</p></td>
+<td><p>1,00 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Switch</p></td>
+<td><p>AMAZON</p></td>
+<td><p>Mikrotech KCD1-11</p></td>
+<td><p>2</p></td>
+<td><p>0,43 €</p></td>
+<td><p>0,86 €</p></td>
+</tr>
+<tr class="row-even"><td><p>VIS THC M3x6</p></td>
+<td><p>BRICOVIS</p></td>
+<td><p>TC HC M3x6ANEF</p></td>
+<td><p>8</p></td>
+<td><p>0,06 €</p></td>
+<td><p>0,48 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>VIS STHC M3x10</p></td>
+<td><p>BRICOVIS</p></td>
+<td><p>STHC Pointeau M3X10ANEF</p></td>
+<td><p>2</p></td>
+<td><p>0,08 €</p></td>
+<td><p>0,17 €</p></td>
+</tr>
+<tr class="row-even"><td><p>XT60 MALE</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>0,60 €</p></td>
+<td><p>0,60 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>XT60 FEM</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>0,60 €</p></td>
+<td><p>0,60 €</p></td>
+</tr>
+<tr class="row-even"><td><p>CONV DCDC USB5V 3A</p></td>
+<td><p>AMAZON</p></td>
+<td><p>TECNOIOT XL4015</p></td>
+<td><p>2</p></td>
+<td><p>3,25 €</p></td>
+<td><p>6,49 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>OLED 128X32</p></td>
+<td><p>AMAZON</p></td>
+<td><p>Frienda</p></td>
+<td><p>1</p></td>
+<td><p>3,22 €</p></td>
+<td><p>3,22 €</p></td>
+</tr>
+<tr class="row-even"><td><p>ARDUINO NANO</p></td>
+<td><p>Aliexpress</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>3,49 €</p></td>
+<td><p>3,49 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>LM7805</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>0,40 €</p></td>
+<td><p>0,40 €</p></td>
+</tr>
+<tr class="row-even"><td><p>Prise USB</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>2</p></td>
+<td><p>0,78 €</p></td>
+<td><p>1,56 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>INA219</p></td>
+<td><p>Aliexpress</p></td>
+<td></td>
+<td><p>2</p></td>
+<td><p>2,75 €</p></td>
+<td><p>5,50 €</p></td>
+</tr>
+<tr class="row-even"><td><p>LM35</p></td>
+<td><p>AMAZON</p></td>
+<td><p>ZHITING</p></td>
+<td><p>2</p></td>
+<td><p>1,60 €</p></td>
+<td><p>3,20 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Potar 10k</p></td>
+<td><p>Aliexpress</p></td>
+<td><p>PT15-10k</p></td>
+<td><p>1</p></td>
+<td><p>0,64 €</p></td>
+<td><p>0,64 €</p></td>
+</tr>
+<tr class="row-even"><td><p>Condensateur 100nF</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>2</p></td>
+<td><p>0,01 €</p></td>
+<td><p>0,02 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Plaque à trou2,54</p></td>
+<td><p>Radiospares</p></td>
+<td><p>44x59mm 0,000942€mm2</p></td>
+<td><p>1</p></td>
+<td><p>2,45 €</p></td>
+<td><p>2,45 €</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventilateur 4cm</p></td>
+<td></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>7,00 €</p></td>
+<td><p>7,00 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tige Laiton diam 2mm</p></td>
+<td><p>AMAZON</p></td>
+<td><p>2*68,62mm</p></td>
+<td><p>2</p></td>
+<td><p>0,192</p></td>
+<td><p>0,38 €</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>TOTAL</p></td>
+<td><p>38,06 €</p></td>
+</tr>
+</tbody>
+</table>
+<p>Prendre les ARDUINO NANO sur Aliexpress, il sont nettement moins cher !</p>
+<p>Carte de prototypage à souder à pastilles carrées simple face au pas de 2.54 chez
+Radiospares code <a class="reference external" href="https://fr.rs-online.com/web/p/cartes-matrices/4570761">457-0761</a> <a class="footnote-reference brackets" href="#id11" id="id12">5</a> 200x100 : 18.84€ 20.000mm2 soit 0.000942€/mm2</p>
+<a class="reference internal image-reference" href="_images/veroboardPastilleCaree.jpg"><img alt="_images/veroboardPastilleCaree.jpg" src="_images/veroboardPastilleCaree.jpg" style="width: 300px;" /></a>
+</div>
+<div class="section" id="weblinks">
+<h2>Weblinks<a class="headerlink" href="#weblinks" title="Permalink to this headline">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1">https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1</a></p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">2</a></span></dt>
+<dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B07BDJZ845/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&amp;psc=1">https://www.amazon.fr/gp/product/B07BDJZ845/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&amp;psc=1</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">3</a></span></dt>
+<dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B08CDN5PSJ/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&amp;psc=1">https://www.amazon.fr/gp/product/B08CDN5PSJ/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&amp;psc=1</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">4</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/MajorLee95/tinyelab/blob/main/_02-realisation/_01-software/usb3a/usb3a.ino">https://github.com/MajorLee95/tinyelab/blob/main/_02-realisation/_01-software/usb3a/usb3a.ino</a></p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">5</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.rs-online.com/web/p/cartes-matrices/4570761">https://fr.rs-online.com/web/p/cartes-matrices/4570761</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="sphinx-toc sphinxlocaltoc">
+    <h3><a href="index.html">Page contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Module USB 2x 5A avec ampèremètre</a><ul>
+<li><a class="reference internal" href="#presentation-objectif">Présentation/objectif</a></li>
+<li><a class="reference internal" href="#module-xl4015-evaluation-a-3a">Module XL4015 évaluation à 3A</a></li>
+<li><a class="reference internal" href="#design-du-module">Design du module</a><ul>
+<li><a class="reference internal" href="#prise-usb-utilisees">Prise USB utilisées</a></li>
+<li><a class="reference internal" href="#les-adresses-sur-le-bus-i2c">Les adresses sur le bus I2C</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#schemas-electroniques">Schémas électroniques</a><ul>
+<li><a class="reference internal" href="#de-la-carte-sans-les-lm35">De la carte (sans les LM35)</a></li>
+<li><a class="reference internal" href="#schema-de-cablage">Schéma de câblage</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mesure-de-temperature-lm35">Mesure de température (LM35)</a></li>
+<li><a class="reference internal" href="#quelques-photos-de-la-realisation">Quelques photos de la réalisation</a></li>
+<li><a class="reference internal" href="#une-jolie-face-avant-pour-combler-le-vide">Une jolie face avant (pour combler le vide)</a></li>
+<li><a class="reference internal" href="#rendus-freecad">Rendus FreeCad</a></li>
+<li><a class="reference internal" href="#arduino-code">Arduino code</a></li>
+<li><a class="reference internal" href="#nomenclature">Nomenclature</a></li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div class="sphinxprev">
+    <h4>Page précédente</h4>
+    <p class="topless"><a href="moduleAlimentationParkSide.html"
+                          title="Page précédente">&larr; Module alimentation primaire à base de batterie PARKSIDE de chez LIDL</a></p>
+  </div>
+  <div class="sphinxnext">
+    <h4>Page suivante</h4>
+    <p class="topless"><a href="avancement.html"
+                          title="Page suivante">&rarr; Avancement</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/moduleUSB3A2voies.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="avancement.html" title="Avancement"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="moduleAlimentationParkSide.html" title="Module alimentation primaire à base de batterie PARKSIDE de chez LIDL"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" >Mes réalisations</a> &#187;</li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, J.Soranzo.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>
