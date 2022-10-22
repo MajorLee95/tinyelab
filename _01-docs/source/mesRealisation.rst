@@ -903,16 +903,18 @@ Revoir le courant 20mA par groupe de 4 led 4 groupe 80mA refaire les calculs.
 
 Interrupteurs rouge miniature
 ----------------------------------------------------------------------------------------------------
-Référence `KDC1-11 sur AMAZON`_ en noir mais en rouge ???
+Référence `KDC1-11 sur AMAZON`_ en noir mais en rouge ??? 10x15mm
 
 .. _`KDC1-11 sur AMAZON` : https://www.amazon.fr/5x-Mini-Interrupteur-SPST-27int003/dp/B0749SC157/ref=sr_1_1?keywords=kcd1-11&qid=1655909025&sr=8-1
 
-J'ai commandé `des XCD en 21*15mm ici`_
+J'ai commandé `des KCD1 en 21*15mm ici`_, j'aurais donc du recevoir des 21x15mm et j'ai reçu des 13x9mm beaucoup plus petits ! il y a écrit dessus KCD1-11
 
-.. _`des XCD en 21*15mm ici` : https://www.amazon.fr/gp/product/B085B21DX1/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1
+.. _`des KCD1 en 21*15mm ici` : https://www.amazon.fr/gp/product/B085B21DX1/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1
 
-J'ai l'impression qu'il s'agit d'une erreur, sur les autres photo on des KCD1. Un des commentaire 
+J'ai l'impression qu'il s'agit d'une erreur, sur les autres photo on a des KCD1. Un des commentaire 
 avec photo le montre clairement ! Mistère résolu.
+
+C'est un peu chaint pour estimer le coût. Je prend 2.15€ les 5
 
 
 Avec un digispark

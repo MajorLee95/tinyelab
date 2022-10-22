@@ -154,15 +154,17 @@ module USB 3A Refait
     - refaire les trous de ventilation dans la base dans Freecad
 
 
-- une petite face avant
+- une petite face avant **OK**
 
-- nomenclature
-- schéma
+- nomenclature **OK**
+- schéma **OK**
     - de la carte : à intégrer dans la doc **OK**
-    - de câblage **en cours**
+    - de câblage **OK**
 
 
-- Le code
+- Le code !
+
+- la face avant **OK**
 
 
 ====================================================================================================

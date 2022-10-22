@@ -1,3 +1,13 @@
+/**
+ @file usb3a.ino
+ @author J.SORANZO
+ @date 22/10/2022
+ @copyright 2022 CC0
+ @version git versionning
+ @brief Projet Tiny eLab
+ Module USB 2x 3A
+*/
+
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -7,8 +17,7 @@
 
 #define CONSIGNE_TEMP A0
 
-// pwm ventilo abandonné
-#define VENTILO_OUT 3 //pin2
+
 
 Adafruit_INA219 ina219;
 Adafruit_INA219 ina219_2(0x41);
@@ -36,8 +45,6 @@ void setup()   {
 	display.println("VoRoBoTics");
 	display.println("Tiny e-lab");
 	
-	//               123456789012345678901
-	// display.println("31kHz");
 	display.display();
 	delay(4000);
 	display.clearDisplay();
@@ -75,11 +82,10 @@ void loop(){
 	dtostrf(loadvoltage,2,2,tmp_u);
 	dtostrf(current_A,2,2,tmp_i);
 	display.setCursor(0,6);
-	//display.setCursor(0,20);
+
 	sprintf( ligne, "CH2 %sV %sA %d C", tmp_u, tmp_i, temp2 );
 	display.println(ligne);
-	// display.setCursor(0,9); // avce les println seuls c'est un peu trop serré
-	//display.println("Temp : "); // pour la température
+
 	
 	shuntvoltage = ina219.getShuntVoltage_mV();
 	busvoltage = ina219.getBusVoltage_V();
@@ -91,16 +97,12 @@ void loop(){
 	display.setCursor(0,24);
 	sprintf( ligne, "CH1 %sV %sA %d C", tmp_u, tmp_i, temp1 );
 	display.println(ligne);
-	// display.setCursor(0,27);
-	//display.println("Temp :"); // pour la température
+
 
 	display.display();
 	
 	delay (200);
 	display.clearDisplay();
 	
-	// int val = analogRead( A0 ); //Read P2
-	// int pwm = map( val, 0,1023, 0, 255);
-	// analogWrite( VENTILO_OUT , pwm);
 	
 }

@@ -1,12 +1,24 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Module USB 2x 5A avec ampèremètre
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. image:: images/usb2x3a/moduleUSB2x3AComplet.jpg 
+   :width: 300 px
+   :align: right
 
 :Auteur: J.Soranzo
 :Date de création: 10/2022
 :Date dernière maj: 10/2022
 :Societe: VoRoBoTics
 :Entity: VoLAB
+
+
+
+
+.. |clearer|  raw:: html
+
+   <div class="clearer"></div>
+
+
 
 ====================================================================================================
 Présentation/objectif
@@ -66,7 +78,13 @@ J'envisage de réaliser le double ampèremètre grâce à:
 
 - 2 modules INA219
 - 1 ARDUINO NANO
-- 1 écran OLED I2C monocrome de 0.91" 128 x 32
+- 1 écran `OLED I2C monocrome de 0.91" 128 x 32`_
+
+.. image:: images/oled128x32.jpg 
+   :width: 300 px
+
+
+.. _`OLED I2C monocrome de 0.91" 128 x 32` : https://www.amazon.fr/gp/product/B08CDN5PSJ/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1
 
 Toutefois à 3A la chute de tension provoqué par le module INA219 et son shunt de 0.1 ohm risque 
 d'être non négligeable : 0.3V. Il est possible de compenser cela en dessoudant le potar de feedback 
@@ -92,10 +110,6 @@ Solutions:
       - Echec: le ventilateur siffle (même à 32kHz en PWM) et la plage de réglage et très courte
 - Mettre un simple régulateur : Lm1084 ou 7805
 
-Transistor pour le PWM ou celui utilisé dans le module ventilo:
-630
-20
-N3LG  ON SEMI
 
 7805 pour alimenter l'arduino.
 
@@ -109,7 +123,15 @@ En parcourant la datasheet du 7805, je suis tombé sur cette figure:
 Il est donc possible à partir du 7805 de faire du 9V qui pourrait servir à alimenter le ventilo ET 
 l'ARDUINO sur son  Vin.
 
-I2C scan : 0x3C, 0x40 et 0x41
+Prise USB utilisées
+----------------------------------------------------------------------------------------------------
+.. image:: images/usbBreakOutBoard.jpg 
+   :width: 300 px
+
+
+Les adresses sur le bus I2C
+----------------------------------------------------------------------------------------------------
+I2C scan : 0x3C, 0x40 et 0x41 (écran, INA1, INA2)
 
 ====================================================================================================
 Schémas électroniques
@@ -121,6 +143,23 @@ De la carte (sans les LM35)
    :width: 600 px
 
 Les LM35 ont été ajoutés après coup en fil volant.
+
+**Pseudo PCB KiCAD**
+
+.. image:: images/usb2x3a_pseudoPCB.jpg 
+   :width: 600 px
+
+Pseudo pcb car réalisé sur de la plaque à trous à pastille carrées Veroboard.
+
+Schéma de câblage
+----------------------------------------------------------------------------------------------------
+.. image:: images/usb2x3ACabalge221009_1106.svg 
+   :width: 600 px
+
+|clearer|
+
+.. image:: images/usb2x3ACabalge_filaire221020_0026.svg 
+   :width: 600 px
 
 
 ====================================================================================================
@@ -158,7 +197,87 @@ Les 2 capteurs sont collés aux dissipateurs grâce à de la colle thermique
 .. image:: images/colleThermique.jpg 
    :width: 300 px
 
+====================================================================================================
+Quelques photos de la réalisation
+====================================================================================================
 
+.. |aliasImage1| image:: images/usb2x3a/mequettagePrelimi.jpg
+   :width: 200 px
+
+.. |aliasImage2| image:: images/usb2x3a/xl4015EnCharge.jpg
+  :width: 200 px
+
+.. |aliasImage3| image:: images/usb2x3a/ina219EtTrimerDeporte.jpg
+  :width: 200 px
+
+.. |aliasImage4| image:: images/usb2x3a/carteEnCoursDeSoudure.jpg
+  :width: 200 px
+
+.. |aliasImage5| image:: images/usb2x3a/carteEnCoursDeSoudureRecto.jpg
+  :width: 200 px
+
+.. list-table::
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Maquette
+     - XL4015 en charge
+     - INA219 + trimer
+     - Carte en cours
+     - Carte verso
+
+   * - |aliasImage1|
+     - |aliasImage2|
+     - |aliasImage3|
+     - |aliasImage4|
+     - |aliasImage5|
+
+.. |aliasImage6| image:: images/usb2x3a/decoupeDissipateurALaDremel.jpg
+   :width: 200 px
+
+.. |aliasImage7| image:: images/usb2x3a/carteEssaiStatique.jpg
+  :width: 200 px
+
+.. |aliasImage8| image:: images/usb2x3a/cablageFaceAvantEtBase.jpg
+  :width: 200 px
+
+.. |aliasImage9| image:: images/usb2x3a/connexionFavBase.jpg
+  :width: 200 px
+
+.. |aliasImage10| image:: images/usb2x3a/essaisTemp.jpg
+  :width: 200 px
+
+.. list-table::
+   :widths: 20 20 20 20 20
+   :header-rows: 1
+
+   * - Maquette
+     - XL4015 en charge
+     - INA219 + trimer
+     - Carte en cours
+     - Carte verso
+
+   * - |aliasImage6|
+     - |aliasImage7|
+     - |aliasImage8|
+     - |aliasImage9|
+     - |aliasImage10|
+
+
+====================================================================================================
+Une jolie face avant (pour combler le vide)
+====================================================================================================
+
+.. image:: ../../_02-realisation/_02-hardware/usb5v3a_v2_fav/fav221017_2030.svg
+   :width: 300 px
+
+Découpé avec notre antique craftrobot...
+
+.. image:: images/craftrobot.jpg 
+   :width: 300 px
+
+Compatible du logiciel Silhouette Studio (je conseille la v3.6.057, pour les repère de coupe old
+style)
 
 ====================================================================================================
 Rendus FreeCad
@@ -179,9 +298,42 @@ Et avec
    :width: 400 px
 
 ====================================================================================================
+Arduino code
+====================================================================================================
+.. image:: images/ArduinoCommunityLogo_SVG.svg 
+   :align: center
+
+
+.. image:: images/doc.svg 
+   :align: left
+
+
+Vous le trouverez sur le `github du projet`_
+
+.. _`github du projet` : https://github.com/MajorLee95/tinyelab/blob/main/_02-realisation/_01-software/usb3a/usb3a.ino
+
+====================================================================================================
 Nomenclature
 ====================================================================================================
-Pour la nom : tige de laiton longueur : 68.62mm
+
+.. csv-table:: Nomenclature USB5V 3A
+   :file: ../../_02-realisation/_03-cao_3D/mesCreations/moduleUSB3A/nomUSB3A.csv
+   :delim: ,
+   :encoding: UTF-8
+   :align: left
+   :header-rows: 1
+
+Prendre les ARDUINO NANO sur Aliexpress, il sont nettement moins cher !
+
+Carte de prototypage à souder à pastilles carrées simple face au pas de 2.54 chez
+Radiospares code `457-0761`_ 200x100 : 18.84€ 20.000mm2 soit 0.000942€/mm2
+
+.. _`457-0761` : https://fr.rs-online.com/web/p/cartes-matrices/4570761
+
+.. image:: images/veroboardPastilleCaree.jpg 
+   :width: 300 px
+
+
 
 ====================================================================================================
 Weblinks
