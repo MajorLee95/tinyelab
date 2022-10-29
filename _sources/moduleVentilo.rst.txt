@@ -235,8 +235,23 @@ C'est un peu chaint pour estimer le coût. Je prend 2.15€ les 5
 Rendu Freecad
 ====================================================================================================
 
-.. image:: images/moduleVentilo.JPG 
+.. image:: images/ventiloRendu3D.JPG 
    :width: 600 px
+
+====================================================================================================
+Photos
+====================================================================================================
+Système d'inclinaison en test
+
+.. image:: images/ventiloInclinaison.JPG 
+   :width: 300 px
+
+En cours de câblage
+
+.. image:: images/ventiloLesEntrailles.JPG 
+   :width: 300 px
+
+
 
 ====================================================================================================
 Nomenclature
