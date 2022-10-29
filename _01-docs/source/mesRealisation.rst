@@ -6,8 +6,12 @@ Mes réalisations
 :Auteur: J.Soranzo
 :Date de création: 02/2022
 :Date dernière maj: 07/10/2022
-:Societe: VoRoBoTics
-:Entity: VoLAB
+:Societe: `VoRoBoTics`_
+:Entity: `VoLAB`_
+
+.. _`VoLAB` : http://www.vorobotics.com/wp/
+
+.. _`VoRoBoTics` : http://www.vorobotics.com/wp/
 
 .. |clearer|  raw:: html
 
@@ -23,6 +27,8 @@ Mes réalisations
    moduleAlimStabiliseeDPS3005
    moduleAlimentationParkSide
    moduleUSB3A2voies
+   moduleOscilloDSO138
+   moduleVentilo
 
 ====================================================================================================
 Réalisés/terminés
@@ -107,10 +113,14 @@ Faire : Fichier / Enregistrer une copie sous...
  
 Choisir UTF-8 et , comme séparateur
 
-Alimentation des modules en plus base tension
+
+.. _refConvertisseurDCDC:
+
+Alimentation des modules en base tension
 ----------------------------------------------------------------------------------------------------
 
-Pour les modules qui en ont besoin !
+Pour les modules qui ont besoin d'une tension inférieur à la tension d'alimentation principale 
+(19 à 24v)! Comme le module oscilloscope par exemple
 
 
 .. _moduleDCDC2596:
@@ -534,89 +544,6 @@ Module USB-C Quick charger
 Dossier : moduleUSBC_QC3
 
 
-----------------------------------------------------------------------------------------------------
-
-.. _refOscilloRealisation:
-
-.. index::
-    pair: Modules; Oscilloscope
-
-====================================================================================================
-Module oscillo 1 voies DSO138
-====================================================================================================
-.. WARNING:: REGLER LA TENSION DE SORTIE DU DCDC à 9V sinon ça chauffe
-   :class: without-title
-
-   ici 9V
-
-.. _`NOUVEAU JYETech® 13805K DSO138 Mini Oscilloscope Numérique 200KHz` : https://www.banggood.com/fr/NEW-JYETech-13805K-DSO138-Mini-200KHz-Digital-Oscilloscope-SMD-Soldered-Version-DC3_5V-6V-With-Housing-p-1627586.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=FR&utm_content=minha&utm_campaign=minha-fr-fr-pc&currency=EUR&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_union&utm_content=sandra&utm_campaign=sandra-ssc-fr-css-all-0423-19bf-v2&ad_id=344815794167&gclid=CjwKCAiAx8KQBhAGEiwAD3EiP3yN54JABv3-oe_jhIRZ2Zv9rc89praeH_G5VnR0Qqd3OnVhP0iA_hoC_KoQAvD_BwE
-
-.. image:: images/oscilloAmazon.jpg 
-   :width: 600 px
-
-Sur AMAZON `ARCELI Oscilloscope numérique au Format de Poche, kit Open Source TFT 2,4 Pouces avec sonde, Version assemblée (soudé)`_ à 27€
-
-.. _`ARCELI Oscilloscope numérique au Format de Poche, kit Open Source TFT 2,4 Pouces avec sonde, Version assemblée (soudé)` : https://www.amazon.fr/gp/product/B07V67LYXF/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1
-
-Attention plusieurs versions différentes même sur le site JYE Tech
-
-`NOUVEAU JYETech® 13805K DSO138 Mini Oscilloscope Numérique 200KHz`_ chez BANGGOOD (vue assemblée)
-
-.. image:: images/dso138mini.jpg 
-   :width: 300 px
-
-Dimension: 85mm X 75mm X 15mm
-
-La version la plus stable serait la `JYE Tech DSO138mini`_ plus compact et aussi plus cher. 
-Pas trouvé assemblée sur AMAZON
-
-.. _`JYE Tech DSO138mini` : https://jyetech.com/dso138mini-oscilloscope-diy-kit/
-
-BNC : code RS :  680-7371, modèle directement récupérer et mis en fichier Freecad.
-
-:download:`Drawing<fichiersJoints/bnc_drawing_0900766b80d9b202.pdf>`
-
-.. image:: images/bncMountingHole.jpg 
-   :width: 300 px
-
-.. WARNING:: REGLER LA TENSION DE SORTIE DU DCDC à 9V sinon ça chauffe
-   :class: without-title
-
-   Ici 9V cf. `Alimentation des modules en plus base tension`_
-
-Oscillo schéma de câblage
-----------------------------------------------------------------------------------------------------
-
-.. image:: images/oscillosch_220504_1808.svg 
-   :width: 600 px
-
-
-Rendu FreeCad
-----------------------------------------------------------------------------------------------------
-.. image:: images/oscillo.jpg 
-   :width: 600 px
-
-
-Oscilloscope en situation
-----------------------------------------------------------------------------------------------------
-
-.. image:: images/oscilloEnSituation.jpg 
-   :width: 600 px
-
-Test du PWM pour le module Ventilo
-
-
-Nomenclature oscillo DSO138
-----------------------------------------------------------------------------------------------------
-.. csv-table:: Nomenclature oscilloscope DSO138
-   :file: ../../_02-realisation/_03-cao_3D/mesCreations/moduleOscillo/nomOscillo.csv
-   :delim: ,
-   :encoding: UTF-8
-   :align: left
-   :header-rows: 1
-
-
-
 .. index::
     pair: Modules; Volt/ampèremètre
 
@@ -809,210 +736,6 @@ Photo
 .. image:: images/tripleVolt.JPG 
    :width: 600 px
 
-
-.. index::
-    pair: Modules; Ventilo
-
-====================================================================================================
-Module ventilo
-====================================================================================================
-Diamètre ventilateur 8cm, souhait : inclinable avec éclairage à LED et filtre
-
-Conception du système d'inclinaison
-----------------------------------------------------------------------------------------------------
-Conception du système d'inclinaison, les différentes versions :
-
-- avec demi bille et lame de ressort imprimée : KO trop peu précis
-- avec aimant : presque mais... aimants difficiles à manipuler et pas assez puissants
-- languette et poignée sur le côté : prometteuse (retenue pour le moment)
-
-
-.. |langBille| image:: images/moduleVentiloVersionlanguetteBille.JPG
-   :width: 200 px
-
-.. |aimants| image:: images/moduleVentiloVersionAimants.JPG
-  :width: 300 px
-
-.. list-table::
-   :widths: 27 27 
-   :header-rows: 1
-
-   * - languette et bille imprimée
-     - Version avec aimants
-
-   * - |langBille|
-     - |aimants|
-
-.. _pilotageLedVentilo:
-
-Pilotage éléectrique du ventilo et des LED
-----------------------------------------------------------------------------------------------------
-
-.. image:: images/potarAvecOnOff.jpg 
-   :width: 300 px
-
-`Potentiomètre Rotatif avec Interrupteur chez AMAZON`_
-
-.. _`Potentiomètre Rotatif avec Interrupteur chez AMAZON` : https://www.amazon.fr/gp/product/B096NXK7L1/ref=ox_sc_act_title_1?smid=A2W68NJA5YNXUP&psc=1
-
-Abandon de l'idée du potar avec inter car l'inter n'est pas cliquable mais s'active en bout de rotation
-si bine que cela ne permet pas de concerner le réglage. Donc retour à une version avec switch séparé
-cela tombien j'en ai des petit 10x5.
-
-Un simple potentiomètre seul ne convient pas car la tension d'entrée peut varier de 12 à 24V.
-
-On est obligé de passer par un régulateur et comme on veut que cela soit variable, il convient de 
-limiter le module LM2596S à 12V max en sortie et de déporter le potar
-
-:download:`datasheet du LM2596S<fichiersJoints/lm2596s_dts.pdf>` qui équipe les modules choisi
-:ref:`voir ici<moduleDCDC2596>`
-
-.. image:: images/lm2596sextraitdtsCalculR1R2sch.jpg 
-   :width: 800 px
-
-.. image:: images/lm2596sextraitdtsCalculR1R2.jpg 
-   :width: 600 px
-
-Pour du 12v avec R1 1k on a:
-
-1k * ( 12/1.23 - 1 ) = 8.75k
-
-admettons qu'on veuille aller jusqu'à 14V, il faudrait 10.4K pour R2.
-
-D'après l'équation (1) si R1 augmente Vout diminiue mais R1 doit être comprise entre 240 et 1.5k 
-pas 10k comment les modules fonctionnent ?
-
-Une piste:
-
-.. image:: images/LM2596S-Schematic.jpg 
-   :width: 600 px
-
-Visiblement sur mes modules R1 = 270ohm
-
-vout à 10k = 1.23 * ( 1 + R2/R1) = 1.23 * ( 1 + 10/0.27) = 46V !
-
-vout à 100ohm = 1.23 * ( 1 + 100/270 ) = 1.68V
-
-Pour du 14 en sortie : 0.27 * ( 14 / 1.23 -1 ) = 2.8k max  et pas 13805K
-
-Solution une zener 12V en sortie pour écrêter:
-
-R = 24v - 12v / 0.1A environ 120ohm P=1.2W bof ! 5 résistance 1/4W en //
-
-Revoir le courant 20mA par groupe de 4 led 4 groupe 80mA refaire les calculs.
-
-Interrupteurs rouge miniature
-----------------------------------------------------------------------------------------------------
-Référence `KDC1-11 sur AMAZON`_ en noir mais en rouge ??? 10x15mm
-
-.. _`KDC1-11 sur AMAZON` : https://www.amazon.fr/5x-Mini-Interrupteur-SPST-27int003/dp/B0749SC157/ref=sr_1_1?keywords=kcd1-11&qid=1655909025&sr=8-1
-
-J'ai commandé `des KCD1 en 21*15mm ici`_, j'aurais donc du recevoir des 21x15mm et j'ai reçu des 13x9mm beaucoup plus petits ! il y a écrit dessus KCD1-11
-
-.. _`des KCD1 en 21*15mm ici` : https://www.amazon.fr/gp/product/B085B21DX1/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1
-
-J'ai l'impression qu'il s'agit d'une erreur, sur les autres photo on a des KCD1. Un des commentaire 
-avec photo le montre clairement ! Mistère résolu.
-
-C'est un peu chaint pour estimer le coût. Je prend 2.15€ les 5
-
-
-Avec un digispark
-----------------------------------------------------------------------------------------------------
-:download:`Schema digispark<fichiersJoints/DigisparkSchematicFinal.pdf>`
-
-`Description sur le site`_ Pas fcaile à trouver !
-
-.. _`Description sur le site` : http://digistump.com/wiki/digispark/tutorials/digispark
-
-Pour le PWM et analogRead tout sur une `seule page sur le wiki digistump`_
-
-.. _`seule page sur le wiki digistump` : http://digistump.com/wiki/digispark/tutorials/basics
-
-Attiny85 10bits ADC
-
-.. image:: images/2n7000pinout.jpg 
-   :width: 200 px
-
-|clearer|
-
-.. image:: images/2n700courant.jpg 
-
-
-le 2n700, c'est la première colonne donc 200mA en continu et 500 en pulse.
-
-:download:`2N7000 datasheet<fichiersJoints/2N7000.pdf>`
-
-
-4 LED en // 80mA et le ventilo donné pour 0.33A mesuré 167mA sous 14V
-
-Transistor en D2PAK NTD20N03L27 20A ou 
-:download:`IPD079N06L datasheet<fichiersJoints/Infineon-IPD079N06L3-DS-v02_00-en.pdf>`
-composants que j'avais sous la main mais un cananl N capable de driver 500mA à 1A suffit !
-
-.. image:: images/ipd079N06pinout.jpg 
-   :width: 300 px
-
-.. WARNING:: Encore un échec ! le ventilateur siffle quand il est piloté en pwm. Pour les LED c'est OK
-   :class: without-title
-
-
-
-
-
-Essais d'un ventilo avec pwm : à voir ventilateur commandé sur AMAZON :download:`pure wing2 dts<fichiersJoints/Datasheet_Pure-Wings2_PWM_en.pdf>`
-Il n'est pas dit la frequence à laquelle, il faut piloter ce ventilo, on parle sur les doc de carte mère de 15 à 20kHz.
-
-Changer la fréquence du PWM dans le digispark
-****************************************************************************************************
-`Digispark tricks`_
-
-.. _`Digispark tricks` : http://digistump.com/wiki/digispark/tricks
-
-
-`Trying to increase PWM frequency`_ sur le forum Digispak
-
-.. _`Trying to increase PWM frequency` : http://digistump.com/board/index.php?topic=2312.0
-
-Un peu plus éloigné : `ATTiny85 PWM frequency selection`_
-
-.. _`ATTiny85 PWM frequency selection` : https://forum.arduino.cc/t/attiny85-pwm-frequency-selection/60785/5
-
-Attention les canaux analogiques ne sont pas numéroté de manière logique.
-
-Voir `Digistump basics`_
-
-.. _`Digistump basics` : http://digistump.com/wiki/digispark/tutorials/basics
-
-::
-
-   sensorValue = analogRead(1); //Read P2
-   //To set to input: pinMode(2, INPUT);
-   //THIS IS P2, P2 is analog input 1, so when you are using analog read, you refer to it as 1.
-
-   //sensorValue = analogRead(2); //Read P4
-   //To set to input: pinMode(4, INPUT);
-   //THIS IS P4, P4 is analog input 2, so when you are using analog read, you refer to it as 2.
-
-   //sensorValue = analogRead(3); //Read P3
-   //To set to input: pinMode(3, INPUT);
-   //THIS IS P3, P3 is analog input 3, so when you are using analog read, you refer to it as 3.
-
-   //sensorValue = analogRead(0); //Read P5
-   //To set to input: pinMode(5, INPUT);
-   //THIS IS P5, P5 is analog input 0, so when you are using analog read, you refer to it as 0.
-
-Rendu Freecad
-----------------------------------------------------------------------------------------------------
-
-.. image:: images/moduleVentilo.JPG 
-   :width: 600 px
-
-
-Améliorations possibles/souhaitable
-----------------------------------------------------------------------------------------------------
-- possibilité de remplacement du filtre sans démonter la casquette
-- inclinaison de la barre de LED vers l'avant ( Elles éclairent actuellement la base du ventilo )
 
 
 

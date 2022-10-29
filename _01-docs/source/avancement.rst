@@ -148,24 +148,6 @@ Module ventilation
 - nomenclature
 - saisir schéma KiCAD
 
-module USB 3A Refait 
-----------------------------------------------------------------------------------------------------
-- design3D
-    - refaire les trous de ventilation dans la base dans Freecad
-
-
-- une petite face avant **OK**
-
-- nomenclature **OK**
-- schéma **OK**
-    - de la carte : à intégrer dans la doc **OK**
-    - de câblage **OK**
-
-
-- Le code !
-
-- la face avant **OK**
-
 
 ====================================================================================================
 A faire modules
@@ -629,7 +611,7 @@ Module batterie Lidl
     - screenshot (rendu Freecad) **OK**
     - nomenclature **OK**
 
-module USB 3A à refaire sniff
+module USB 2x 3A Refait
 ----------------------------------------------------------------------------------------------------
 - trouver un convertisseur qui tienne 24V **ET** 3A **OK**
     - le tester avant de l'intégrer **OK**
@@ -717,7 +699,22 @@ Full doc: `DC to DC Converter with Constant Current (CC) and Constant Voltage (C
 
 .. _`DC to DC Converter with Constant Current (CC) and Constant Voltage (CV) Control - Schematics, PCB, Parts List, and Working` : https://circuitdigest.com/electronic-circuits/diy-xl4015-dc-dc-buck-converter-module
 
+ 
+- design3D **OK**
+    - refaire les trous de ventilation dans la base dans Freecad
 
+
+- une petite face avant **OK**
+
+- nomenclature **OK**
+- schéma **OK**
+    - de la carte : à intégrer dans la doc **OK**
+    - de câblage **OK**
+
+
+- Le code ! **OK**
+
+- la face avant **OK**
 
 ====================================================================================================
 Weblinks

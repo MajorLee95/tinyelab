@@ -6,8 +6,12 @@ Presentation
 :Auteur: J.Soranzo
 :Date de création: 02/2022
 :Date dernière maj: 07/10/2022
-:Societe: VoRoBoTics
-:Entity: VoLAB
+:Societe: `VoRoBoTics`_
+:Entity: `VoLAB`_
+
+.. _`VoLAB` : http://www.vorobotics.com/wp/
+
+.. _`VoRoBoTics` : http://www.vorobotics.com/wp/
 
 
 
