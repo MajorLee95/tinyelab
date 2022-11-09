@@ -153,12 +153,12 @@ Pseudo pcb car réalisé sur de la plaque à trous à pastille carrées Veroboar
 
 Schéma de câblage
 ----------------------------------------------------------------------------------------------------
-.. image:: images/usb2x3ACabalge221009_1106.svg 
+.. image:: images/usb2x3ACablage221009_1106.svg
    :width: 600 px
 
 |clearer|
 
-.. image:: images/usb2x3ACabalge_filaire221020_0026.svg 
+.. image:: images/usb2x3ACablage_filaire221020_0026.svg
    :width: 600 px
 
 
@@ -304,7 +304,7 @@ Arduino code
    :align: center
 
 
-.. image:: images/doc.svg 
+.. image:: images/docIcon.svg 
    :align: left
 
 
@@ -325,7 +325,12 @@ Nomenclature
 
 Prendre les ARDUINO NANO sur Aliexpress, il sont nettement moins cher !
 
-Carte de prototypage à souder à pastilles carrées simple face au pas de 2.54 chez
+.. index::
+    single: Veroboard
+
+.. _refVeroboard:
+
+Carte de prototypage à souder à **pastilles carrées** simple face au pas de 2.54 chez
 Radiospares code `457-0761`_ 200x100 : 18.84€ 20.000mm2 soit 0.000942€/mm2
 
 .. _`457-0761` : https://fr.rs-online.com/web/p/cartes-matrices/4570761
@@ -333,7 +338,8 @@ Radiospares code `457-0761`_ 200x100 : 18.84€ 20.000mm2 soit 0.000942€/mm2
 .. image:: images/veroboardPastilleCaree.jpg 
    :width: 300 px
 
-
+Le pastillage carré permet de tracer des pistes en reliant par des ponts de soudure les pastilles
+2 à 2 puis 4 à 4 puis 8 à 8...
 
 ====================================================================================================
 Weblinks

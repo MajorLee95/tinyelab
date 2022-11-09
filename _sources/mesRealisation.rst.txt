@@ -508,9 +508,9 @@ J'ai tester :
 
 
 ====================================================================================================
-USB 5V 3A simple 2 voies  : redisign module ALIExpress
+USB 5V 3A simple 2 voies  : redesign module ALIExpress
 ====================================================================================================
-Redsign avec les modules :
+Redesign avec les modules :
 
 `QC3.0 QC2.0 BC1.2 FCP AFC, Module de chargeur de voiture rapide, convertisseur abaisseur Buck, carte d'alimentation pour téléphone`_
 

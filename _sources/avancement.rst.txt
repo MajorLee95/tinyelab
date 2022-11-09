@@ -145,8 +145,8 @@ module triple tiny Voltmètre
 
 Module ventilation
 ----------------------------------------------------------------------------------------------------
-- nomenclature
-- saisir schéma KiCAD
+- nomenclature **OK**
+- saisir schéma de câblage **en cours**
 
 
 ====================================================================================================
@@ -162,7 +162,7 @@ USB double mais plus simple
 - trouver un buck qui tienne la charge et les 24V !
     - recherches veines pour le moment....
 
-Peut-etre trouvé chez aliExpres...
+Peut-etre trouvé chez aliExpres... oui et testé, y a plus qu'à !
 
 Module USB-C fast charge
 ----------------------------------------------------------------------------------------------------

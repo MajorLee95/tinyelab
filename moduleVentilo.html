@@ -154,12 +154,21 @@ pas 10k comment les modules fonctionnent ?</p>
 </div>
 <div class="section" id="avec-un-digispark">
 <h2>Avec un digispark<a class="headerlink" href="#avec-un-digispark" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sources">
+<h3>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h3>
 <p>Officiellement les Digispark sur le site de Digistump sont out of stock mais on en trouve facilement
 sur Aliexpress et même sur Amazon.</p>
 <p><a class="reference external" href="https://fr.aliexpress.com/item/2040316211.html?pdp_npi=2%40dis%21EUR%21%E2%82%AC%202%2C66%212%2C53%20%E2%82%AC%21%21%21%21%21%40211b446316670801691677278e7ee0%2158307777832%21btf&amp;_t=pvid%3Aa2597e6f-c42f-455d-a547-d3642fcc9f41&amp;afTraceInfo=2040316211__pc__c_ppc_item_bridge__xxxxxx__1667080169&amp;spm=a2g0o.ppclist.product.mainProduct&amp;gatewayAdapt=glo2fra">digispark sur Aliexpress</a> <a class="footnote-reference brackets" href="#id4" id="id5">2</a></p>
 <p><a class="reference external" href="https://www.amazon.fr/AZDelivery-Digispark-Kickstarter-d%C3%A9veloppement-compatible/dp/B076KS2QDS/ref=pd_lpo_1?pd_rd_w=Nu1uA&amp;content-id=amzn1.sym.596c2ea6-add0-4f08-9363-445efdea7d0d&amp;pf_rd_p=596c2ea6-add0-4f08-9363-445efdea7d0d&amp;pf_rd_r=7Y542ZA82TSVNNT76T21&amp;pd_rd_wg=MwbAP&amp;pd_rd_r=1ee0a8f6-2f4f-4ecb-a2dd-2629fbaef3dc&amp;pd_rd_i=B076KS2QDS&amp;psc=1">digispark sur Amazon</a> <a class="footnote-reference brackets" href="#id6" id="id7">3</a></p>
 <p><a class="reference download internal" download="" href="_downloads/4aac1f2c3bd68e3b619fec7246ce397f/DigisparkSchematicFinal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Schema</span> <span class="pre">digispark</span></code></a></p>
 <p><a class="reference external" href="http://digistump.com/wiki/digispark/tutorials/digispark">Description sur le site</a> <a class="footnote-reference brackets" href="#id8" id="id9">4</a> Pas fcaile à trouver !</p>
+</div>
+<div class="section" id="digispark-pinout">
+<h3>Digispark pinout<a class="headerlink" href="#digispark-pinout" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/digisparkpinout.png"><img alt="_images/digisparkpinout.png" src="_images/digisparkpinout.png" style="width: 300px;" /></a>
+</div>
+<div class="section" id="digispark-pwm-et-analog">
+<h3>Digispark PWM et analog<a class="headerlink" href="#digispark-pwm-et-analog" title="Permalink to this headline">¶</a></h3>
 <p>Pour le PWM et analogRead tout sur une <a class="reference external" href="http://digistump.com/wiki/digispark/tutorials/basics">seule page sur le wiki digistump</a> <a class="footnote-reference brackets" href="#id10" id="id11">5</a></p>
 <p>Attiny85 10bits ADC</p>
 <a class="reference internal image-reference" href="_images/2n7000pinout.jpg"><img alt="_images/2n7000pinout.jpg" src="_images/2n7000pinout.jpg" style="width: 200px;" /></a>
@@ -178,6 +187,7 @@ composants que j’avais sous la main mais un cananl N capable de driver 500mA �
 </div>
 <p>Essais d’un ventilo avec pwm : à voir ventilateur commandé sur AMAZON <a class="reference download internal" download="" href="_downloads/2c60ecc919a24328240144c0197e38f4/Datasheet_Pure-Wings2_PWM_en.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pure</span> <span class="pre">wing2</span> <span class="pre">dts</span></code></a>
 Il n’est pas dit la frequence à laquelle, il faut piloter ce ventilo, on parle sur les doc de carte mère de 15 à 20kHz.</p>
+</div>
 <div class="section" id="changer-la-frequence-du-pwm-dans-le-digispark">
 <h3>Changer la fréquence du PWM dans le digispark<a class="headerlink" href="#changer-la-frequence-du-pwm-dans-le-digispark" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://digistump.com/wiki/digispark/tricks">Digispark tricks</a> <a class="footnote-reference brackets" href="#id12" id="id13">6</a></p>
@@ -213,6 +223,10 @@ Il n’est pas dit la frequence à laquelle, il faut piloter ce ventilo, on parl
 avec photo le montre clairement ! Mistère résolu.</p>
 <p>C’est un peu chaint pour estimer le coût. Je prend 2.15€ les 5</p>
 </div>
+<div class="section" id="schema-de-cablage">
+<h2>Schéma de câblage<a class="headerlink" href="#schema-de-cablage" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/ventiloCablage221030.svg"><img alt="_images/ventiloCablage221030.svg" src="_images/ventiloCablage221030.svg" width="600px" /></a>
+</div>
 <div class="section" id="rendu-freecad">
 <h2>Rendu Freecad<a class="headerlink" href="#rendu-freecad" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/ventiloRendu3D.JPG"><img alt="_images/ventiloRendu3D.JPG" src="_images/ventiloRendu3D.JPG" style="width: 600px;" /></a>
@@ -221,8 +235,14 @@ avec photo le montre clairement ! Mistère résolu.</p>
 <h2>Photos<a class="headerlink" href="#photos" title="Permalink to this headline">¶</a></h2>
 <p>Système d’inclinaison en test</p>
 <a class="reference internal image-reference" href="_images/ventiloInclinaison.JPG"><img alt="_images/ventiloInclinaison.JPG" src="_images/ventiloInclinaison.JPG" style="width: 300px;" /></a>
-<p>En cours de câblage</p>
+<p>En cours de câblage:</p>
 <a class="reference internal image-reference" href="_images/ventiloLesEntrailles.JPG"><img alt="_images/ventiloLesEntrailles.JPG" src="_images/ventiloLesEntrailles.JPG" style="width: 300px;" /></a>
+<p>Carte LEDs Recto</p>
+<a class="reference internal image-reference" href="_images/ventiloLedRecto.jpg"><img alt="_images/ventiloLedRecto.jpg" src="_images/ventiloLedRecto.jpg" style="width: 300px;" /></a>
+<p>Carte LEDs verso</p>
+<a class="reference internal image-reference" href="_images/ventiloLedVerso.jpg"><img alt="_images/ventiloLedVerso.jpg" src="_images/ventiloLedVerso.jpg" style="width: 300px;" /></a>
+<p>Carte LEDs dans son emplacement</p>
+<a class="reference internal image-reference" href="_images/ventiloLedEnPlace.jpg"><img alt="_images/ventiloLedEnPlace.jpg" src="_images/ventiloLedEnPlace.jpg" style="width: 300px;" /></a>
 </div>
 <div class="section" id="nomenclature">
 <h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this headline">¶</a></h2>
@@ -306,10 +326,10 @@ avec photo le montre clairement ! Mistère résolu.</p>
 </tr>
 <tr class="row-odd"><td><p>PCB</p></td>
 <td><p>Radiospares</p></td>
-<td><p>30*20mm à 0,00942€mm2</p></td>
+<td><p>33*12,7mm à 0,000942€mm2</p></td>
 <td><p>1</p></td>
-<td><p>0,60 €</p></td>
-<td><p>0,60 €</p></td>
+<td><p>0,40 €</p></td>
+<td><p>0,40 €</p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>Vis TF M3x6</p></td>
@@ -405,11 +425,12 @@ avec photo le montre clairement ! Mistère résolu.</p>
 <td></td>
 <td></td>
 <td><p>TOTAL</p></td>
-<td><p>29,29 €</p></td>
+<td><p>29,08 €</p></td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<p>Référence de la plaque à trou au pas de 2.54mm à pastaillage carré voir <a class="reference internal" href="moduleUSB3A2voies.html#refveroboard"><span class="std std-ref">ICI</span></a></p>
 </div>
 <div class="section" id="ameliorations-possibles-souhaitable">
 <h2>Améliorations possibles/souhaitable<a class="headerlink" href="#ameliorations-possibles-souhaitable" title="Permalink to this headline">¶</a></h2>
@@ -475,10 +496,14 @@ avec photo le montre clairement ! Mistère résolu.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#avec-un-digispark">Avec un digispark</a><ul>
+<li><a class="reference internal" href="#sources">Sources</a></li>
+<li><a class="reference internal" href="#digispark-pinout">Digispark pinout</a></li>
+<li><a class="reference internal" href="#digispark-pwm-et-analog">Digispark PWM et analog</a></li>
 <li><a class="reference internal" href="#changer-la-frequence-du-pwm-dans-le-digispark">Changer la fréquence du PWM dans le digispark</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#interrupteurs-rouge-miniature">Interrupteurs rouge miniature</a></li>
+<li><a class="reference internal" href="#schema-de-cablage">Schéma de câblage</a></li>
 <li><a class="reference internal" href="#rendu-freecad">Rendu Freecad</a></li>
 <li><a class="reference internal" href="#photos">Photos</a></li>
 <li><a class="reference internal" href="#nomenclature">Nomenclature</a></li>
