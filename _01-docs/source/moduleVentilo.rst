@@ -116,6 +116,9 @@ Revoir le courant 20mA par groupe de 4 led 4 groupe 80mA refaire les calculs.
 ====================================================================================================
 Avec un digispark
 ====================================================================================================
+Sources
+----------------------------------------------------------------------------------------------------
+
 Officiellement les Digispark sur le site de Digistump sont out of stock mais on en trouve facilement
 sur Aliexpress et même sur Amazon.
 
@@ -135,6 +138,13 @@ sur Aliexpress et même sur Amazon.
 
 .. _`Description sur le site` : http://digistump.com/wiki/digispark/tutorials/digispark
 
+Digispark pinout
+----------------------------------------------------------------------------------------------------
+.. image:: images/digisparkpinout.png 
+   :width: 300 px
+
+Digispark PWM et analog
+----------------------------------------------------------------------------------------------------
 Pour le PWM et analogRead tout sur une `seule page sur le wiki digistump`_
 
 .. _`seule page sur le wiki digistump` : http://digistump.com/wiki/digispark/tutorials/basics
@@ -232,6 +242,14 @@ avec photo le montre clairement ! Mistère résolu.
 C'est un peu chaint pour estimer le coût. Je prend 2.15€ les 5
 
 ====================================================================================================
+Schéma de câblage
+====================================================================================================
+
+.. image:: images/ventiloCablage221030.svg
+   :width: 600 px
+
+
+====================================================================================================
 Rendu Freecad
 ====================================================================================================
 
@@ -246,12 +264,26 @@ Système d'inclinaison en test
 .. image:: images/ventiloInclinaison.JPG 
    :width: 300 px
 
-En cours de câblage
+En cours de câblage:
 
 .. image:: images/ventiloLesEntrailles.JPG 
    :width: 300 px
 
+Carte LEDs Recto
 
+.. image:: images/ventiloLedRecto.jpg 
+   :width: 300 px
+
+
+Carte LEDs verso
+
+.. image:: images/ventiloLedVerso.jpg 
+   :width: 300 px
+
+Carte LEDs dans son emplacement
+
+.. image:: images/ventiloLedEnPlace.jpg 
+   :width: 300 px
 
 ====================================================================================================
 Nomenclature
@@ -263,6 +295,9 @@ Nomenclature
    :encoding: UTF-8
    :align: left
    :header-rows: 1
+
+Référence de la plaque à trou au pas de 2.54mm à pastaillage carré voir :ref:`ICI<refVeroboard>`
+
 
 
 ====================================================================================================
