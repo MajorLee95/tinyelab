@@ -135,18 +135,6 @@ Module voltmètre / ampèremètre
 - nomenclatures  **OK**
 - photo **OK**
 
-module triple tiny Voltmètre
-----------------------------------------------------------------------------------------------------
-- test électrique+ réglage **OK**
-- explications **OK**
-- photo **OK**
-- nomenclatures
-- schéma
-
-Module ventilation
-----------------------------------------------------------------------------------------------------
-- nomenclature **OK**
-- saisir schéma de câblage **en cours**
 
 
 ====================================================================================================
@@ -448,6 +436,11 @@ module triple tiny Voltmètre
 - câblage
     - couper barres laiton 73.62mm (vérifié le 24/4) **OK**
 
+- test électrique+ réglage **OK**
+- explications **OK**
+- photo **OK**
+- nomenclatures **OK**
+- schéma **OK**
 
 Module voltmère / ampéremètre 
 ----------------------------------------------------------------------------------------------------
@@ -585,6 +578,9 @@ Module ventilation
     - Programmer Digispark **OK**
     
 - tester **OK**
+
+- nomenclature **OK**
+- saisir schéma de câblage **Ok**
 
 Module primaire prises PC multiples **aborted**
 ----------------------------------------------------------------------------------------------------
