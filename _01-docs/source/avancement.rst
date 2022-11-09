@@ -135,13 +135,7 @@ Module voltmètre / ampèremètre
 - nomenclatures  **OK**
 - photo **OK**
 
-module triple tiny Voltmètre
-----------------------------------------------------------------------------------------------------
-- test électrique+ réglage **OK**
-- explications **OK**
-- photo **OK**
-- nomenclatures
-- schéma
+
 
 ====================================================================================================
 A faire modules
@@ -442,6 +436,11 @@ module triple tiny Voltmètre
 - câblage
     - couper barres laiton 73.62mm (vérifié le 24/4) **OK**
 
+- test électrique+ réglage **OK**
+- explications **OK**
+- photo **OK**
+- nomenclatures **OK**
+- schéma **OK**
 
 Module voltmère / ampéremètre 
 ----------------------------------------------------------------------------------------------------
