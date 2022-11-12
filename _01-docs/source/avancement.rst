@@ -2,41 +2,30 @@
 Avancement
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-:Projet: Tiny e-lab
-:Auteur: J.Soranzo
-:Date de création: 03/2022
-:Date dernière maj: 07/10/2022
-:Societe: VoRoBoTics
-:Entity: VoLAB
+.. include:: volabid.rst
 
-.. contents::
-    :backlinks: top
+:Date de création: 03/2022
+:Date dernière maj: 12/11/2022
+
 
 .. _refAvancementGeneral:
 
 ====================================================================================================
 A faire général
 ====================================================================================================
-Mettre des photos dans la doc
+Liens vers les sources
 ----------------------------------------------------------------------------------------------------
-- ir module oscillo qui chauffe
-- modules déjà réalisés en fonctionnement.
+Dans la partie rendu Freecad mettre un lien vers les sources avec un peu d'explications:
 
-Mettre projet sous Volab/wiki et sous github
-----------------------------------------------------------------------------------------------------
-- créer git local **OK**
-    - Arrêt du versionning par les noms de fichiers ou pas tout à fait **OK**
-- créer projet github **OK**
-- lier projet Github et git local (git ls-remote) **OK**
-- pusher le projet **OK**
+- modulePrimaireTensionCourant
+- moduleAlimStabiliseeDPS3005
+- moduleAlimentationParkSide
+- moduleUSB3A2voies
+- moduleOscilloDSO138
+- moduleVentilo
+- moduleTripleTinyVoltmetres
+- moduleVoltAmperemetre
 
-- créer github io **OK**
-- pusher la doc sur githubio **OK**
-- créer un readme.rst au niveau projet **OK**
-- créer le projet dans le Wiki du lab **OK**
-- Renseigner le projet dans le wiki du lab **OK**
-- Créer une vignette projet dans le Wiki
-- peut-être compléter la description
 
 Mettre les modules sous Thinkiverse
 ----------------------------------------------------------------------------------------------------
@@ -56,23 +45,10 @@ Mettre les modules sous Thinkiverse
     - renseigner le lien dans la doc
 
 
-Les nomenclatures
-----------------------------------------------------------------------------------------------------
-    - base **OK**
-    - USB **OK**
-    - Module U/I en ligne **OK**
-    - Alim DPS3005 **OK**
-    - Oscillo **OK**
-    - VA **OK**
-    - multi-voltmètres
 
 schéma de câblage des modules
 ----------------------------------------------------------------------------------------------------
-    - USB
-    - Module U/I en ligne
     - Alim DPS3005
-    - Oscillo **OK**
-    - VA
 
 XT60 : boîtier ou capot de prise XT60
 ----------------------------------------------------------------------------------------------------
@@ -94,25 +70,6 @@ Concept du tiroir
 ----------------------------------------------------------------------------------------------------
 - rangement sonde/fils
     -  principe du petit tiroir basculant ou pas **à conceptualiser**
-
-module USB 3A à refaire sniff
-----------------------------------------------------------------------------------------------------
-- design3D
-    - refaire les trous de ventilation dans la base dans Freecad
-
-- mesure de température
-
-- câblage définitif
-
-- une petite face avant
-
-- nomenclature
-
-- schéma :
-    - de la carte : fait mais à ajouter dans la doc
-    - de cablage
-      - à faire
-      - ajouter à la doc
 
 
 ====================================================================================================
@@ -141,16 +98,14 @@ Module voltmètre / ampèremètre
 A faire modules
 ====================================================================================================
 
-
 USB double mais plus simple
 ----------------------------------------------------------------------------------------------------
 - étude du concept sous Freecad **OK**
     - ``_03-cao_3D\mesCreations\moduleUSBsimpleDouble`` **OK**
 
-- trouver un buck qui tienne la charge et les 24V !
-    - recherches veines pour le moment....
+- trouver un buck qui tienne la charge et les 24V ! **OK**
 
-Peut-etre trouvé chez aliExpres... oui et testé, y a plus qu'à !
+Peut-être trouvé chez aliExpres... oui et testé, y a plus qu'à !
 
 Module USB-C fast charge
 ----------------------------------------------------------------------------------------------------
@@ -211,12 +166,6 @@ Module Générateur de fonction
 - Design 3D
     - Tout
 
-
-
-
-
-
-
 Voltmètre avec masse flottante
 ----------------------------------------------------------------------------------------------------
 - tout
@@ -253,6 +202,8 @@ Module fer à souder
 ----------------------------------------------------------------------------------------------------
 - tout : présente peu d'intérêt avec le fer TS100 un simple cable de bout de chaîne pourrait suffire !
 
+Non à l'usage (cendrier) un vrai support serait mieux
+
 
 
 
@@ -270,6 +221,22 @@ En accordéon réglable.
 ====================================================================================================
 Fait (pour mémoire)
 ====================================================================================================
+
+Mettre projet sous Volab/wiki et sous github
+----------------------------------------------------------------------------------------------------
+- créer git local **OK**
+    - Arrêt du versionning par les noms de fichiers ou pas tout à fait **OK**
+- créer projet github **OK**
+- lier projet Github et git local (git ls-remote) **OK**
+- pusher le projet **OK**
+
+- créer github io **OK**
+- pusher la doc sur githubio **OK**
+- créer un readme.rst au niveau projet **OK**
+- créer le projet dans le Wiki du lab **OK**
+- Renseigner le projet dans le wiki du lab **OK**
+- Créer une vignette projet dans le Wiki **OK**
+- peut-être compléter la description **OK**
 
 Appro 
 ----------------------------------------------------------------------------------------------------

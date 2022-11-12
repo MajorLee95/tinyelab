@@ -2,12 +2,11 @@
 Module primaire mesure Tension/courant de la ligne
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-:Projet: Tiny e-lab
-:Auteur: J.Soranzo
+.. include:: volabid.rst
+
 :Date de création: 10/2022
 :Date dernière maj: 07/10/2022
-:Societe: VoRoBoTics
-:Entity: VoLAB
+
 
 
 .. index::

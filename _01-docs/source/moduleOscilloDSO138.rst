@@ -2,11 +2,11 @@
 Module oscilloscope DSO138
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-:Auteur: J.Soranzo
+.. include:: volabid.rst
+
 :Date de création: 10/2022
 :Date dernière maj: 10/2022
-:Societe: VoRoBoTics
-:Entity: VoLAB
+
 
 
 
