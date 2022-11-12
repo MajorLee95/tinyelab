@@ -2,14 +2,12 @@
 GH Pages
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-:Auteur: J.Soranzo
+.. include:: volabid.rst
+
 :Date de création: 07/2022
 :Date dernière maj: 07/2022
-:Societe: VoRoBoTics
-:Entity: VoLAB
 
-.. contents::
-    :backlinks: top
+
 
 ====================================================================================================
 How to

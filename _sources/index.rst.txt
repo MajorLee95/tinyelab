@@ -6,16 +6,13 @@ Tiny e-lab extension
    :width: 300 px
    :align: right
 
+.. include:: volabid.rst
 
-:Auteur: J.Soranzo
 :Date de création: 02/2022
 :Date dernière maj: 06/07/2022
-:Societe: `VoRoBoTics`_
-:Entity: `VoLAB`_
 
-.. _`VoLAB` : http://www.vorobotics.com/wp/
 
-.. _`VoRoBoTics` : http://www.vorobotics.com/wp/
+
 
 
 .. toctree::

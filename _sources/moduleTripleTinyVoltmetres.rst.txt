@@ -2,11 +2,11 @@
 Module triple tiny voltmètres
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-:Auteur: J.Soranzo
+.. include:: volabid.rst
+
 :Date de création: 11/2022
 :Date dernière maj: 08/11/2022
-:Societe: VoRoBoTics
-:Entity: VoLAB
+
 
 
 ====================================================================================================

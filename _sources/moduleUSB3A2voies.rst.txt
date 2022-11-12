@@ -5,11 +5,11 @@ Module USB 2x 5A avec ampèremètre
    :width: 300 px
    :align: right
 
-:Auteur: J.Soranzo
+.. include:: volabid.rst
+
 :Date de création: 10/2022
 :Date dernière maj: 10/2022
-:Societe: VoRoBoTics
-:Entity: VoLAB
+
 
 
 
@@ -308,9 +308,9 @@ Arduino code
    :align: left
 
 
-Vous le trouverez sur le `github du projet`_
+Vous le trouverez sur le `github du projet module usb2x3a`_
 
-.. _`github du projet` : https://github.com/MajorLee95/tinyelab/blob/main/_02-realisation/_01-software/usb3a/usb3a.ino
+.. _`github du projet module usb2x3a` : https://github.com/MajorLee95/tinyelab/blob/main/_02-realisation/_01-software/usb3a/usb3a.ino
 
 ====================================================================================================
 Nomenclature

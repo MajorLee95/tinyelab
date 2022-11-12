@@ -1,0 +1,363 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Module Volt/amperemetre couplés &#8212; Tiny e-lab extension  documentation</title>
+    <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+
+    
+    
+     
+        <script src="_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Avancement" href="avancement.html" />
+    <link rel="prev" title="Module triple tiny voltmètres" href="moduleTripleTinyVoltmetres.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="avancement.html" title="Avancement"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="moduleTripleTinyVoltmetres.html" title="Module triple tiny voltmètres"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" accesskey="U">Mes réalisations</a> &#187;</li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-volt-amperemetre-couples">
+<h1>Module Volt/amperemetre couplés<a class="headerlink" href="#module-volt-amperemetre-couples" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Projet</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://www.vorobotics.com/wiki/index.php?title=Mon_Petit_Lab">Tiny e-lab</a> <a class="footnote-reference brackets" href="#id5" id="id6">1</a></p>
+</dd>
+<dt class="field-even">Auteur</dt>
+<dd class="field-even"><p>J.Soranzo</p>
+</dd>
+<dt class="field-odd">Societe</dt>
+<dd class="field-odd"><p><a class="reference external" href="http://www.vorobotics.com/wp/">VoRoBoTics</a> <a class="footnote-reference brackets" href="#id7" id="id9">2</a></p>
+</dd>
+<dt class="field-even">Entity</dt>
+<dd class="field-even"><p><a class="reference external" href="http://www.vorobotics.com/wp/">VoLAB</a> <a class="footnote-reference brackets" href="#id7" id="id8">2</a></p>
+</dd>
+<dt class="field-odd">Sources</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/MajorLee95/tinyelab">Github du projet</a> <a class="footnote-reference brackets" href="#id10" id="id11">3</a></p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Auteur</dt>
+<dd class="field-odd"><p>J.Soranzo</p>
+</dd>
+<dt class="field-even">Date de création</dt>
+<dd class="field-even"><p>11/2022</p>
+</dd>
+<dt class="field-odd">Date dernière maj</dt>
+<dd class="field-odd"><p>11/2022</p>
+</dd>
+</dl>
+<div class="section" id="presentation">
+<span id="index-0"></span><h2>Présentation<a class="headerlink" href="#presentation" title="Permalink to this headline">¶</a></h2>
+<p>Il s’agit d’un simple Voltmètre ampèremètre digital comme on en trouve de multiple sur internet
+J’en ai choisi un qui traînait dans mes affaire depuis bien longtemps…</p>
+<a class="reference internal image-reference" href="_images/moduleVA_AC_SL1000_.jpg"><img alt="_images/moduleVA_AC_SL1000_.jpg" src="_images/moduleVA_AC_SL1000_.jpg" style="width: 300px;" /></a>
+<p>Source possible mais non garantie au niveau des dimensions notamment:</p>
+<p><a class="reference external" href="https://www.amazon.fr/BE-TOOL-Multim%C3%A8tre-Voltm%C3%A8tre-amp%C3%A8rem%C3%A8tre-domestique/dp/B07Q1P8BQB/ref=sr_1_30?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=19MAY7ESO4AZB&amp;keywords=amp%C3%A8rem%C3%A8tre+voltm%C3%A8tre&amp;qid=1660089756&amp;sprefix=amp%C3%A8rem%C3%A8tre+voltm%C3%A8tre%2Caps%2C97&amp;sr=8-30">BE-TOOL Voltmètre multimètre, voltmètre numérique et ampèremètre avec double affichage LED rouge et bleu CC 0–100 V 10 A</a> <a class="footnote-reference brackets" href="#id12" id="id13">4</a></p>
+<p>J’ai facilement trouvé le modèle 3D sur Grabcad.</p>
+<p>J’ai réutilisé la connectique du module <a class="reference internal" href="moduleAlimStabiliseeDPS3005.html#refalimstabdps3005"><span class="std std-ref">alimentation stabilisée DPS3005</span></a></p>
+<div class="figure align-left" id="id1">
+<a class="reference internal image-reference" href="_images/voltAmpereWiring_51KumhqfJfL.jpg"><img alt="_images/voltAmpereWiring_51KumhqfJfL.jpg" src="_images/voltAmpereWiring_51KumhqfJfL.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Volt ampère schéma de câblage initial</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p><div class="clearer"></div></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=vPSaLIBBoh4">How to Make a Digital Voltmeter and Ampere Meter at Home - Homemade Myltimeter</a> <a class="footnote-reference brackets" href="#id14" id="id15">5</a> On Youtube</p>
+<div class="figure align-left" id="id2">
+<a class="reference internal image-reference" href="_images/va_wiring.svg"><img alt="_images/va_wiring.svg" src="_images/va_wiring.svg" width="300px" /></a>
+<p class="caption"><span class="caption-text">Câblage interne et utilisation</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p><div class="clearer"></div></p>
+<div class="without-title admonition warning">
+<p class="admonition-title">Warning</p>
+<p>ATTENTION</p>
+<p>Avec ce genre de module le point chaud est commun entre l’apèremètre et le voltmètre.
+De plus n’oubliez pas que le GND est commun avec les autres modules.</p>
+</div>
+<p><div class="clearer"></div></p>
+<div class="figure align-left" id="id3">
+<a class="reference internal image-reference" href="_images/VAInWork.jpg"><img alt="_images/VAInWork.jpg" src="_images/VAInWork.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Module Volt ampère première utilisation</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="rendu-freecad">
+<h2>Rendu Freecad<a class="headerlink" href="#rendu-freecad" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/moduleVA.jpg"><img alt="_images/moduleVA.jpg" class="align-left" src="_images/moduleVA.jpg" style="width: 300px;" /></a>
+</div>
+<div class="section" id="photo">
+<h2>Photo<a class="headerlink" href="#photo" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/moduleVAPhoto.jpg"><img alt="_images/moduleVAPhoto.jpg" class="align-center" src="_images/moduleVAPhoto.jpg" style="width: 600px;" /></a>
+</div>
+<div class="section" id="nomenclature">
+<h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-left" id="id4">
+<caption><span class="caption-text">Nomenclature module Volt/ampère</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Désignation</p></td>
+<td><p>Fab ou fournisseur</p></td>
+<td><p>Ref fab</p></td>
+<td><p>Qté</p></td>
+<td><p>Pu</p></td>
+<td><p>Pt</p></td>
+</tr>
+<tr class="row-even"><td><p>Insert Fileté M3</p></td>
+<td><p>MUTHEX</p></td>
+<td><p>sans</p></td>
+<td><p>4</p></td>
+<td><p>0,10 €</p></td>
+<td><p>0,40 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Switch</p></td>
+<td><p>ARCOLECTRIC</p></td>
+<td><p>C1500AT</p></td>
+<td><p>1</p></td>
+<td><p>2,70 €</p></td>
+<td><p>2,70 €</p></td>
+</tr>
+<tr class="row-even"><td><p>Module VA</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>11,39 €</p></td>
+<td><p>11,39 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Prise rapide</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>2</p></td>
+<td><p>1,80 €</p></td>
+<td><p>3,60 €</p></td>
+</tr>
+<tr class="row-even"><td><p>Embase banane dim4 rouge</p></td>
+<td><p>CONRAD</p></td>
+<td></td>
+<td><p>2</p></td>
+<td><p>0,70 €</p></td>
+<td><p>1,40 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>Embase banane dim4 noire</p></td>
+<td><p>CONRAD</p></td>
+<td></td>
+<td><p>2</p></td>
+<td><p>0,70 €</p></td>
+<td><p>1,40 €</p></td>
+</tr>
+<tr class="row-even"><td><p>VIS THC M3x6</p></td>
+<td><p>BRICOVIS</p></td>
+<td><p>TC HC M3x6ANEF</p></td>
+<td><p>4</p></td>
+<td><p>0,06 €</p></td>
+<td><p>0,24 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>VIS STHC M3x10</p></td>
+<td><p>BRICOVIS</p></td>
+<td><p>STHC Pointeau M3X10ANEF</p></td>
+<td><p>2</p></td>
+<td><p>0,08 €</p></td>
+<td><p>0,17 €</p></td>
+</tr>
+<tr class="row-even"><td><p>XT60 MALE</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>0,60 €</p></td>
+<td><p>0,60 €</p></td>
+</tr>
+<tr class="row-odd"><td><p>XT60 FEM</p></td>
+<td><p>AMAZON</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>0,60 €</p></td>
+<td><p>0,60 €</p></td>
+</tr>
+<tr class="row-even"><td><p>Tige Laiton diam 2mm</p></td>
+<td><p>AMAZON</p></td>
+<td><p>2*78,62mm</p></td>
+<td><p>2</p></td>
+<td><p>0,22 €</p></td>
+<td><p>0,44 €</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>TOTAL</p></td>
+<td><p>22,94 €</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="weblinks">
+<h2>Weblinks<a class="headerlink" href="#weblinks" title="Permalink to this headline">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">1</a></span></dt>
+<dd><p><a class="reference external" href="http://www.vorobotics.com/wiki/index.php?title=Mon_Petit_Lab">http://www.vorobotics.com/wiki/index.php?title=Mon_Petit_Lab</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets">2</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id9">2</a>)</span></dt>
+<dd><p><a class="reference external" href="http://www.vorobotics.com/wp/">http://www.vorobotics.com/wp/</a></p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id11">3</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/MajorLee95/tinyelab">https://github.com/MajorLee95/tinyelab</a></p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id13">4</a></span></dt>
+<dd><p><a class="reference external" href="https://www.amazon.fr/BE-TOOL-Multim%C3%A8tre-Voltm%C3%A8tre-amp%C3%A8rem%C3%A8tre-domestique/dp/B07Q1P8BQB/ref=sr_1_30?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=19MAY7ESO4AZB&amp;keywords=amp%C3%A8rem%C3%A8tre+voltm%C3%A8tre&amp;qid=1660089756&amp;sprefix=amp%C3%A8rem%C3%A8tre+voltm%C3%A8tre%2Caps%2C97&amp;sr=8-30">https://www.amazon.fr/BE-TOOL-Multim%C3%A8tre-Voltm%C3%A8tre-amp%C3%A8rem%C3%A8tre-domestique/dp/B07Q1P8BQB/ref=sr_1_30?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=19MAY7ESO4AZB&amp;keywords=amp%C3%A8rem%C3%A8tre+voltm%C3%A8tre&amp;qid=1660089756&amp;sprefix=amp%C3%A8rem%C3%A8tre+voltm%C3%A8tre%2Caps%2C97&amp;sr=8-30</a></p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id15">5</a></span></dt>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=vPSaLIBBoh4">https://www.youtube.com/watch?v=vPSaLIBBoh4</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="sphinx-toc sphinxlocaltoc">
+    <h3><a href="index.html">Page contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Module Volt/amperemetre couplés</a><ul>
+<li><a class="reference internal" href="#presentation">Présentation</a></li>
+<li><a class="reference internal" href="#rendu-freecad">Rendu Freecad</a></li>
+<li><a class="reference internal" href="#photo">Photo</a></li>
+<li><a class="reference internal" href="#nomenclature">Nomenclature</a></li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div class="sphinxprev">
+    <h4>Page précédente</h4>
+    <p class="topless"><a href="moduleTripleTinyVoltmetres.html"
+                          title="Page précédente">&larr; Module triple tiny voltmètres</a></p>
+  </div>
+  <div class="sphinxnext">
+    <h4>Page suivante</h4>
+    <p class="topless"><a href="avancement.html"
+                          title="Page suivante">&rarr; Avancement</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/moduleVoltAmperemetre.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="avancement.html" title="Avancement"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="moduleTripleTinyVoltmetres.html" title="Module triple tiny voltmètres"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" >Mes réalisations</a> &#187;</li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, J.Soranzo.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>
