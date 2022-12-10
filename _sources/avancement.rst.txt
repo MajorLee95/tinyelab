@@ -15,7 +15,8 @@ A faire général
 ====================================================================================================
 Liens vers les sources
 ----------------------------------------------------------------------------------------------------
-Dans la partie rendu Freecad mettre un lien vers les sources avec un peu d'explications:
+Dans la partie rendu Freecad mettre un lien vers les sources avec un peu d'explications comme les 
+dépendances:
 
 - modulePrimaireTensionCourant
 - moduleAlimStabiliseeDPS3005
@@ -83,7 +84,7 @@ Module oscilo
 - photo **OK**
 - schéma **OK**
 - IR : images non retrouvées le 2/7/22, elles ne sont pas dans la caméra 16/7/22 **ABANDON**
-- Design capo avec boutons
+- Design capo avec boutons **en cours 23/11/22**
 
 Module voltmètre / ampèremètre 
 ----------------------------------------------------------------------------------------------------

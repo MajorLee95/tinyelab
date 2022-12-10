@@ -199,6 +199,9 @@ Face avant détachable & ventilation. Fortement inspiré du model de Cordless
 
 Ajout également d'une vis pointeau et d'un insert fileté pour bien tenir les XT60
 
+.. index::
+    single: Insert filetés
+
 Insert filetés
 ----------------------------------------------------------------------------------------------------
 `Sur AMAZON ruthex Boîte M2 + M3 + M4 + M5 insert fileté`_
@@ -213,6 +216,14 @@ Dimensions:
 
 .. image:: images/ruthexBoxDimension.JPG 
    :width: 300 px
+
+Un fer à souder dédié sur AMAZON: `Station de Souder, HANMATEK SD1`_
+
+.. image:: images/hamatekSD1.JPG 
+   :width: 300 px
+
+
+.. _`Station de Souder, HANMATEK SD1` : https://www.amazon.fr/gp/product/B07Y1MHPDY/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&th=1
 
 Calculs relatifs à la ventilation
 ----------------------------------------------------------------------------------------------------
