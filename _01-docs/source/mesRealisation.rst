@@ -219,6 +219,10 @@ Dimensions:
 
 Un fer à souder dédié sur AMAZON: `Station de Souder, HANMATEK SD1`_
 
+.. image:: images/hamatekSD1.JPG 
+   :width: 300 px
+
+
 .. _`Station de Souder, HANMATEK SD1` : https://www.amazon.fr/gp/product/B07Y1MHPDY/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&th=1
 
 Calculs relatifs à la ventilation
