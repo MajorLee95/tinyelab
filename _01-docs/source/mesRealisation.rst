@@ -504,7 +504,7 @@ Nomenclature
 .. WARNING:: Je n'ai rien trouvé de satisfaisant pour remplacer les modules défectueux
    :class: without-title
 
-J'ai tester :
+J'ai testé :
 
 `Greluma 4 Pièces Convertisseur Buck USB,Module Abaisseur DC-DC 4.5-32V 12V 24V à 5V QC 3.0`_ **A EVITER ABSOLUMENT !**
 
@@ -533,9 +533,9 @@ Redesign avec les modules :
 
 
 Pas de modèle 3D sous GRABCAD. En réalité, on ne sait pas quoi rechercher. La référence sur le
-composant principal a été effacé. Je souspsonne qu'il s'agisse d'un IP6505
+composant principal a été effacé. Je soupçonne qu'il s'agisse d'un IP6505
 
-J'ai trouvé ceci :
+J'ai trouvé ceci (mais pas commandé, juste pour la ref) :
 
 `Module abaisseur USB 12V 24V vers QC2.0 QC3.0, panneau de Charge rapide pour téléphone portable, pour Apple Huawei FCP, ip6505`_
 
@@ -544,6 +544,11 @@ J'ai trouvé ceci :
 .. image:: images/usb5v3a_autreModule.jpg 
    :width: 300 px
 
+ou cela sur Aliexpress:
+
+`Convertisseur USB QC3.0 QC2.0, Module abaisseur de charge 6-32V 9V 12V 24V à chargeur rapide`_
+
+.. _`Convertisseur USB QC3.0 QC2.0, Module abaisseur de charge 6-32V 9V 12V 24V à chargeur rapide` : https://fr.aliexpress.com/item/32983839710.html?srcSns=sns_Copy&spreadType=socialShare&bizType=ProductDetail&social_params=60118492185&aff_fcid=c3e6178e2b3c4390aeb6c8347d062a0f-1671006012122-04198-_u79Chw&tt=MG&aff_fsk=_u79Chw&aff_platform=default&sk=_u79Chw&aff_trace_key=c3e6178e2b3c4390aeb6c8347d062a0f-1671006012122-04198-_u79Chw&shareId=60118492185&businessType=ProductDetail&platform=AE&terminal_id=da1926e557754fd8b015744507271bbb&afSmartRedirect=y
 
 
 ====================================================================================================
@@ -658,7 +663,62 @@ Tellement fun un ampèremètre continu à aiguille :
 .. _`En version AC 0-5A` : https://www.amazon.fr/Classe-pr%C3%A9cision-Analogique-0-5A-gamme-Panneau/dp/B009PKGQZY/ref=sr_1_43?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=25ULUI5QE2J55&keywords=pr%C3%A9cision%2Bamp%C3%A8rem%C3%A8tre%2Bpanneau&qid=1650820644&sprefix=pr%C3%A9cision%2Bamp%C3%A8rem%C3%A8tre%2Bpanneau%2Caps%2C106&sr=8-43
 
 
+====================================================================================================
+Components tester (LCR tester)
+====================================================================================================
+Existe déjà dans le Thingiverse
 
+.. image:: images/lcrTesterRemixThing.JPG 
+   :width: 300 px
+
+j'ai:
+
+.. image:: images/lcrTesterBase.JPG 
+   :width: 300 px
+
+
+Serait possible à améliorer en intégrant plutôt:
+
+.. image:: images/lcrTesterRTC1.JPG 
+   :width: 300 px
+
+29€ (04/03/23) sur AMAMZON.fr `Testeur de Transistors Multifonctions, APKLVSR`_
+
+.. _`Testeur de Transistors Multifonctions, APKLVSR` : https://www.amazon.fr/gp/product/B09CYWQHSX/ref=ox_sc_act_title_1?smid=AE3E5WPQSSR6E&psc=1
+
+.. WARNING:: Pas certain qu'il passe dans la hauteur des boîtier Tinylab
+   :class: without-title
+
+----------------------------------------------------------------------------------------------------
+
+`Multi-Component Tester Calibration / Operation / Comparison (M8 ver. M12864) (4K)`_
+
+.. _`Multi-Component Tester Calibration / Operation / Comparison (M8 ver. M12864) (4K)` : https://www.youtube.com/watch?v=C38eSPOF1o0
+
+.. image:: images/lcrTestercompareVideo.JPG 
+   :width: 300 px
+
+----------------------------------------------------------------------------------------------------
+
+ou encore
+
+.. image:: images/lcrTesterR_new.JPG 
+   :width: 300 px
+
+En mode DiY:
+
+`This device can Test Any Component led, transistor, inductor, capacitor, diodes`_
+
+.. _`This device can Test Any Component led, transistor, inductor, capacitor, diodes` : https://www.youtube.com/watch?v=mogaMWEWWlQ
+
+
+.. image:: images/lcrTesterDiY.JPG 
+   :width: 300 px
+
+
+Une vidéo comparative : `Some thoughts about components tester GM328A`_
+
+.. _`Some thoughts about components tester GM328A` : https://www.youtube.com/watch?v=LlMCi6XyO2A
 
 ====================================================================================================
 Weblinks
