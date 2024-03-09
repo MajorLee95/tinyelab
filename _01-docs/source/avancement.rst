@@ -13,7 +13,7 @@ Avancement
 ====================================================================================================
 A faire général
 ====================================================================================================
-Liens vers les sources
+Ajouter des liens vers les sources
 ----------------------------------------------------------------------------------------------------
 Dans la partie rendu Freecad mettre un lien vers les sources avec un peu d'explications comme les 
 dépendances:
@@ -110,7 +110,7 @@ Peut-être trouvé chez aliExpres... oui et testé, y a plus qu'à !
 
 Module USB-C fast charge
 ----------------------------------------------------------------------------------------------------
-- tout
+- tout est à faire
 
 Module alim 24V/10A
 ----------------------------------------------------------------------------------------------------
@@ -119,6 +119,9 @@ Module alim 24V/10A
 - En profiter pour cable rallonge XT60 **OK**
     - avec gros fil dans le tiroir **OK**
 - Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V ? Si
+
+Je me pose réellement la question de l'utilité de ce module à cause de son encombrement. 
+Le besoin d'une alimentation 24v n'est pas démontré.
 
 module ampèremètre seul 0/3A
 ----------------------------------------------------------------------------------------------------
