@@ -504,7 +504,7 @@ Nomenclature
 .. WARNING:: Je n'ai rien trouvé de satisfaisant pour remplacer les modules défectueux
    :class: without-title
 
-J'ai tester :
+J'ai testé :
 
 `Greluma 4 Pièces Convertisseur Buck USB,Module Abaisseur DC-DC 4.5-32V 12V 24V à 5V QC 3.0`_ **A EVITER ABSOLUMENT !**
 
@@ -533,9 +533,9 @@ Redesign avec les modules :
 
 
 Pas de modèle 3D sous GRABCAD. En réalité, on ne sait pas quoi rechercher. La référence sur le
-composant principal a été effacé. Je souspsonne qu'il s'agisse d'un IP6505
+composant principal a été effacé. Je soupçonne qu'il s'agisse d'un IP6505
 
-J'ai trouvé ceci :
+J'ai trouvé ceci (mais pas commandé, juste pour la ref) :
 
 `Module abaisseur USB 12V 24V vers QC2.0 QC3.0, panneau de Charge rapide pour téléphone portable, pour Apple Huawei FCP, ip6505`_
 
@@ -715,6 +715,10 @@ En mode DiY:
 .. image:: images/lcrTesterDiY.JPG 
    :width: 300 px
 
+
+Une vidéo comparative : `Some thoughts about components tester GM328A`_
+
+.. _`Some thoughts about components tester GM328A` : https://www.youtube.com/watch?v=LlMCi6XyO2A
 
 ====================================================================================================
 Weblinks
