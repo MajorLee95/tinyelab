@@ -16,6 +16,14 @@ Module alimentation primaire à base de batterie PARKSIDE de chez LIDL
     pair: Modules; PARKSIDE
 
 ====================================================================================================
+Les languettes
+====================================================================================================
+Toutes la difficulté dans cette exercice est de trouver des languettes métalliques compatibles.
+
+Piste : Radiosspares : Feuille de métal 500mm x 300mm x 0.6mm 682-488 188€ les 10 feuilles !
+
+
+====================================================================================================
 Module Parkside X20
 ====================================================================================================
 Recherche de model internet : pas grand chose d'exploitable, surtout des stl !

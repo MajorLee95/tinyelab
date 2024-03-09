@@ -6,17 +6,18 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Module USB 2x 5A avec ampèremètre &#8212; Tiny e-lab extension  documentation</title>
-    <link rel="stylesheet" href="_static/cloud.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/cloud.css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
     
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
 
     
     
@@ -56,7 +57,8 @@
              accesskey="P">previous</a> &nbsp; &nbsp;</li>
     <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="mesRealisation.html" accesskey="U">Mes réalisations</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" accesskey="U">Mes réalisations</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Module USB 2x 5A avec ampèremètre</a></li> 
       </ul>
     </div>
     </div>
@@ -67,7 +69,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-usb-2x-5a-avec-amperemetre">
+  <section id="module-usb-2x-5a-avec-amperemetre">
 <h1>Module USB 2x 5A avec ampèremètre<a class="headerlink" href="#module-usb-2x-5a-avec-amperemetre" title="Permalink to this headline">¶</a></h1>
 <a class="reference internal image-reference" href="_images/moduleUSB2x3AComplet.jpg"><img alt="_images/moduleUSB2x3AComplet.jpg" class="align-right" src="_images/moduleUSB2x3AComplet.jpg" style="width: 300px;" /></a>
 <dl class="field-list simple">
@@ -95,12 +97,12 @@
 <dd class="field-even"><p>10/2022</p>
 </dd>
 </dl>
-<div class="section" id="presentation-objectif">
+<section id="presentation-objectif">
 <h2>Présentation/objectif<a class="headerlink" href="#presentation-objectif" title="Permalink to this headline">¶</a></h2>
 <p>On souhaite ici un module avec 2 prise USB capable de délivrer chacune 3A pour éventuellement
 alimenter 2 Raspberry pi avec un écran qui affiche tension courant pour chaque voie.</p>
-</div>
-<div class="section" id="module-xl4015-evaluation-a-3a">
+</section>
+<section id="module-xl4015-evaluation-a-3a">
 <h2>Module XL4015 évaluation à 3A<a class="headerlink" href="#module-xl4015-evaluation-a-3a" title="Permalink to this headline">¶</a></h2>
 <p>La base est le convertisseur DCDC XL4015</p>
 <p><a class="reference external" href="https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1">TECNOIOT 5pcs 5A XL4015 DC-DC Step Down Adjustable Power Supply Module LED Lithium Charger</a> <a class="footnote-reference brackets" href="#id10" id="id11">4</a></p>
@@ -127,8 +129,8 @@ parallaxe des 2 objectifs fait que les température ne sont  pas aux bons endroi
 qui compte</p>
 <p>Lorsque le module délivre 5V / 3A la température de la diode se situe aux environs de 120°C. C’est
 beaucoup</p>
-</div>
-<div class="section" id="design-du-module">
+</section>
+<section id="design-du-module">
 <h2>Design du module<a class="headerlink" href="#design-du-module" title="Permalink to this headline">¶</a></h2>
 <p>Compte tenu de l’essai ci-dessus je décide d’incorporer un ventilateur de 40mm au module.</p>
 <p>Je décide également de mettre 2 voies 5V/3A donc d’utiliser 2 convertisseurs.</p>
@@ -171,33 +173,33 @@ semble un bon compromis. Sauf que je n’ai pas d’alim à cette valeur dans le
 <img alt="_images/7805_high_output.JPG" class="align-center" src="_images/7805_high_output.JPG" />
 <p>Il est donc possible à partir du 7805 de faire du 9V qui pourrait servir à alimenter le ventilo ET
 l’ARDUINO sur son  Vin.</p>
-<div class="section" id="prise-usb-utilisees">
+<section id="prise-usb-utilisees">
 <h3>Prise USB utilisées<a class="headerlink" href="#prise-usb-utilisees" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/usbBreakOutBoard.jpg"><img alt="_images/usbBreakOutBoard.jpg" src="_images/usbBreakOutBoard.jpg" style="width: 300px;" /></a>
-</div>
-<div class="section" id="les-adresses-sur-le-bus-i2c">
+</section>
+<section id="les-adresses-sur-le-bus-i2c">
 <h3>Les adresses sur le bus I2C<a class="headerlink" href="#les-adresses-sur-le-bus-i2c" title="Permalink to this headline">¶</a></h3>
 <p>I2C scan : 0x3C, 0x40 et 0x41 (écran, INA1, INA2)</p>
-</div>
-</div>
-<div class="section" id="schemas-electroniques">
+</section>
+</section>
+<section id="schemas-electroniques">
 <h2>Schémas électroniques<a class="headerlink" href="#schemas-electroniques" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="de-la-carte-sans-les-lm35">
+<section id="de-la-carte-sans-les-lm35">
 <h3>De la carte (sans les LM35)<a class="headerlink" href="#de-la-carte-sans-les-lm35" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/usb5V3AOledSch.jpg"><img alt="_images/usb5V3AOledSch.jpg" src="_images/usb5V3AOledSch.jpg" style="width: 600px;" /></a>
 <p>Les LM35 ont été ajoutés après coup en fil volant.</p>
 <p><strong>Pseudo PCB KiCAD</strong></p>
 <a class="reference internal image-reference" href="_images/usb2x3a_pseudoPCB.jpg"><img alt="_images/usb2x3a_pseudoPCB.jpg" src="_images/usb2x3a_pseudoPCB.jpg" style="width: 600px;" /></a>
 <p>Pseudo pcb car réalisé sur de la plaque à trous à pastille carrées Veroboard.</p>
-</div>
-<div class="section" id="schema-de-cablage">
+</section>
+<section id="schema-de-cablage">
 <h3>Schéma de câblage<a class="headerlink" href="#schema-de-cablage" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="_images/usb2x3ACablage221009_1106.svg"><img alt="_images/usb2x3ACablage221009_1106.svg" src="_images/usb2x3ACablage221009_1106.svg" width="600px" /></a>
 <p><div class="clearer"></div></p>
 <a class="reference internal image-reference" href="_images/usb2x3ACablage_filaire221020_0026.svg"><img alt="_images/usb2x3ACablage_filaire221020_0026.svg" src="_images/usb2x3ACablage_filaire221020_0026.svg" width="600px" /></a>
-</div>
-</div>
-<div class="section" id="mesure-de-temperature-lm35">
+</section>
+</section>
+<section id="mesure-de-temperature-lm35">
 <h2>Mesure de température (LM35)<a class="headerlink" href="#mesure-de-temperature-lm35" title="Permalink to this headline">¶</a></h2>
 <p>Ajout de dernière minute.</p>
 <p>Comment : l’arduino à des entrée analogique dispo.</p>
@@ -225,8 +227,8 @@ l’ARDUINO sur son  Vin.</p>
 <p>Les 2 capteurs sont collés aux dissipateurs grâce à de la colle thermique
 (pas de la pate mais bien de la colle ! ).</p>
 <a class="reference internal image-reference" href="_images/colleThermique.jpg"><img alt="_images/colleThermique.jpg" src="_images/colleThermique.jpg" style="width: 300px;" /></a>
-</div>
-<div class="section" id="quelques-photos-de-la-realisation">
+</section>
+<section id="quelques-photos-de-la-realisation">
 <h2>Quelques photos de la réalisation<a class="headerlink" href="#quelques-photos-de-la-realisation" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-given docutils align-default">
 <colgroup>
@@ -278,16 +280,16 @@ l’ARDUINO sur son  Vin.</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="une-jolie-face-avant-pour-combler-le-vide">
+</section>
+<section id="une-jolie-face-avant-pour-combler-le-vide">
 <h2>Une jolie face avant (pour combler le vide)<a class="headerlink" href="#une-jolie-face-avant-pour-combler-le-vide" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/fav221017_2030.svg"><img alt="_images/fav221017_2030.svg" src="_images/fav221017_2030.svg" width="300px" /></a>
 <p>Découpé avec notre antique craftrobot…</p>
 <a class="reference internal image-reference" href="_images/craftrobot.jpg"><img alt="_images/craftrobot.jpg" src="_images/craftrobot.jpg" style="width: 300px;" /></a>
 <p>Compatible du logiciel Silhouette Studio (je conseille la v3.6.057, pour les repère de coupe old
 style)</p>
-</div>
-<div class="section" id="rendus-freecad">
+</section>
+<section id="rendus-freecad">
 <h2>Rendus FreeCad<a class="headerlink" href="#rendus-freecad" title="Permalink to this headline">¶</a></h2>
 <p>L’intérieur du module très chargé et encore, il n’y a pas les fils de cablage…</p>
 <a class="reference internal image-reference" href="_images/usb2x3Av2_interne.jpg"><img alt="_images/usb2x3Av2_interne.jpg" src="_images/usb2x3Av2_interne.jpg" style="width: 600px;" /></a>
@@ -295,12 +297,12 @@ style)</p>
 <a class="reference internal image-reference" href="_images/usb2x3Av2_sansFAV.jpg"><img alt="_images/usb2x3Av2_sansFAV.jpg" src="_images/usb2x3Av2_sansFAV.jpg" style="width: 400px;" /></a>
 <p>Et avec</p>
 <a class="reference internal image-reference" href="_images/usb2x3Av2_avecFAV.jpg"><img alt="_images/usb2x3Av2_avecFAV.jpg" src="_images/usb2x3Av2_avecFAV.jpg" style="width: 400px;" /></a>
-</div>
-<div class="section" id="arduino-code">
+</section>
+<section id="arduino-code">
 <h2>Arduino code<a class="headerlink" href="#arduino-code" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/ArduinoCommunityLogo_SVG.svg" class="align-center" src="_images/ArduinoCommunityLogo_SVG.svg" /><img alt="_images/docIcon.svg" class="align-left" src="_images/docIcon.svg" /><p>Vous le trouverez sur le <a class="reference external" href="https://github.com/MajorLee95/tinyelab/blob/main/_02-realisation/_01-software/usb3a/usb3a.ino">github du projet module usb2x3a</a> <a class="footnote-reference brackets" href="#id16" id="id17">7</a></p>
-</div>
-<div class="section" id="nomenclature">
+</section>
+<section id="nomenclature">
 <h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-left" id="id2">
 <caption><span class="caption-text">Nomenclature USB5V 3A</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
@@ -463,8 +465,8 @@ Radiospares code <a class="reference external" href="https://fr.rs-online.com/we
 <a class="reference internal image-reference" href="_images/veroboardPastilleCaree.jpg"><img alt="_images/veroboardPastilleCaree.jpg" src="_images/veroboardPastilleCaree.jpg" style="width: 300px;" /></a>
 <p>Le pastillage carré permet de tracer des pistes en reliant par des ponts de soudure les pastilles
 2 à 2 puis 4 à 4 puis 8 à 8…</p>
-</div>
-<div class="section" id="weblinks">
+</section>
+<section id="weblinks">
 <h2>Weblinks<a class="headerlink" href="#weblinks" title="Permalink to this headline">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
@@ -492,10 +494,11 @@ Radiospares code <a class="reference external" href="https://fr.rs-online.com/we
 <dd><p><a class="reference external" href="https://fr.rs-online.com/web/p/cartes-matrices/4570761">https://fr.rs-online.com/web/p/cartes-matrices/4570761</a></p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -549,7 +552,7 @@ Radiospares code <a class="reference external" href="https://fr.rs-online.com/we
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -592,14 +595,15 @@ Radiospares code <a class="reference external" href="https://fr.rs-online.com/we
              >previous</a> &nbsp; &nbsp;</li>
     <li><a href="index.html">Tiny e-lab extension  documentation</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="mesRealisation.html" >Mes réalisations</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="mesRealisation.html" >Mes réalisations</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Module USB 2x 5A avec ampèremètre</a></li> 
       </ul>
     </div>
     </div>
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2022, J.Soranzo.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
     </div>
     <!-- cloud_sptheme 1.4 -->
   </body>
