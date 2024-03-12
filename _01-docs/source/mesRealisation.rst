@@ -518,6 +518,16 @@ J'ai testé :
 ====================================================================================================
 USB 5V 3A simple 2 voies  : redesign module ALIExpress
 ====================================================================================================
+Tout d'abord une étude avec un convertisseur DC/DC et juste 2 connecteurs USB.
+Dans ``_03-cao_3D\mesCreations\moduleUSBsimpleDouble``
+
+
+.. image:: images/conceptUSBDoublePlusSimple.JPG 
+   :width: 300 px
+
+
+Concept abandonnée au profit des convertisseurs ci-dessous.
+
 Redesign avec les modules :
 
 `QC3.0 QC2.0 BC1.2 FCP AFC, Module de chargeur de voiture rapide, convertisseur abaisseur Buck, carte d'alimentation pour téléphone`_

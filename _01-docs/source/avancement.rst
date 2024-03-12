@@ -5,13 +5,22 @@ Avancement
 .. include:: volabid.rst
 
 :Date de création: 03/2022
-:Date dernière maj: 12/11/2022
+:Date dernière maj: voir github
+
+====================================================================================================
+Journal
+====================================================================================================
+09/03/24::
+
+    Reprise module USB QC3.0 simple un USB un inter
+    Déjà quelques chose dans ``mesCreations\moduleUSB5V2ASimple2voies``
+
 
 
 .. _refAvancementGeneral:
 
 ====================================================================================================
-A faire général
+A faire : de manière général
 ====================================================================================================
 Ajouter des liens vers les sources
 ----------------------------------------------------------------------------------------------------
@@ -98,15 +107,38 @@ Module voltmètre / ampèremètre
 ====================================================================================================
 A faire modules
 ====================================================================================================
+Support fer à souder
+----------------------------------------------------------------------------------------------------
+Tout est à faire
+
+Des idées: `Tiny E-lab Ts100 alternate stand by erreib on Thingiverse`_
+
+Trop volumineux, interrupteur inutile (le TS-100 à le sien)
+
+Il faudrait une protetion complète de la panne !
+
+.. _`Tiny E-lab Ts100 alternate stand by erreib on Thingiverse` : https://www.thingiverse.com/thing:5216290
+
+Le module ventilation faire à souder
+----------------------------------------------------------------------------------------------------
+Simplifier le module (après retour d'expérience)
+
+    - supprimer la charnière le ventilateur à la vertical suffit amplement.
+    - supprimer les variateurs (éclairage à fond et ventilation à fond toujours...)
+    - incliner l'éclairage vers l'avant (actuellmement, il éclaire les boutons)
 
 USB double mais plus simple
 ----------------------------------------------------------------------------------------------------
 - étude du concept sous Freecad **OK**
     - ``_03-cao_3D\mesCreations\moduleUSBsimpleDouble`` **OK**
+    
 
 - trouver un buck qui tienne la charge et les 24V ! **OK**
 
 Peut-être trouvé chez aliExpres... oui et testé, y a plus qu'à !
+
+Finalement, je pars sur un USB simple dans un premier temps pour mettre de chaque côté du module 
+ventilo pour éclairer la soudure
 
 Module USB-C fast charge
 ----------------------------------------------------------------------------------------------------
@@ -120,8 +152,11 @@ Module alim 24V/10A
     - avec gros fil dans le tiroir **OK**
 - Ne vaut-il pas mieux un module complet à cause de l'arrivée 220V ? Si
 
-Je me pose réellement la question de l'utilité de ce module à cause de son encombrement. 
-Le besoin d'une alimentation 24v n'est pas démontré.
+.. WARNING:: Utilité de ce module ?
+    :class: without-title
+
+    Je me pose réellement la question de l'utilité de ce module à cause de son encombrement. 
+    Le besoin d'une alimentation 24v n'est pas démontré.
 
 module ampèremètre seul 0/3A
 ----------------------------------------------------------------------------------------------------
