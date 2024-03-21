@@ -5,7 +5,7 @@ Mes réalisations
 .. include:: volabid.rst
 
 :Date de création: 02/2022
-:Date dernière maj: 07/10/2022
+:Date dernière maj: 20/03/2024
 
 
 .. |clearer|  raw:: html
@@ -468,7 +468,41 @@ Nomenclature XT60 coverts
 
 
 
+====================================================================================================
+Support fer TS-100
+====================================================================================================
 
+Inspi:
+
+`Tiny E-lab Ts100 alternate stand`_
+
+.. _`Tiny E-lab Ts100 alternate stand` : https://www.thingiverse.com/thing:5216290
+
+.. image:: images/ts100holderAlternative.JPG 
+   :width: 300 px
+
+Je garde le nettoyeur Weller commandé sur Amazon comm le conseil erreib
+
+.. SEEALSO:: **SITE DE COMMERCE**
+   :class: without-title
+   
+   `Weller WLACCBSH-02 Nettoyant Pour Eponge A Souder En Laiton, Avec Support En Silicone`_ lien Amazon France
+
+.. _`Weller WLACCBSH-02 Nettoyant Pour Eponge A Souder En Laiton, Avec Support En Silicone` : https://www.amazon.fr/dp/B08FQBS97L?psc=1&ref=ppx_yo2ov_dt_b_product_details
+
+Je ne garde pas le support qui me semble dépassé trop et serait trop fragile dans le valise.
+
+Je souhaite quelque chose de plus compact.
+
+Tube en cuivre de plomberie diamètre extérieur 14 intérieur 12mm
+
+Pour isoler le tube : `Caoutchouc laser/caoutchouc pour tampon 31 x 22`_ j'ai fait le test on peu 
+poser le fer dessus.
+
+.. _`Caoutchouc laser/caoutchouc pour tampon 31 x 22` : https://www.amazon.fr/dp/B07HH696BV?ref=ppx_yo2ov_dt_b_product_details
+
+.. image:: images/ts100_cahoutchou.JPG 
+   :width: 300 px
 
 
 
@@ -561,11 +595,25 @@ ou cela sur Aliexpress:
 .. _`Convertisseur USB QC3.0 QC2.0, Module abaisseur de charge 6-32V 9V 12V 24V à chargeur rapide` : https://fr.aliexpress.com/item/32983839710.html?srcSns=sns_Copy&spreadType=socialShare&bizType=ProductDetail&social_params=60118492185&aff_fcid=c3e6178e2b3c4390aeb6c8347d062a0f-1671006012122-04198-_u79Chw&tt=MG&aff_fsk=_u79Chw&aff_platform=default&sk=_u79Chw&aff_trace_key=c3e6178e2b3c4390aeb6c8347d062a0f-1671006012122-04198-_u79Chw&shareId=60118492185&businessType=ProductDetail&platform=AE&terminal_id=da1926e557754fd8b015744507271bbb&afSmartRedirect=y
 
 
+Conception
+----------------------------------------------------------------------------------------------------
+Un mot sur la conception, d'un point de vue électronique : rien à faire. Les modules peuvent être 
+alimentés jusqu'à 32v. 
+
+C'est la partie mécanique qui pause le plus de difficultés. En effet, les 
+modules ne disposent d'aucun trous de vis permettant la fixation.
+
+.. image:: images/usb2x5V3A_2024Design.jpg 
+   :width: 300 px
+
+
 ====================================================================================================
 Module USB-C Quick charger
 ====================================================================================================
 Dossier : moduleUSBC_QC3
 
+.. image:: images/USB_QC3_prise.JPG 
+   :width: 600 px
 
 
 
