@@ -91,13 +91,21 @@
 <dd class="field-odd"><p>03/2022</p>
 </dd>
 <dt class="field-even">Date dernière maj</dt>
-<dd class="field-even"><p>12/11/2022</p>
+<dd class="field-even"><p>voir github</p>
 </dd>
 </dl>
-<section id="a-faire-general">
-<span id="refavancementgeneral"></span><h2>A faire général<a class="headerlink" href="#a-faire-general" title="Permalink to this headline">¶</a></h2>
-<section id="liens-vers-les-sources">
-<h3>Liens vers les sources<a class="headerlink" href="#liens-vers-les-sources" title="Permalink to this headline">¶</a></h3>
+<section id="journal">
+<h2>Journal<a class="headerlink" href="#journal" title="Permalink to this headline">¶</a></h2>
+<p>09/03/24:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Reprise module USB QC3.0 simple un USB un inter
+Déjà quelques chose dans ``mesCreations\moduleUSB5V2ASimple2voies``
+</pre></div>
+</div>
+</section>
+<section id="a-faire-de-maniere-general">
+<span id="refavancementgeneral"></span><h2>A faire : de manière général<a class="headerlink" href="#a-faire-de-maniere-general" title="Permalink to this headline">¶</a></h2>
+<section id="ajouter-des-liens-vers-les-sources">
+<h3>Ajouter des liens vers les sources<a class="headerlink" href="#ajouter-des-liens-vers-les-sources" title="Permalink to this headline">¶</a></h3>
 <p>Dans la partie rendu Freecad mettre un lien vers les sources avec un peu d’explications comme les
 dépendances:</p>
 <ul class="simple">
@@ -239,6 +247,24 @@ dépendances:</p>
 </section>
 <section id="a-faire-modules">
 <h2>A faire modules<a class="headerlink" href="#a-faire-modules" title="Permalink to this headline">¶</a></h2>
+<section id="support-fer-a-souder">
+<h3>Support fer à souder<a class="headerlink" href="#support-fer-a-souder" title="Permalink to this headline">¶</a></h3>
+<p>Tout est à faire</p>
+<p>Des idées: <a class="reference external" href="https://www.thingiverse.com/thing:5216290">Tiny E-lab Ts100 alternate stand by erreib on Thingiverse</a> <a class="footnote-reference brackets" href="#id10" id="id11">4</a></p>
+<p>Trop volumineux, interrupteur inutile (le TS-100 à le sien)</p>
+<p>Il faudrait une protetion complète de la panne !</p>
+</section>
+<section id="le-module-ventilation-faire-a-souder">
+<h3>Le module ventilation faire à souder<a class="headerlink" href="#le-module-ventilation-faire-a-souder" title="Permalink to this headline">¶</a></h3>
+<p>Simplifier le module (après retour d’expérience)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>supprimer la charnière le ventilateur à la vertical suffit amplement.</p></li>
+<li><p>supprimer les variateurs (éclairage à fond et ventilation à fond toujours…)</p></li>
+<li><p>incliner l’éclairage vers l’avant (actuellmement, il éclaire les boutons)</p></li>
+</ul>
+</div></blockquote>
+</section>
 <section id="usb-double-mais-plus-simple">
 <h3>USB double mais plus simple<a class="headerlink" href="#usb-double-mais-plus-simple" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -252,11 +278,13 @@ dépendances:</p>
 <li><p>trouver un buck qui tienne la charge et les 24V ! <strong>OK</strong></p></li>
 </ul>
 <p>Peut-être trouvé chez aliExpres… oui et testé, y a plus qu’à !</p>
+<p>Finalement, je pars sur un USB simple dans un premier temps pour mettre de chaque côté du module
+ventilo pour éclairer la soudure</p>
 </section>
 <section id="module-usb-c-fast-charge">
 <h3>Module USB-C fast charge<a class="headerlink" href="#module-usb-c-fast-charge" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>tout</p></li>
+<li><p>tout est à faire</p></li>
 </ul>
 </section>
 <section id="module-alim-24v-10a">
@@ -273,6 +301,12 @@ dépendances:</p>
 </li>
 <li><p>Ne vaut-il pas mieux un module complet à cause de l’arrivée 220V ? Si</p></li>
 </ul>
+<div class="without-title admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Utilité de ce module ?</p>
+<p>Je me pose réellement la question de l’utilité de ce module à cause de son encombrement.
+Le besoin d’une alimentation 24v n’est pas démontré.</p>
+</div>
 </section>
 <section id="module-amperemetre-seul-0-3a">
 <h3>module ampèremètre seul 0/3A<a class="headerlink" href="#module-amperemetre-seul-0-3a" title="Permalink to this headline">¶</a></h3>
@@ -1160,9 +1194,9 @@ la partie plane de la partie fixe plutot mobile à cause de l’emprunte languet
 <li><dl>
 <dt>trouver un convertisseur qui tienne 24V <strong>ET</strong> 3A <strong>OK</strong></dt><dd><ul>
 <li><p>le tester avant de l’intégrer <strong>OK</strong></p></li>
-<li><p><a class="reference external" href="https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1">TECNOIOT 5pcs 5A XL4015 DC-DC Step Down Adjustable Power Supply Module LED Lithium Charger</a> <a class="footnote-reference brackets" href="#id10" id="id11">4</a></p></li>
+<li><p><a class="reference external" href="https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1">TECNOIOT 5pcs 5A XL4015 DC-DC Step Down Adjustable Power Supply Module LED Lithium Charger</a> <a class="footnote-reference brackets" href="#id12" id="id13">5</a></p></li>
 <li><dl>
-<dt>également<span class="classifier"><a class="reference external" href="https://www.amazon.fr/gp/product/B084BVKGDK/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&amp;psc=1">TECNOIOT 5pcs 5A Max XL4015 DC to DC CC CV Step-Down</a> <a class="footnote-reference brackets" href="#id12" id="id13">5</a> avec limiteur de courant</span></dt><dd><ul class="simple">
+<dt>également<span class="classifier"><a class="reference external" href="https://www.amazon.fr/gp/product/B084BVKGDK/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&amp;psc=1">TECNOIOT 5pcs 5A Max XL4015 DC to DC CC CV Step-Down</a> <a class="footnote-reference brackets" href="#id14" id="id15">6</a> avec limiteur de courant</span></dt><dd><ul class="simple">
 <li><p>évaluer</p></li>
 <li><p>rentre difficilement (par de trous de fixation)</p></li>
 </ul>
@@ -1174,7 +1208,7 @@ la partie plane de la partie fixe plutot mobile à cause de l’emprunte languet
 </dl>
 </li>
 </ul>
-<p>Full doc: <a class="reference external" href="https://circuitdigest.com/electronic-circuits/diy-xl4015-dc-dc-buck-converter-module">DC to DC Converter with Constant Current (CC) and Constant Voltage (CV) Control - Schematics, PCB, Parts List, and Working</a> <a class="footnote-reference brackets" href="#id14" id="id15">6</a></p>
+<p>Full doc: <a class="reference external" href="https://circuitdigest.com/electronic-circuits/diy-xl4015-dc-dc-buck-converter-module">DC to DC Converter with Constant Current (CC) and Constant Voltage (CV) Control - Schematics, PCB, Parts List, and Working</a> <a class="footnote-reference brackets" href="#id16" id="id17">7</a></p>
 <ul class="simple">
 <li><p>attention le ventilo ne passe pas ! SI <strong>OK</strong></p></li>
 <li><dl class="simple">
@@ -1329,12 +1363,15 @@ la partie plane de la partie fixe plutot mobile à cause de l’emprunte languet
 <dd><p><a class="reference external" href="https://github.com/MajorLee95/tinyelab">https://github.com/MajorLee95/tinyelab</a></p>
 </dd>
 <dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id11">4</a></span></dt>
-<dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1">https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1</a></p>
+<dd><p><a class="reference external" href="https://www.thingiverse.com/thing:5216290">https://www.thingiverse.com/thing:5216290</a></p>
 </dd>
 <dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id13">5</a></span></dt>
-<dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B084BVKGDK/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&amp;psc=1">https://www.amazon.fr/gp/product/B084BVKGDK/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&amp;psc=1</a></p>
+<dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1">https://www.amazon.fr/gp/product/B07XXFZFQJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1</a></p>
 </dd>
 <dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id15">6</a></span></dt>
+<dd><p><a class="reference external" href="https://www.amazon.fr/gp/product/B084BVKGDK/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&amp;psc=1">https://www.amazon.fr/gp/product/B084BVKGDK/ref=ppx_yo_dt_b_asin_image_o00_s00?ie=UTF8&amp;psc=1</a></p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id17">7</a></span></dt>
 <dd><p><a class="reference external" href="https://circuitdigest.com/electronic-circuits/diy-xl4015-dc-dc-buck-converter-module">https://circuitdigest.com/electronic-circuits/diy-xl4015-dc-dc-buck-converter-module</a></p>
 </dd>
 </dl>
@@ -1350,8 +1387,9 @@ la partie plane de la partie fixe plutot mobile à cause de l’emprunte languet
     <h3><a href="index.html">Page contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Avancement</a><ul>
-<li><a class="reference internal" href="#a-faire-general">A faire général</a><ul>
-<li><a class="reference internal" href="#liens-vers-les-sources">Liens vers les sources</a></li>
+<li><a class="reference internal" href="#journal">Journal</a></li>
+<li><a class="reference internal" href="#a-faire-de-maniere-general">A faire : de manière général</a><ul>
+<li><a class="reference internal" href="#ajouter-des-liens-vers-les-sources">Ajouter des liens vers les sources</a></li>
 <li><a class="reference internal" href="#mettre-les-modules-sous-thinkiverse">Mettre les modules sous Thinkiverse</a></li>
 <li><a class="reference internal" href="#schema-de-cablage-des-modules">schéma de câblage des modules</a></li>
 <li><a class="reference internal" href="#xt60-boitier-ou-capot-de-prise-xt60">XT60 : boîtier ou capot de prise XT60</a></li>
@@ -1365,6 +1403,8 @@ la partie plane de la partie fixe plutot mobile à cause de l’emprunte languet
 </ul>
 </li>
 <li><a class="reference internal" href="#a-faire-modules">A faire modules</a><ul>
+<li><a class="reference internal" href="#support-fer-a-souder">Support fer à souder</a></li>
+<li><a class="reference internal" href="#le-module-ventilation-faire-a-souder">Le module ventilation faire à souder</a></li>
 <li><a class="reference internal" href="#usb-double-mais-plus-simple">USB double mais plus simple</a></li>
 <li><a class="reference internal" href="#module-usb-c-fast-charge">Module USB-C fast charge</a></li>
 <li><a class="reference internal" href="#module-alim-24v-10a">Module alim 24V/10A</a></li>
